@@ -6,7 +6,7 @@ Simple Bank system made in C# and MySQL
 - MySQL database
 
 #Version
-- Decoder-banmex 1.0
+- Decoder-Banmex 1.0
 
 #Project Managers
 - David Kiyoshi Garcia Azano.
