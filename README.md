@@ -1,5 +1,5 @@
 # Decoder-Banmex
-Simple Bank system made in C3 and MySQL 
+Simple Bank system made in C# and MySQL 
 
 #Installation
 - Visual Studio 5017
