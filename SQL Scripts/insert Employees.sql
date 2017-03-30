@@ -1,0 +1,1 @@
+INSERT INTO employee (firstName, lastName, address, cellphone, password, position, active) VALUES ('Jonathan', 'Ortiz', 'Cerro de tequila', 15227097, 'saurom', 1, true);

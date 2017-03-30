@@ -1,0 +1,1 @@
+INSERT INTO client (firstName, lastName, phone, rfc) VALUES ('Uriel', 'Vallejo', 320891345, 'URVA212493GHI');
