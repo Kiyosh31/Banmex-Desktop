@@ -18,5 +18,6 @@ C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.csproj.GenerateResource.Cache
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.exe
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.pdb
-C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.adminMenu.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.cashierMenu.resources
+C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.ManagerMenu.resources
+C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.ShowEmployees.resources

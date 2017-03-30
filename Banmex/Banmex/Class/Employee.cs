@@ -57,7 +57,7 @@ namespace Banmex.Class
 
         public static Employee SearchEmployee(MySqlConnection Connection, string firstName)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM employee WHERE firstName = {0} AND active = true", firstName), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM employee WHERE firstName = {0} AND active = 1", firstName), Connection);
             MySqlDataReader reader = command.ExecuteReader();
 
             if (reader.Read())

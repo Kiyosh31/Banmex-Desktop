@@ -54,11 +54,11 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\AdminMenu.cs">
+    <Compile Include="Menu\ManagerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\AdminMenu.Designer.cs">
-      <DependentUpon>AdminMenu.cs</DependentUpon>
+    <Compile Include="Menu\ManagerMenu.Designer.cs">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\CashierMenu.cs">
       <SubType>Form</SubType>
@@ -66,16 +66,25 @@
     <Compile Include="Menu\CashierMenu.Designer.cs">
       <DependentUpon>CashierMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\ShowEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\ShowEmployees.Designer.cs">
+      <DependentUpon>ShowEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\AdminMenu.resx">
-      <DependentUpon>AdminMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Menu\ManagerMenu.resx">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\CashierMenu.resx">
       <DependentUpon>CashierMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\ShowEmployees.resx">
+      <DependentUpon>ShowEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

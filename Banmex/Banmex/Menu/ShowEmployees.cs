@@ -1,5 +1,4 @@
-﻿using Banmex.Class;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Banmex.Menu
 {
-    public partial class AdminMenu : Form
+    public partial class ShowEmployees : Form
     {
-        Class.Connection Connection = new Class.Connection();
-        Class.Employee employee;
-
-        public AdminMenu(Class.Employee employee)
+        public ShowEmployees()
         {
             InitializeComponent();
-
-            this.employee = employee;
         }
     }
 }

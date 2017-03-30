@@ -36,22 +36,26 @@ namespace Banmex
 
             if (reader.Read())
             {
-                if (reader.GetInt32(6) == 0)
+                if(reader.GetInt32(6) == 0)
                 {
                     Connection.CloseConnection();
                     Connection.OpenConnection();
-                    
-                    Class.Employee employee = Class.Employee.SearchEmployee(Connection.myConnection, userTextbox.Text);
+                    //Class.Employee employee = Class.Employee.SearchEmployee(Connection.myConnection, userTextbox.Text);
                     Connection.CloseConnection();
-                    AdminMenu adminWindow = new AdminMenu(employee);
+                    MessageBox.Show("Sesion iniciada como admin");
+                    ManagerMenu ManagerWindow = new ManagerMenu();
                     this.Hide();
-                    adminWindow.ShowDialog();
-                    this.Show();
+                    ManagerWindow.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Sesion iniciada como cajero");
                     Connection.CloseConnection();
+                    CashierMenu CashierWIndow = new CashierMenu();
+                    this.Hide();
+                    CashierWIndow.ShowDialog();
+                    this.Close();
                 }
             }
             else
