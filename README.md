@@ -9,4 +9,7 @@ Simple Bank system made in C3 and MySQL
 - Decoder-banmex 1.0
 
 #Project Managers
-- David Garcia aka Me.
+- David Kiyoshi Garcia Azano.
+- Laura Jazmin Macías Martinez.
+- José Miguel Rodriguez Seáñez.
+- Uriel de Jesús Vallejo Sierra.
