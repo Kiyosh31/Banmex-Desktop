@@ -107,6 +107,7 @@
             this.Controls.Add(this.userLabel);
             this.Controls.Add(this.userTextbox);
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión BANMEX";
             this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userPicturebox)).EndInit();

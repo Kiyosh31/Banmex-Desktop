@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Banmex.Class
 {
-    class Connection
+    public class Connection
     {
         public MySqlConnection myConnection;
 

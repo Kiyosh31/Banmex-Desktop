@@ -14,19 +14,16 @@ namespace Banmex.Menu
     public partial class ManagerMenu : Form
     {
         Class.Connection Connection = new Class.Connection();
-        Class.Employee employee;
 
         public ManagerMenu()
         {
             InitializeComponent();
-
-            
         }
 
         private void employeesButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ShowEmployees EmployeesWindow = new ShowEmployees();
+            ShowEmployees EmployeesWindow = new ShowEmployees(Connection);
             EmployeesWindow.ShowDialog();
             this.Show();
         }

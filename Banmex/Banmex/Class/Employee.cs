@@ -68,5 +68,11 @@ namespace Banmex.Class
             Employee e = null;
             return e;
         }
+
+        public static MySqlDataAdapter showAllEmployees(MySqlConnection connection)
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT idEmployee as ID, firstName as Nombre, lastName as Apellido, address as Domicilio, cellphone as Celular, position as Puesto", connection);
+            return da;
+        }
     }
 }
