@@ -21,17 +21,13 @@ namespace Banmex.Menu
             this.Connection = Connection;
 
             //Ajustar la tabla a la ventana
-            //employesGridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            employesGridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         public void loadData()
         {
             Connection.OpenConnection();
-            MySqlDataAdapter da = Class.Employee.showAllEmployees(Connection.myConnection);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "employee");
-            employesGridview.DataSource = ds;
-            employesGridview.DataMember = "employee";
+            employesGridview.DataSource = Class.Employee.showAllEmployees(Connection.myConnection);
             Connection.CloseConnection();
         }
 

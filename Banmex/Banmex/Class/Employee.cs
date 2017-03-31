@@ -13,14 +13,20 @@ namespace Banmex.Class
         private int idEmployee;
         private string firstName;
         private string lastName;
+        private string address;
+        private int cellphone;
+        private string password;
         private int jobPosition;
         private bool active;
 
-        public Employee(int idEmployee, string firstName, string lastName, int jobPosition, bool active)
+        public Employee(int idEmployee, string firstName, string lastName, string address, int cellphone, string password, int jobPosition, bool active)
         {
             this.idEmployee = idEmployee;
             this.firstName = firstName;
             this.lastName = lastName;
+            this.address = address;
+            this.cellphone = cellphone;
+            this.password = password;
             this.jobPosition = jobPosition;
             this.active = active;
         }
@@ -43,7 +49,25 @@ namespace Banmex.Class
             set { lastName = value; }
         }
 
-        public int JobPosotion
+        public string Address
+        {
+            get { return address; }
+            set { address = value; }
+        }
+
+        public int Cellphone
+        {
+            get { return cellphone; }
+            set { cellphone = value; }
+        }
+
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+
+        public int JobPosition
         {
             get { return jobPosition; }
             set { jobPosition = value; }
@@ -55,24 +79,21 @@ namespace Banmex.Class
             set { active = value; }
         }
 
-        public static Employee SearchEmployee(MySqlConnection Connection, string firstName)
+
+
+        public static IList<Employee> showAllEmployees(MySqlConnection Connection)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM employee WHERE firstName = {0} AND active = 1", firstName), Connection);
+            List<Employee> employeeList = new List<Employee>();
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM employee WHERE active = true"), Connection);
             MySqlDataReader reader = command.ExecuteReader();
 
-            if (reader.Read())
+            while(reader.Read())
             {
-                Employee employee = new Employee(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetBoolean(4));
-                return employee;
+                Employee employee = new Employee(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4), reader.GetString(5), reader.GetInt32(6), reader.GetBoolean(7));
+                employeeList.Add(employee);
             }
-            Employee e = null;
-            return e;
-        }
 
-        public static MySqlDataAdapter showAllEmployees(MySqlConnection connection)
-        {
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT idEmployee as ID, firstName as Nombre, lastName as Apellido, address as Domicilio, cellphone as Celular, position as Puesto", connection);
-            return da;
+            return employeeList;
         }
     }
 }
