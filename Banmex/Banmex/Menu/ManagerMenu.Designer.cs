@@ -112,6 +112,7 @@
             this.showClientButton.TabIndex = 4;
             this.showClientButton.Text = "Ver";
             this.showClientButton.UseVisualStyleBackColor = true;
+            this.showClientButton.Click += new System.EventHandler(this.showClientButton_Click);
             // 
             // employeeLabel
             // 

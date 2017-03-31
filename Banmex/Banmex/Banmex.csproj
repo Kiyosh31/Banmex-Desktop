@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Client.cs" />
     <Compile Include="Class\Connection.cs" />
     <Compile Include="Class\Employee.cs" />
     <Compile Include="login.cs">
@@ -66,6 +67,12 @@
     <Compile Include="Menu\CashierMenu.Designer.cs">
       <DependentUpon>CashierMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\ShowClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\ShowClients.Designer.cs">
+      <DependentUpon>ShowClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\ShowEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\CashierMenu.resx">
       <DependentUpon>CashierMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\ShowClients.resx">
+      <DependentUpon>ShowClients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\ShowEmployees.resx">
       <DependentUpon>ShowEmployees.cs</DependentUpon>

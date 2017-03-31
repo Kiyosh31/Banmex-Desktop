@@ -27,5 +27,13 @@ namespace Banmex.Menu
             EmployeesWindow.ShowDialog();
             this.Show();
         }
+
+        private void showClientButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ShowClients ClientsWindow = new ShowClients(Connection);
+            ClientsWindow.ShowDialog();
+            this.Show();
+        }
     }
 }
