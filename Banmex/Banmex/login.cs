@@ -19,8 +19,6 @@ namespace Banmex
         public login()
         {
             InitializeComponent();
-
-            loginButton.Enabled = false;
         }
 
         private void login_Load(object sender, EventArgs e)
@@ -30,64 +28,57 @@ namespace Banmex
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            Connection.OpenConnection();
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * from employee WHERE firstName = '{0}' AND password = '{1}'", userTextbox.Text, passwordTextbox.Text), Connection.myConnection);
-            MySqlDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
+            if(userTextbox.Text == "" || passwordTextbox.Text == "")
             {
-                if(reader.GetInt32(6) == 0)
-                {
-                    Connection.CloseConnection();
-                    Connection.OpenConnection();
-                    //Class.Employee employee = Class.Employee.SearchEmployee(Connection.myConnection, userTextbox.Text);
-                    Connection.CloseConnection();
-                    MessageBox.Show("Sesion iniciada como admin");
-                    ManagerMenu ManagerWindow = new ManagerMenu();
-                    this.Hide();
-                    ManagerWindow.ShowDialog();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Sesion iniciada como cajero");
-                    Connection.CloseConnection();
-                    CashierMenu CashierWIndow = new CashierMenu();
-                    this.Hide();
-                    CashierWIndow.ShowDialog();
-                    this.Close();
-                }
+                MessageBox.Show("Favor de llenar todos los campos");
             }
             else
             {
-                MessageBox.Show("ID o Contraseña Incorrectos", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                Connection.OpenConnection();
+                MySqlCommand command = new MySqlCommand(String.Format("SELECT * from employee WHERE firstName = '{0}' AND password = '{1}'", userTextbox.Text, passwordTextbox.Text), Connection.myConnection);
+                MySqlDataReader reader = command.ExecuteReader();
 
-            Connection.CloseConnection();
+                if (reader.Read())
+                {
+                    if (reader.GetInt32(6) == 0)
+                    {
+                        Connection.CloseConnection();
+                        Connection.OpenConnection();
+                        //Class.Employee employee = Class.Employee.SearchEmployee(Connection.myConnection, userTextbox.Text);
+                        Connection.CloseConnection();
+                        MessageBox.Show("Sesion iniciada como admin");
+                        ManagerMenu ManagerWindow = new ManagerMenu(Connection);
+                        this.Hide();
+                        ManagerWindow.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sesion iniciada como cajero");
+                        Connection.CloseConnection();
+                        CashierMenu CashierWIndow = new CashierMenu(Connection);
+                        this.Hide();
+                        CashierWIndow.ShowDialog();
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ID o Contraseña Incorrectos", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                Connection.CloseConnection();
+            }
         }
 
         private void userTextbox_TextChanged(object sender, EventArgs e)
         {
-            if (userTextbox.Text == "")
-            {
-                loginButton.Enabled = false;
-            }
-            else if (passwordTextbox.Text != "")
-            {
-                loginButton.Enabled = true;
-            }
+            
         }
 
         private void passwordTextbox_TextChanged(object sender, EventArgs e)
         {
-            if (passwordTextbox.Text == "")
-            {
-                loginButton.Enabled = false;
-            }
-            else if (userTextbox.Text != "")
-            {
-                loginButton.Enabled = true;
-            }
+            
         }
     }
 }

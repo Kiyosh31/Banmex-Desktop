@@ -55,6 +55,18 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\AddClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\AddClient.Designer.cs">
+      <DependentUpon>AddClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\ManagerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,18 @@
     </Compile>
     <Compile Include="Menu\CashierMenu.Designer.cs">
       <DependentUpon>CashierMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\ModifyClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\ModifyClient.Designer.cs">
+      <DependentUpon>ModifyClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\ModifyEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\ModifyEmployee.Designer.cs">
+      <DependentUpon>ModifyEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\ShowClients.cs">
       <SubType>Form</SubType>
@@ -84,11 +108,23 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\addClient.resx">
+      <DependentUpon>AddClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\ManagerMenu.resx">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\CashierMenu.resx">
       <DependentUpon>CashierMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\ModifyClient.resx">
+      <DependentUpon>ModifyClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\ModifyEmployee.resx">
+      <DependentUpon>ModifyEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\ShowClients.resx">
       <DependentUpon>ShowClients.cs</DependentUpon>

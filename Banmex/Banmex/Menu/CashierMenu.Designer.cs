@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierMenu));
             this.addClientButton = new System.Windows.Forms.Button();
             this.clientLabel = new System.Windows.Forms.Label();
             this.showClientButton = new System.Windows.Forms.Button();
-            this.modifyClientButton = new System.Windows.Forms.Button();
-            this.deleteClientButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addClientButton
             // 
-            this.addClientButton.Location = new System.Drawing.Point(36, 49);
+            this.addClientButton.Location = new System.Drawing.Point(106, 49);
             this.addClientButton.Name = "addClientButton";
             this.addClientButton.Size = new System.Drawing.Size(127, 52);
             this.addClientButton.TabIndex = 0;
             this.addClientButton.Text = "Agregar";
             this.addClientButton.UseVisualStyleBackColor = true;
+            this.addClientButton.Click += new System.EventHandler(this.addClientButton_Click);
             // 
             // clientLabel
             // 
             this.clientLabel.AutoSize = true;
-            this.clientLabel.Location = new System.Drawing.Point(70, 9);
+            this.clientLabel.BackColor = System.Drawing.Color.Transparent;
+            this.clientLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.clientLabel.Location = new System.Drawing.Point(140, 9);
             this.clientLabel.Name = "clientLabel";
             this.clientLabel.Size = new System.Drawing.Size(51, 17);
             this.clientLabel.TabIndex = 1;
@@ -55,38 +57,20 @@
             // 
             // showClientButton
             // 
-            this.showClientButton.Location = new System.Drawing.Point(36, 120);
+            this.showClientButton.Location = new System.Drawing.Point(106, 120);
             this.showClientButton.Name = "showClientButton";
             this.showClientButton.Size = new System.Drawing.Size(127, 52);
             this.showClientButton.TabIndex = 2;
             this.showClientButton.Text = "Ver";
             this.showClientButton.UseVisualStyleBackColor = true;
-            // 
-            // modifyClientButton
-            // 
-            this.modifyClientButton.Location = new System.Drawing.Point(36, 201);
-            this.modifyClientButton.Name = "modifyClientButton";
-            this.modifyClientButton.Size = new System.Drawing.Size(127, 52);
-            this.modifyClientButton.TabIndex = 3;
-            this.modifyClientButton.Text = "Modificar";
-            this.modifyClientButton.UseVisualStyleBackColor = true;
-            // 
-            // deleteClientButton
-            // 
-            this.deleteClientButton.Location = new System.Drawing.Point(36, 281);
-            this.deleteClientButton.Name = "deleteClientButton";
-            this.deleteClientButton.Size = new System.Drawing.Size(127, 52);
-            this.deleteClientButton.TabIndex = 4;
-            this.deleteClientButton.Text = "Eliminar";
-            this.deleteClientButton.UseVisualStyleBackColor = true;
+            this.showClientButton.Click += new System.EventHandler(this.showClientButton_Click);
             // 
             // CashierMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(343, 445);
-            this.Controls.Add(this.deleteClientButton);
-            this.Controls.Add(this.modifyClientButton);
             this.Controls.Add(this.showClientButton);
             this.Controls.Add(this.clientLabel);
             this.Controls.Add(this.addClientButton);
@@ -103,7 +87,5 @@
         private System.Windows.Forms.Button addClientButton;
         private System.Windows.Forms.Label clientLabel;
         private System.Windows.Forms.Button showClientButton;
-        private System.Windows.Forms.Button modifyClientButton;
-        private System.Windows.Forms.Button deleteClientButton;
     }
 }

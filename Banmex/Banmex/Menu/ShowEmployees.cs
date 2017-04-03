@@ -35,5 +35,29 @@ namespace Banmex.Menu
         {
             loadData();
         }
+
+        private void modifyButton_Click(object sender, EventArgs e)
+        {
+            string idEmployee = employesGridview.CurrentRow.Cells[0].Value.ToString();
+            ModifyEmployee modWindow = new ModifyEmployee(Connection, idEmployee);
+            modWindow.ShowDialog();
+            loadData();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Seguro que desea eliminar este elemento?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if(result == DialogResult.Yes)
+            {
+                string idEmployee = employesGridview.CurrentRow.Cells[0].Value.ToString();
+                Connection.OpenConnection();
+                Class.Employee.deleteEmployee(Connection.myConnection, idEmployee);
+                Connection.CloseConnection();
+
+                MessageBox.Show("Eliminado exitosamente");
+                loadData();
+            }
+        }
     }
 }

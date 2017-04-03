@@ -15,7 +15,7 @@ namespace Banmex.Menu
     {
         Class.Connection Connection = new Class.Connection();
 
-        public ManagerMenu()
+        public ManagerMenu(Class.Connection Connection)
         {
             InitializeComponent();
         }
@@ -28,11 +28,27 @@ namespace Banmex.Menu
             this.Show();
         }
 
+        private void addEmployeeButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddEmployee addWindow = new AddEmployee(Connection);
+            addWindow.ShowDialog();
+            this.Show();
+        }
+
         private void showClientButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             ShowClients ClientsWindow = new ShowClients(Connection);
             ClientsWindow.ShowDialog();
+            this.Show();
+        }
+
+        private void addClientButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddClient addWindow = new AddClient(Connection);
+            addWindow.ShowDialog();
             this.Show();
         }
     }

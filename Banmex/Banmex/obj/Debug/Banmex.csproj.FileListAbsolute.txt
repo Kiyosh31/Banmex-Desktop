@@ -22,3 +22,7 @@ C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.ManagerMenu.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.ShowEmployees.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.showClients.resources
+C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.addEmployee.resources
+C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.addClient.resources
+C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.ModifyEmployee.resources
+C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.ModifyClient.resources

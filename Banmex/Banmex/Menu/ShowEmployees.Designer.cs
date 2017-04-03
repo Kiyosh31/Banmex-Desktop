@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.employesGridview = new System.Windows.Forms.DataGridView();
+            this.modifyButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.employesGridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -37,18 +39,40 @@
             this.employesGridview.AllowUserToAddRows = false;
             this.employesGridview.AllowUserToDeleteRows = false;
             this.employesGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employesGridview.Location = new System.Drawing.Point(13, 13);
+            this.employesGridview.Location = new System.Drawing.Point(12, 12);
             this.employesGridview.Name = "employesGridview";
             this.employesGridview.ReadOnly = true;
             this.employesGridview.RowTemplate.Height = 24;
-            this.employesGridview.Size = new System.Drawing.Size(858, 352);
+            this.employesGridview.Size = new System.Drawing.Size(637, 439);
             this.employesGridview.TabIndex = 0;
+            // 
+            // modifyButton
+            // 
+            this.modifyButton.Location = new System.Drawing.Point(711, 113);
+            this.modifyButton.Name = "modifyButton";
+            this.modifyButton.Size = new System.Drawing.Size(147, 60);
+            this.modifyButton.TabIndex = 1;
+            this.modifyButton.Text = "Modificar";
+            this.modifyButton.UseVisualStyleBackColor = true;
+            this.modifyButton.Click += new System.EventHandler(this.modifyButton_Click);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Location = new System.Drawing.Point(711, 253);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(147, 60);
+            this.deleteButton.TabIndex = 2;
+            this.deleteButton.Text = "Eliminar";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // ShowEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 377);
+            this.ClientSize = new System.Drawing.Size(917, 463);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.employesGridview);
             this.Name = "ShowEmployees";
             this.Text = "Mostrar Empleados";
@@ -61,5 +85,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView employesGridview;
+        private System.Windows.Forms.Button modifyButton;
+        private System.Windows.Forms.Button deleteButton;
     }
 }

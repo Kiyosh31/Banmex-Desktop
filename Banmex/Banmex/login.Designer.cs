@@ -49,6 +49,7 @@
             // userLabel
             // 
             this.userLabel.AutoSize = true;
+            this.userLabel.BackColor = System.Drawing.Color.Transparent;
             this.userLabel.Location = new System.Drawing.Point(101, 193);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(57, 17);
@@ -58,6 +59,7 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
             this.passwordLabel.Location = new System.Drawing.Point(101, 257);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(81, 17);
@@ -85,6 +87,7 @@
             // 
             // userPicturebox
             // 
+            this.userPicturebox.BackColor = System.Drawing.Color.Transparent;
             this.userPicturebox.ErrorImage = null;
             this.userPicturebox.Image = global::Banmex.Properties.Resources.user_icon;
             this.userPicturebox.InitialImage = ((System.Drawing.Image)(resources.GetObject("userPicturebox.InitialImage")));
@@ -99,6 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(404, 458);
             this.Controls.Add(this.userPicturebox);
             this.Controls.Add(this.loginButton);
