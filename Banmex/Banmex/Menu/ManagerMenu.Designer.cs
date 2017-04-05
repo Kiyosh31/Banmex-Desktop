@@ -35,6 +35,8 @@
             this.showClientButton = new System.Windows.Forms.Button();
             this.employeeLabel = new System.Windows.Forms.Label();
             this.clientLabel = new System.Windows.Forms.Label();
+            this.retrieveEmployeesButton = new System.Windows.Forms.Button();
+            this.retrieveClientsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // showEmployeeButton
@@ -99,12 +101,34 @@
             this.clientLabel.TabIndex = 9;
             this.clientLabel.Text = "Clientes";
             // 
+            // retrieveEmployeesButton
+            // 
+            this.retrieveEmployeesButton.Location = new System.Drawing.Point(12, 222);
+            this.retrieveEmployeesButton.Name = "retrieveEmployeesButton";
+            this.retrieveEmployeesButton.Size = new System.Drawing.Size(149, 72);
+            this.retrieveEmployeesButton.TabIndex = 10;
+            this.retrieveEmployeesButton.Text = "Recuperar";
+            this.retrieveEmployeesButton.UseVisualStyleBackColor = true;
+            this.retrieveEmployeesButton.Click += new System.EventHandler(this.retrieveButton_Click);
+            // 
+            // retrieveClientsButton
+            // 
+            this.retrieveClientsButton.Location = new System.Drawing.Point(181, 222);
+            this.retrieveClientsButton.Name = "retrieveClientsButton";
+            this.retrieveClientsButton.Size = new System.Drawing.Size(149, 72);
+            this.retrieveClientsButton.TabIndex = 11;
+            this.retrieveClientsButton.Text = "Recuperar";
+            this.retrieveClientsButton.UseVisualStyleBackColor = true;
+            this.retrieveClientsButton.Click += new System.EventHandler(this.retrieveClientsButton_Click);
+            // 
             // ManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(342, 242);
+            this.ClientSize = new System.Drawing.Size(342, 306);
+            this.Controls.Add(this.retrieveClientsButton);
+            this.Controls.Add(this.retrieveEmployeesButton);
             this.Controls.Add(this.clientLabel);
             this.Controls.Add(this.employeeLabel);
             this.Controls.Add(this.addClientButton);
@@ -127,5 +151,7 @@
         private System.Windows.Forms.Button showClientButton;
         private System.Windows.Forms.Label employeeLabel;
         private System.Windows.Forms.Label clientLabel;
+        private System.Windows.Forms.Button retrieveEmployeesButton;
+        private System.Windows.Forms.Button retrieveClientsButton;
     }
 }

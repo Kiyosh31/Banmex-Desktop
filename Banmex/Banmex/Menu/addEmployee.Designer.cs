@@ -33,15 +33,17 @@
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameLabel = new System.Windows.Forms.Label();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.phoneLabel = new System.Windows.Forms.Label();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.emailLabel = new System.Windows.Forms.Label();
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.addressLabel = new System.Windows.Forms.Label();
-            this.cellphoneTextBox = new System.Windows.Forms.TextBox();
-            this.cellphoneLabel = new System.Windows.Forms.Label();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.passwordLabel = new System.Windows.Forms.Label();
             this.positionLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
             this.positionComboBox = new System.Windows.Forms.ComboBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.passwordLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -80,67 +82,66 @@
             this.lastNameLabel.TabIndex = 2;
             this.lastNameLabel.Text = "Apellido";
             // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.Location = new System.Drawing.Point(29, 174);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(205, 22);
+            this.phoneTextBox.TabIndex = 5;
+            // 
+            // phoneLabel
+            // 
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.BackColor = System.Drawing.Color.Transparent;
+            this.phoneLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.phoneLabel.Location = new System.Drawing.Point(26, 154);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(64, 17);
+            this.phoneLabel.TabIndex = 4;
+            this.phoneLabel.Text = "Telefono";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Location = new System.Drawing.Point(29, 235);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(205, 22);
+            this.emailTextBox.TabIndex = 7;
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.emailLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.emailLabel.Location = new System.Drawing.Point(26, 215);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(125, 17);
+            this.emailLabel.TabIndex = 6;
+            this.emailLabel.Text = "Correo Electronico";
+            // 
             // addressTextBox
             // 
-            this.addressTextBox.Location = new System.Drawing.Point(29, 174);
+            this.addressTextBox.Location = new System.Drawing.Point(29, 299);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(205, 22);
-            this.addressTextBox.TabIndex = 5;
+            this.addressTextBox.TabIndex = 9;
             // 
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
             this.addressLabel.BackColor = System.Drawing.Color.Transparent;
             this.addressLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addressLabel.Location = new System.Drawing.Point(26, 154);
+            this.addressLabel.Location = new System.Drawing.Point(26, 279);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(64, 17);
-            this.addressLabel.TabIndex = 4;
+            this.addressLabel.TabIndex = 8;
             this.addressLabel.Text = "Domicilio";
-            // 
-            // cellphoneTextBox
-            // 
-            this.cellphoneTextBox.Location = new System.Drawing.Point(29, 235);
-            this.cellphoneTextBox.Name = "cellphoneTextBox";
-            this.cellphoneTextBox.Size = new System.Drawing.Size(205, 22);
-            this.cellphoneTextBox.TabIndex = 7;
-            // 
-            // cellphoneLabel
-            // 
-            this.cellphoneLabel.AutoSize = true;
-            this.cellphoneLabel.BackColor = System.Drawing.Color.Transparent;
-            this.cellphoneLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cellphoneLabel.Location = new System.Drawing.Point(26, 215);
-            this.cellphoneLabel.Name = "cellphoneLabel";
-            this.cellphoneLabel.Size = new System.Drawing.Size(118, 17);
-            this.cellphoneLabel.TabIndex = 6;
-            this.cellphoneLabel.Text = "Numero Telefono";
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.Location = new System.Drawing.Point(29, 299);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(205, 22);
-            this.passwordTextBox.TabIndex = 9;
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
-            this.passwordLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.passwordLabel.Location = new System.Drawing.Point(26, 279);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(81, 17);
-            this.passwordLabel.TabIndex = 8;
-            this.passwordLabel.Text = "Contraseña";
             // 
             // positionLabel
             // 
             this.positionLabel.AutoSize = true;
             this.positionLabel.BackColor = System.Drawing.Color.Transparent;
             this.positionLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.positionLabel.Location = new System.Drawing.Point(32, 347);
+            this.positionLabel.Location = new System.Drawing.Point(32, 404);
             this.positionLabel.Name = "positionLabel";
             this.positionLabel.Size = new System.Drawing.Size(61, 17);
             this.positionLabel.TabIndex = 10;
@@ -148,7 +149,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(258, 430);
+            this.addButton.Location = new System.Drawing.Point(250, 492);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(129, 44);
             this.addButton.TabIndex = 12;
@@ -162,26 +163,47 @@
             this.positionComboBox.Items.AddRange(new object[] {
             "Gerente",
             "Cajero"});
-            this.positionComboBox.Location = new System.Drawing.Point(29, 367);
+            this.positionComboBox.Location = new System.Drawing.Point(29, 424);
             this.positionComboBox.Name = "positionComboBox";
             this.positionComboBox.Size = new System.Drawing.Size(205, 24);
             this.positionComboBox.TabIndex = 13;
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.Location = new System.Drawing.Point(35, 364);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
+            this.passwordTextBox.Size = new System.Drawing.Size(205, 22);
+            this.passwordTextBox.TabIndex = 15;
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.passwordLabel.Location = new System.Drawing.Point(32, 344);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(81, 17);
+            this.passwordLabel.TabIndex = 14;
+            this.passwordLabel.Text = "Contraseña";
             // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(399, 486);
+            this.ClientSize = new System.Drawing.Size(391, 548);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.positionComboBox);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.positionLabel);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.passwordLabel);
-            this.Controls.Add(this.cellphoneTextBox);
-            this.Controls.Add(this.cellphoneLabel);
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.addressLabel);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.emailLabel);
+            this.Controls.Add(this.phoneTextBox);
+            this.Controls.Add(this.phoneLabel);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.firstNameTextBox);
@@ -200,14 +222,16 @@
         private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.TextBox lastNameTextBox;
         private System.Windows.Forms.Label lastNameLabel;
+        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.Label phoneLabel;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.Label addressLabel;
-        private System.Windows.Forms.TextBox cellphoneTextBox;
-        private System.Windows.Forms.Label cellphoneLabel;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label positionLabel;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.ComboBox positionComboBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.Label passwordLabel;
     }
 }

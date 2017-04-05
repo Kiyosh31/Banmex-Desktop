@@ -1,6 +1,5 @@
-INSERT INTO client (firstName, lastName, phone, rfc, active)
-VALUES
-('david', 'garcia', 33138610, 'DAGA3313ABC', true),
-('jazmin', 'macias', 33548910, 'JAMA3354DEF', true),
-('miguel', 'seañez', 33897560, 'MISE3389GHI', true),
-('uriel', 'vallejo', 33638954, 'URVA3363JKL', true);
+INSERT INTO client (FirstName, LastName, Phone, Email, Address, Active) 
+VALUES ('David', 'Garcia', '3313861013', 'david_5043@hotmail.com', 'Monte Parnaso', true),
+		('jazmin', 'Macias', '3315897036', 'jaz_ma@gmail.com', 'tlajolotlan', true),
+        ('Miguel', 'Rodriguez', '3639785230', 'migue@live.com', 'sierra madre', true),
+        ('Uriel', 'Vallejo', '15789245', 'vallejo@yahoo.com', 'tonala', true);

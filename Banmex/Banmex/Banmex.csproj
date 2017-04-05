@@ -91,6 +91,18 @@
     <Compile Include="Menu\ModifyEmployee.Designer.cs">
       <DependentUpon>ModifyEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\RetrieveClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\RetrieveClients.Designer.cs">
+      <DependentUpon>RetrieveClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\RetrieveEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\RetrieveEmployees.Designer.cs">
+      <DependentUpon>RetrieveEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\ShowClients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\ModifyEmployee.resx">
       <DependentUpon>ModifyEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\RetrieveClients.resx">
+      <DependentUpon>RetrieveClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\RetrieveEmployees.resx">
+      <DependentUpon>RetrieveEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\ShowClients.resx">
       <DependentUpon>ShowClients.cs</DependentUpon>

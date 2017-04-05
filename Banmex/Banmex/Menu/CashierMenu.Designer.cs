@@ -32,6 +32,7 @@
             this.addClientButton = new System.Windows.Forms.Button();
             this.clientLabel = new System.Windows.Forms.Label();
             this.showClientButton = new System.Windows.Forms.Button();
+            this.retrieveClientsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addClientButton
@@ -65,12 +66,23 @@
             this.showClientButton.UseVisualStyleBackColor = true;
             this.showClientButton.Click += new System.EventHandler(this.showClientButton_Click);
             // 
+            // retrieveClientsButton
+            // 
+            this.retrieveClientsButton.Location = new System.Drawing.Point(106, 188);
+            this.retrieveClientsButton.Name = "retrieveClientsButton";
+            this.retrieveClientsButton.Size = new System.Drawing.Size(127, 52);
+            this.retrieveClientsButton.TabIndex = 3;
+            this.retrieveClientsButton.Text = "Recuperar";
+            this.retrieveClientsButton.UseVisualStyleBackColor = true;
+            this.retrieveClientsButton.Click += new System.EventHandler(this.retrieveClientsButton_Click);
+            // 
             // CashierMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(343, 445);
+            this.ClientSize = new System.Drawing.Size(343, 312);
+            this.Controls.Add(this.retrieveClientsButton);
             this.Controls.Add(this.showClientButton);
             this.Controls.Add(this.clientLabel);
             this.Controls.Add(this.addClientButton);
@@ -87,5 +99,6 @@
         private System.Windows.Forms.Button addClientButton;
         private System.Windows.Forms.Label clientLabel;
         private System.Windows.Forms.Button showClientButton;
+        private System.Windows.Forms.Button retrieveClientsButton;
     }
 }

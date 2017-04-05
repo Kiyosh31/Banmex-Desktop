@@ -23,16 +23,15 @@ namespace Banmex.Menu
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            if(firstNameTextBox.Text == "" || lastNameTextBox.Text == "" || cellphoneTextBox.Text == "" || rfcTextBox.Text == "")
+            if(firstNameTextBox.Text == "" || lastNameTextBox.Text == "" || phoneTextBox.Text == "" || emailTextBox.Text == "" || addresTextBox.Text == "")
             {
                 MessageBox.Show("Favor de llenar todos los campos");
             }
             else
             {
                 Connection.OpenConnection();
-                int cellphone = Int32.Parse(cellphoneTextBox.Text);
 
-                Class.Client client = new Class.Client(1, firstNameTextBox.Text, lastNameTextBox.Text, cellphone, rfcTextBox.Text);
+                Class.Client client = new Class.Client(1, firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, emailTextBox.Text, addresTextBox.Text, true);
                 Class.Client.addClient(Connection.myConnection, client);
                 Connection.CloseConnection();
 

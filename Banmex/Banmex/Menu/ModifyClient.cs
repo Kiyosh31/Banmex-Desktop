@@ -32,21 +32,22 @@ namespace Banmex.Menu
             idTextBox.Text = Convert.ToString(client.IdClient);
             firstNameTextBox.Text = client.FirstName;
             lastNameTextBox.Text = client.LastName;
-            phoneTextbox.Text = Convert.ToString(client.Phone);
-            rfcTextBox.Text = client.Rfc;
+            phoneTextBox.Text = client.Phone;
+            emailtextBox.Text = client.Email;
+            addressTextBox.Text = client.Address;
             Connection.CloseConnection();
         }
 
         private void modifyButton_Click(object sender, EventArgs e)
         {
-            if(firstNameTextBox.Text == "" || lastNameTextBox.Text == "" || phoneTextbox.Text == "" || rfcTextBox.Text == "")
+            if(firstNameTextBox.Text == "" || lastNameTextBox.Text == "" || phoneTextBox.Text == "" || emailtextBox.Text == "" || addressTextBox.Text == "")
             {
                 MessageBox.Show("Favor de llenar todos los campos");
             }
             else
             {
                 Connection.OpenConnection();
-                Class.Client client = new Class.Client(int.Parse(idClient), firstNameTextBox.Text, lastNameTextBox.Text, Int32.Parse(phoneTextbox.Text), rfcTextBox.Text);
+                Class.Client client = new Class.Client(int.Parse(idClient), firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, emailtextBox.Text, addressTextBox.Text, true);
                 Class.Client.modifyClient(Connection.myConnection, client);
                 Connection.CloseConnection();
 

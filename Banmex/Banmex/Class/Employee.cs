@@ -13,21 +13,23 @@ namespace Banmex.Class
         private int idEmployee;
         private string firstName;
         private string lastName;
+        private string phone;
+        private string email;
         private string address;
-        private int cellphone;
         private string password;
-        private int jobPosition;
+        private int employeeType;
         private bool active;
 
-        public Employee(int idEmployee, string firstName, string lastName, string address, int cellphone, string password, int jobPosition, bool active)
+        public Employee(int idEmployee, string firstName, string lastName, string phone, string email, string address, string password, int employeeType, bool active)
         {
             this.idEmployee = idEmployee;
             this.firstName = firstName;
             this.lastName = lastName;
+            this.phone = phone;
+            this.email = email;
             this.address = address;
-            this.cellphone = cellphone;
             this.password = password;
-            this.jobPosition = jobPosition;
+            this.employeeType = employeeType;
             this.active = active;
         }
 
@@ -48,17 +50,23 @@ namespace Banmex.Class
             get { return lastName; }
             set { lastName = value; }
         }
+        
+        public string Phone
+        {
+            get { return phone; }
+            set { phone = value; }
+        }
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
 
         public string Address
         {
             get { return address; }
             set { address = value; }
-        }
-
-        public int Cellphone
-        {
-            get { return cellphone; }
-            set { cellphone = value; }
         }
 
         public string Password
@@ -67,10 +75,10 @@ namespace Banmex.Class
             set { password = value; }
         }
 
-        public int JobPosition
+        public int EmployeeType
         {
-            get { return jobPosition; }
-            set { jobPosition = value; }
+            get { return employeeType; }
+            set { employeeType = value; }
         }
 
         public bool Active
@@ -79,11 +87,9 @@ namespace Banmex.Class
             set { active = value; }
         }
 
-
-        public static int addEmployee(MySqlConnection Connection, Employee newEmployee)
+        public static int addEmployee(MySqlConnection Connection, Employee employee)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO employee(firstName, lastName, address, cellphone, password, position, active) VALUES ('{0}', '{1}', '{2}', {3}, '{4}', {5}, true)", newEmployee.firstName, newEmployee.lastName, newEmployee.address, newEmployee.cellphone, newEmployee.password, newEmployee.jobPosition), Connection);
-
+            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO employee (FirstName, LastName, Phone, Email, Address, Password, EmployeeType, Active) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', {6}, true)", employee.firstName, employee.lastName, employee.phone, employee.email, employee.address, employee.password, employee.employeeType), Connection);
             /// if OK = 1 it's ok
             /// if OK = 0 error
             int OK = command.ExecuteNonQuery();
@@ -97,7 +103,7 @@ namespace Banmex.Class
 
             if (reader.Read())
             {
-                Employee employee = new Employee(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4), reader.GetString(5), reader.GetInt32(6), reader.GetBoolean(7));
+                Employee employee = new Employee(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7) ,reader.GetBoolean(8));
                 return employee;
             }
             Employee e = null;
@@ -106,14 +112,16 @@ namespace Banmex.Class
 
         public static int modifyEmployee(MySqlConnection Connection, Employee employee)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("UPDATE employee SET firstName = '{1}', lastName = '{2}', address = '{3}', cellphone = {4}, password = '{5}', position = {6}, active = true WHERE idEmployee = {0}", employee.ID ,employee.firstName, employee.lastName, employee.address, employee.cellphone, employee.password, employee.jobPosition), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format(
+                "UPDATE employee SET firstName = '{1}', lastName = '{2}', phone = '{3}', email = {4}, address = '{5}', password = '{6}', employeeType = {6}, Active = true WHERE idEmployee = {0}", 
+                employee.ID ,employee.firstName, employee.lastName, employee.phone, employee.email, employee.address, employee.password, employee.employeeType, true), Connection);
             int OK = command.ExecuteNonQuery();
             return OK;
         }
 
-        public static int deleteEmployee(MySqlConnection Connection, string name)
+        public static int deleteEmployee(MySqlConnection Connection, string idEmployee)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("UPDATE employee SET active = false WHERE idEmployee = '{0}'", name), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("UPDATE employee SET Active = false WHERE idEmployee = '{0}'", idEmployee), Connection);
             int OK = command.ExecuteNonQuery();
             return OK;
         }
@@ -121,16 +129,38 @@ namespace Banmex.Class
         public static IList<Employee> showAllEmployees(MySqlConnection Connection)
         {
             List<Employee> employeeList = new List<Employee>();
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM employee WHERE active = true"), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM employee WHERE Active = true"), Connection);
             MySqlDataReader reader = command.ExecuteReader();
 
             while(reader.Read())
             {
-                Employee employee = new Employee(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4), reader.GetString(5), reader.GetInt32(6), reader.GetBoolean(7));
+                Employee employee = new Employee(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7) ,reader.GetBoolean(8));
                 employeeList.Add(employee);
             }
 
             return employeeList;
+        }
+
+        public static IList<Employee> showDeletedEmployees(MySqlConnection Connection)
+        {
+            List<Employee> employeeList = new List<Employee>();
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM employee WHERE Active = false"), Connection);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            while(reader.Read())
+            {
+                Employee employee = new Employee(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7), reader.GetBoolean(8));
+                employeeList.Add(employee);
+            }
+
+            return employeeList;
+        }
+
+        public static int retrieveEmployee(MySqlConnection Connection, string idEmployee)
+        {
+            MySqlCommand command = new MySqlCommand(String.Format("UPDATE employee SET Active = true WHERE idEmployee = '{0}'", idEmployee), Connection);
+            int OK = command.ExecuteNonQuery();
+            return OK;
         }
     }
 }

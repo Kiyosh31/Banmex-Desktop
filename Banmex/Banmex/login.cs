@@ -35,16 +35,15 @@ namespace Banmex
             else
             {
                 Connection.OpenConnection();
-                MySqlCommand command = new MySqlCommand(String.Format("SELECT * from employee WHERE firstName = '{0}' AND password = '{1}'", userTextbox.Text, passwordTextbox.Text), Connection.myConnection);
+                MySqlCommand command = new MySqlCommand(String.Format("SELECT * from employee WHERE FirstName = '{0}' AND Password = '{1}'", userTextbox.Text, passwordTextbox.Text), Connection.myConnection);
                 MySqlDataReader reader = command.ExecuteReader();
 
                 if (reader.Read())
                 {
-                    if (reader.GetInt32(6) == 0)
+                    if (reader.GetInt32(7) == 0)
                     {
                         Connection.CloseConnection();
                         Connection.OpenConnection();
-                        //Class.Employee employee = Class.Employee.SearchEmployee(Connection.myConnection, userTextbox.Text);
                         Connection.CloseConnection();
                         MessageBox.Show("Sesion iniciada como admin");
                         ManagerMenu ManagerWindow = new ManagerMenu(Connection);

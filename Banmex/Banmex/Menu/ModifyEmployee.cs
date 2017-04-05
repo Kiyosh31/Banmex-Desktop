@@ -35,11 +35,12 @@ namespace Banmex.Menu
             idTextBox.Text = employee.ID.ToString();
             firstNameTextBox.Text = employee.FirstName;
             lastNameTextBox.Text = employee.LastName;
-            addresTextBox.Text = employee.Address;
-            cellphoneTextBox.Text = Convert.ToString(employee.Cellphone);
+            phoneTextBox.Text = employee.Phone;
+            emailTextBox.Text = employee.Email;
+            addressTextBox.Text = employee.Address;
             passwordTextBox.Text = employee.Password;
 
-            if (employee.JobPosition == 0)
+            if (employee.EmployeeType == 0)
             {
                 positionComboBox.Text = "Gerente";
             }
@@ -51,8 +52,8 @@ namespace Banmex.Menu
 
         private void modifyButton_Click(object sender, EventArgs e)
         {
-            if(firstNameTextBox.Text == "" || lastNameTextBox.Text == "" || addresTextBox.Text == "" || cellphoneTextBox.Text == ""
-                || passwordTextBox.Text == "" || positionComboBox.SelectedItem == null)
+            if(firstNameTextBox.Text == "" || lastNameTextBox.Text == "" || phoneTextBox.Text == "" || emailTextBox.Text == ""
+                || addressTextBox.Text == "" || passwordTextBox.Text == "" || positionComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Favor de llenar todos los campos");
             }
@@ -61,7 +62,7 @@ namespace Banmex.Menu
                 Connection.OpenConnection();
                 int position;
                 int cellphone;
-                cellphone = Int32.Parse(cellphoneTextBox.Text);
+                cellphone = Int32.Parse(emailTextBox.Text);
 
                 if (positionComboBox.Text == "Gerente")
                 {
@@ -72,7 +73,7 @@ namespace Banmex.Menu
                     position = 1;
                 }
 
-                Class.Employee employee = new Class.Employee(int.Parse(idEmployee), firstNameTextBox.Text, lastNameTextBox.Text, addresTextBox.Text, cellphone, passwordTextBox.Text, position, true);
+                Class.Employee employee = new Class.Employee(int.Parse(idEmployee), firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, emailTextBox.Text, addressTextBox.Text, passwordTextBox.Text, position ,true);
                 Class.Employee.modifyEmployee(Connection.myConnection, employee);
                 Connection.CloseConnection();
 

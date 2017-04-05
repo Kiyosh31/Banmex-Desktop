@@ -1,1 +1,1 @@
-DELETE FROM client WHERE idClient = 4
+DELETE FROM client where idClient = 2

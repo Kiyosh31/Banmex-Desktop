@@ -43,12 +43,12 @@
             this.employesGridview.Name = "employesGridview";
             this.employesGridview.ReadOnly = true;
             this.employesGridview.RowTemplate.Height = 24;
-            this.employesGridview.Size = new System.Drawing.Size(637, 439);
+            this.employesGridview.Size = new System.Drawing.Size(728, 439);
             this.employesGridview.TabIndex = 0;
             // 
             // modifyButton
             // 
-            this.modifyButton.Location = new System.Drawing.Point(711, 113);
+            this.modifyButton.Location = new System.Drawing.Point(758, 108);
             this.modifyButton.Name = "modifyButton";
             this.modifyButton.Size = new System.Drawing.Size(147, 60);
             this.modifyButton.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(711, 253);
+            this.deleteButton.Location = new System.Drawing.Point(758, 231);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(147, 60);
             this.deleteButton.TabIndex = 2;

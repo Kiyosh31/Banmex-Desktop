@@ -1,0 +1,2 @@
+INSERT INTO employee (FirstName, LastName, Phone, Email, Address, Password, EmployeeType, Active) 
+VALUES ('jonathan', 'ortiz', '15227097', 'happy_asgar@gmail.com', 'cerro de tequila', 'saurom', 1, true);client

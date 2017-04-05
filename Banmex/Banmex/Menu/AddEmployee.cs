@@ -23,8 +23,8 @@ namespace Banmex.Menu
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            if(firstNameTextBox.Text == "" || lastNameTextBox.Text == "" || addressTextBox.Text == "" || 
-                cellphoneTextBox.Text == "" || passwordTextBox.Text == "" || positionComboBox.SelectedItem == null)
+            if(firstNameTextBox.Text == "" || lastNameTextBox.Text == "" || phoneTextBox.Text == "" || 
+                emailTextBox.Text == "" || addressTextBox.Text == "" || positionComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Favor de llenar todos los campos");
             }
@@ -32,17 +32,18 @@ namespace Banmex.Menu
             {
                 Connection.OpenConnection();
                 int position;
-                int cellphone = Int32.Parse(cellphoneTextBox.Text);
                 if(positionComboBox.SelectedIndex == 0)
                 {
+                    // 0 = gerente
                     position = 0;
                 }
                 else
                 {
+                    //1 = empleado
                     position = 1;
                 }
 
-                Class.Employee newEmploye = new Class.Employee(1, firstNameTextBox.Text, lastNameTextBox.Text, addressTextBox.Text, cellphone, passwordTextBox.Text, position, true);
+                Class.Employee newEmploye = new Class.Employee(1, firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, emailTextBox.Text, addressTextBox.Text, passwordTextBox.Text, position ,true);
                 Class.Employee.addEmployee(Connection.myConnection, newEmploye);
                 Connection.CloseConnection();
 

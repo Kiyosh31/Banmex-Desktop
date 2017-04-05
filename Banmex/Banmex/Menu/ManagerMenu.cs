@@ -51,5 +51,21 @@ namespace Banmex.Menu
             addWindow.ShowDialog();
             this.Show();
         }
+
+        private void retrieveButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RetrieveEmployees retrieveWindow = new RetrieveEmployees(Connection);
+            retrieveWindow.ShowDialog();
+            this.Show();
+        }
+
+        private void retrieveClientsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RetrieveClients retrieveWindow = new RetrieveClients(Connection);
+            retrieveWindow.ShowDialog();
+            this.Show();
+        }
     }
 }
