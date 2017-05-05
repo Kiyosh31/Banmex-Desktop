@@ -1,9 +1,12 @@
 # Decoder-Banmex
 Simple Bank system made in C# and MySQL 
 
+#Necessary Tools
+- Visual Studio 2017.
+- MySQL Full installation.
+
 #Installation
-- Visual Studio 5017
-- MySQL database
+Open folder MySQL Scheema and open Banmex.wmb file on MySQL Workbench giving double click on it, then Database->Forward Engineer and then next, next, next and finish.
 
 #Version
 - Decoder-Banmex 1.0
