@@ -28,6 +28,15 @@ namespace Banmex.Menu
         {
             Connection.OpenConnection();
             clientsGridView.DataSource = Class.Client.showDeletedClients(Connection.myConnection);
+
+            this.clientsGridView.Columns[0].HeaderCell.Value = "ID";
+            this.clientsGridView.Columns[1].HeaderCell.Value = "Nombre";
+            this.clientsGridView.Columns[2].HeaderCell.Value = "Apellido";
+            this.clientsGridView.Columns[3].HeaderCell.Value = "Teléfono";
+            this.clientsGridView.Columns[4].HeaderCell.Value = "Correo";
+            this.clientsGridView.Columns[5].HeaderCell.Value = "Dirección";
+            this.clientsGridView.Columns[6].Visible = false;
+
             Connection.CloseConnection();
         }
 

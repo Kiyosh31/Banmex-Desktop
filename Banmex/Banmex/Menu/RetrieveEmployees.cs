@@ -28,6 +28,17 @@ namespace Banmex.Menu
         {
             Connection.OpenConnection();
             employesGridview.DataSource = Class.Employee.showDeletedEmployees(Connection.myConnection);
+
+            this.employesGridview.Columns[0].HeaderCell.Value = "ID";
+            this.employesGridview.Columns[1].HeaderCell.Value = "Nombre";
+            this.employesGridview.Columns[2].HeaderCell.Value = "Apellido";
+            this.employesGridview.Columns[3].HeaderCell.Value = "Teléfono";
+            this.employesGridview.Columns[4].HeaderCell.Value = "Correo";
+            this.employesGridview.Columns[5].HeaderCell.Value = "Direccion";
+            this.employesGridview.Columns[6].HeaderCell.Value = "Contraseña";
+            this.employesGridview.Columns[7].HeaderCell.Value = "Tipo Empleado";
+            this.employesGridview.Columns[8].Visible = false;
+
             Connection.CloseConnection();
         }
 
