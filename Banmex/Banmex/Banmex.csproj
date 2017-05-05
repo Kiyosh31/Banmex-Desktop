@@ -46,9 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Account.cs" />
     <Compile Include="Class\Client.cs" />
     <Compile Include="Class\Connection.cs" />
+    <Compile Include="Class\DepositWithoutAccount.cs" />
     <Compile Include="Class\Employee.cs" />
+    <Compile Include="Class\Transaction.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>

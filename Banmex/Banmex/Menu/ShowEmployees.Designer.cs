@@ -43,12 +43,12 @@
             this.employesGridview.Name = "employesGridview";
             this.employesGridview.ReadOnly = true;
             this.employesGridview.RowTemplate.Height = 24;
-            this.employesGridview.Size = new System.Drawing.Size(728, 439);
+            this.employesGridview.Size = new System.Drawing.Size(935, 439);
             this.employesGridview.TabIndex = 0;
             // 
             // modifyButton
             // 
-            this.modifyButton.Location = new System.Drawing.Point(758, 108);
+            this.modifyButton.Location = new System.Drawing.Point(983, 117);
             this.modifyButton.Name = "modifyButton";
             this.modifyButton.Size = new System.Drawing.Size(147, 60);
             this.modifyButton.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(758, 231);
+            this.deleteButton.Location = new System.Drawing.Point(983, 240);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(147, 60);
             this.deleteButton.TabIndex = 2;
@@ -70,11 +70,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 463);
+            this.ClientSize = new System.Drawing.Size(1163, 463);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.employesGridview);
             this.Name = "ShowEmployees";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mostrar Empleados";
             this.Load += new System.EventHandler(this.ShowEmployees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employesGridview)).EndInit();
