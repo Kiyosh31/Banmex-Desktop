@@ -149,9 +149,9 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(250, 492);
+            this.addButton.Location = new System.Drawing.Point(250, 480);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(129, 44);
+            this.addButton.Size = new System.Drawing.Size(129, 56);
             this.addButton.TabIndex = 12;
             this.addButton.Text = "Ingresar";
             this.addButton.UseVisualStyleBackColor = true;
@@ -159,6 +159,7 @@
             // 
             // positionComboBox
             // 
+            this.positionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.positionComboBox.FormattingEnabled = true;
             this.positionComboBox.Items.AddRange(new object[] {
             "Gerente",

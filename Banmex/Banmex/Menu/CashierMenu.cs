@@ -51,5 +51,13 @@ namespace Banmex.Menu
             transactionWindow.ShowDialog();
             this.Show();
         }
+
+        private void cancelTransaction_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CancelTransaction cancelWindow = new CancelTransaction(Connection);
+            cancelWindow.ShowDialog();
+            this.Show();
+        }
     }
 }

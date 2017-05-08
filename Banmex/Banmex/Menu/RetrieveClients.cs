@@ -47,33 +47,47 @@ namespace Banmex.Menu
 
         private void retrieveButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Seguro que desea restaurar este elemento?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-            if (result == DialogResult.Yes)
+            if(clientsGridView.Rows.Count == 0)
             {
-                string idClient = clientsGridView.CurrentRow.Cells[0].Value.ToString();
-                Connection.OpenConnection();
-                Class.Employee.retrieveEmployee(Connection.myConnection, idClient);
-                Connection.CloseConnection();
+                MessageBox.Show("la tabla esta vacia");
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("¿Seguro que desea restaurar este elemento?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                MessageBox.Show("Restaurado exitosamente");
-                loadData();
+                if (result == DialogResult.Yes)
+                {
+                    string idClient = clientsGridView.CurrentRow.Cells[0].Value.ToString();
+                    Connection.OpenConnection();
+                    Class.Employee.retrieveEmployee(Connection.myConnection, idClient);
+                    Connection.CloseConnection();
+
+                    MessageBox.Show("Restaurado exitosamente");
+                    loadData();
+                }
             }
         }
 
         private void deleteDefinetly_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Seguro que desea eliminar este elemento?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-            if (result == DialogResult.Yes)
+            if (clientsGridView.Rows.Count == 0)
             {
-                string idClient = clientsGridView.CurrentRow.Cells[0].Value.ToString();
-                Connection.OpenConnection();
-                Class.Client.deleteDefinetly(Connection.myConnection, idClient);
-                Connection.CloseConnection();
+                MessageBox.Show("La tabla esta vacia");
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("¿Seguro que desea eliminar este elemento?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                MessageBox.Show("Eliminado exitosamente");
-                loadData();
+                if (result == DialogResult.Yes)
+                {
+                    string idClient = clientsGridView.CurrentRow.Cells[0].Value.ToString();
+                    Connection.OpenConnection();
+                    Class.Client.deleteDefinetly(Connection.myConnection, idClient);
+                    Connection.CloseConnection();
+
+                    MessageBox.Show("Eliminado exitosamente");
+                    loadData();
+                }
             }
         }
     }

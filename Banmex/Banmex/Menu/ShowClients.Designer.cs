@@ -50,7 +50,7 @@
             this.clientsGridView.Name = "clientsGridView";
             this.clientsGridView.ReadOnly = true;
             this.clientsGridView.RowTemplate.Height = 24;
-            this.clientsGridView.Size = new System.Drawing.Size(584, 436);
+            this.clientsGridView.Size = new System.Drawing.Size(597, 436);
             this.clientsGridView.TabIndex = 0;
             // 
             // modifyButton
@@ -88,11 +88,11 @@
             this.accountdGridView.AllowUserToAddRows = false;
             this.accountdGridView.AllowUserToDeleteRows = false;
             this.accountdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.accountdGridView.Location = new System.Drawing.Point(627, 46);
+            this.accountdGridView.Location = new System.Drawing.Point(615, 46);
             this.accountdGridView.Name = "accountdGridView";
             this.accountdGridView.ReadOnly = true;
             this.accountdGridView.RowTemplate.Height = 24;
-            this.accountdGridView.Size = new System.Drawing.Size(571, 436);
+            this.accountdGridView.Size = new System.Drawing.Size(583, 436);
             this.accountdGridView.TabIndex = 4;
             // 
             // clientsLabel
@@ -115,17 +115,17 @@
             // 
             // deleteAccountButton
             // 
-            this.deleteAccountButton.Location = new System.Drawing.Point(849, 502);
+            this.deleteAccountButton.Location = new System.Drawing.Point(951, 501);
             this.deleteAccountButton.Name = "deleteAccountButton";
             this.deleteAccountButton.Size = new System.Drawing.Size(157, 65);
             this.deleteAccountButton.TabIndex = 8;
-            this.deleteAccountButton.Text = "Eliminar Cliente";
+            this.deleteAccountButton.Text = "Eliminar Cuenta";
             this.deleteAccountButton.UseVisualStyleBackColor = true;
             this.deleteAccountButton.Click += new System.EventHandler(this.deleteAccountButton_Click);
             // 
             // modifyAccountButton
             // 
-            this.modifyAccountButton.Location = new System.Drawing.Point(674, 500);
+            this.modifyAccountButton.Location = new System.Drawing.Point(776, 499);
             this.modifyAccountButton.Name = "modifyAccountButton";
             this.modifyAccountButton.Size = new System.Drawing.Size(147, 68);
             this.modifyAccountButton.TabIndex = 7;

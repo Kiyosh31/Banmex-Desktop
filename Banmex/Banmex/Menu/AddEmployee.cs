@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Banmex.Menu
 {
@@ -65,12 +66,20 @@ namespace Banmex.Menu
         //false = no tiene el formato correcto
         bool IsValidEmail(string email)
         {
-            try
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
             {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            catch
+            else
             {
                 return false;
             }

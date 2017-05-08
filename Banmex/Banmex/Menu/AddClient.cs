@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace Banmex.Menu
 {
@@ -67,9 +68,9 @@ namespace Banmex.Menu
                         accountType = 1;
                     }
                     //conseguimos el id del cliente para asociarlo con la cuenta
-                    int idClient = Class.Client.searchIdClient(Connection.myConnection, firstNameTextBox.Text);
+
                     //instanciamos un objeto account y le mandamos los datos de los campos
-                    Class.Account account = new Class.Account(1, idClient, niptextBox.Text, float.Parse(balanceTextBox.Text), float.Parse(maximumCreditTextBox.Text), date, accountType, true);
+                    Class.Account account = new Class.Account(1, , niptextBox.Text, float.Parse(balanceTextBox.Text), float.Parse(maximumCreditTextBox.Text), date, accountType, true);
                     //ingresamos la nueva cuenta a la db
                     Class.Account.addAccount(Connection.myConnection, account);
                     //cierra conexion a la db
@@ -91,12 +92,20 @@ namespace Banmex.Menu
         //false = no tiene el formato correcto
         bool IsValidEmail(string email)
         {
-            try
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
             {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            catch
+            else
             {
                 return false;
             }

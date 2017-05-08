@@ -21,38 +21,41 @@ namespace Banmex
             InitializeComponent();
         }
 
-        private void login_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void loginButton_Click(object sender, EventArgs e)
         {
+            //validacion: todos los campos deben estar llenos
             if(userTextbox.Text == "" || passwordTextbox.Text == "")
             {
                 MessageBox.Show("Favor de llenar todos los campos");
             }
             else
             {
+                //abre conexion a la db
                 Connection.OpenConnection();
-                MySqlCommand command = new MySqlCommand(String.Format("SELECT * from employee WHERE FirstName = '{0}' AND Password = '{1}'", userTextbox.Text, passwordTextbox.Text), Connection.myConnection);
+                //busco el nombre y la contraseña en la db 
+                MySqlCommand command = new MySqlCommand(String.Format("SELECT * from Employee WHERE FirstName = '{0}' AND Password = '{1}' AND Active  = true", userTextbox.Text, passwordTextbox.Text), Connection.myConnection);
                 MySqlDataReader reader = command.ExecuteReader();
 
                 if (reader.Read())
                 {
+                    //si coinciden los campos con la informacion del gerente entra aqui
                     if (reader.GetInt32(7) == 0)
                     {
                         Connection.CloseConnection();
-                        Connection.OpenConnection();
-                        Connection.CloseConnection();
                         MessageBox.Show("Sesion iniciada como admin");
-                        ManagerMenu ManagerWindow = new ManagerMenu(Connection);
+
+                        //obtengo el id del empleado
+                        
+
+                        //se inicializa el menu del gerente
                         this.Hide();
+                        ManagerMenu ManagerWindow = new ManagerMenu(Connection);
                         ManagerWindow.ShowDialog();
                         this.Close();
                     }
                     else
                     {
+                        //si coinciden los datos con la informacion del cajero entra aqui
                         MessageBox.Show("Sesion iniciada como cajero");
                         Connection.CloseConnection();
                         CashierMenu CashierWIndow = new CashierMenu(Connection);
@@ -68,16 +71,6 @@ namespace Banmex
 
                 Connection.CloseConnection();
             }
-        }
-
-        private void userTextbox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void passwordTextbox_TextChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }

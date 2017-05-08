@@ -44,7 +44,6 @@
             this.userTextbox.Name = "userTextbox";
             this.userTextbox.Size = new System.Drawing.Size(213, 22);
             this.userTextbox.TabIndex = 0;
-            this.userTextbox.TextChanged += new System.EventHandler(this.userTextbox_TextChanged);
             // 
             // userLabel
             // 
@@ -73,7 +72,6 @@
             this.passwordTextbox.PasswordChar = '*';
             this.passwordTextbox.Size = new System.Drawing.Size(213, 22);
             this.passwordTextbox.TabIndex = 2;
-            this.passwordTextbox.TextChanged += new System.EventHandler(this.passwordTextbox_TextChanged);
             // 
             // loginButton
             // 
@@ -113,7 +111,6 @@
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión BANMEX";
-            this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userPicturebox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

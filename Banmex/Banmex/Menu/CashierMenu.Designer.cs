@@ -108,6 +108,7 @@
             this.cancelTransaction.TabIndex = 6;
             this.cancelTransaction.Text = "Cancelar";
             this.cancelTransaction.UseVisualStyleBackColor = true;
+            this.cancelTransaction.Click += new System.EventHandler(this.cancelTransaction_Click);
             // 
             // CashierMenu
             // 

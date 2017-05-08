@@ -42,7 +42,14 @@ namespace Banmex.Menu
             balancetextBox.Text = Convert.ToString(account.Balance);
             maximumCreditTextBox.Text = Convert.ToString(account.MaximumCredit);
             cuttOfDayDateTimePicker.Value = Convert.ToDateTime(account.CutOffDay);
-            accountTypeTextBox.Text = Convert.ToString(account.AccountType);
+            if (account.AccountType == 0)
+            {
+                accountTypeComboBox.Text = "Credito";
+            }
+            else
+            {
+                accountTypeComboBox.Text = "Debito";
+            }
             //cierra conexion a la db
             Connection.CloseConnection();
         }

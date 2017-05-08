@@ -40,6 +40,7 @@
             this.transactionsLabel = new System.Windows.Forms.Label();
             this.addTransactionButton = new System.Windows.Forms.Button();
             this.cancelTransactionButton = new System.Windows.Forms.Button();
+            this.showTransactionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // showEmployeeButton
@@ -147,12 +148,23 @@
             // 
             // cancelTransactionButton
             // 
-            this.cancelTransactionButton.Location = new System.Drawing.Point(353, 130);
+            this.cancelTransactionButton.Location = new System.Drawing.Point(353, 218);
             this.cancelTransactionButton.Name = "cancelTransactionButton";
             this.cancelTransactionButton.Size = new System.Drawing.Size(150, 76);
             this.cancelTransactionButton.TabIndex = 14;
-            this.cancelTransactionButton.Text = "Cancelar";
+            this.cancelTransactionButton.Text = "Canceladas";
             this.cancelTransactionButton.UseVisualStyleBackColor = true;
+            this.cancelTransactionButton.Click += new System.EventHandler(this.cancelTransactionButton_Click);
+            // 
+            // showTransactionButton
+            // 
+            this.showTransactionButton.Location = new System.Drawing.Point(353, 126);
+            this.showTransactionButton.Name = "showTransactionButton";
+            this.showTransactionButton.Size = new System.Drawing.Size(150, 76);
+            this.showTransactionButton.TabIndex = 15;
+            this.showTransactionButton.Text = "Ver";
+            this.showTransactionButton.UseVisualStyleBackColor = true;
+            this.showTransactionButton.Click += new System.EventHandler(this.showTransactionButton_Click);
             // 
             // ManagerMenu
             // 
@@ -160,6 +172,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(514, 306);
+            this.Controls.Add(this.showTransactionButton);
             this.Controls.Add(this.cancelTransactionButton);
             this.Controls.Add(this.addTransactionButton);
             this.Controls.Add(this.transactionsLabel);
@@ -192,5 +205,6 @@
         private System.Windows.Forms.Label transactionsLabel;
         private System.Windows.Forms.Button addTransactionButton;
         private System.Windows.Forms.Button cancelTransactionButton;
+        private System.Windows.Forms.Button showTransactionButton;
     }
 }

@@ -1,3 +1,3 @@
 DELETE FROM Account
 WHERE
-	idAccount = 3
+	idAccount = 8

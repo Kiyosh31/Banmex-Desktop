@@ -36,7 +36,7 @@
             // 
             // retrieveButton
             // 
-            this.retrieveButton.Location = new System.Drawing.Point(793, 48);
+            this.retrieveButton.Location = new System.Drawing.Point(774, 80);
             this.retrieveButton.Name = "retrieveButton";
             this.retrieveButton.Size = new System.Drawing.Size(128, 96);
             this.retrieveButton.TabIndex = 4;
@@ -58,7 +58,7 @@
             // 
             // deleteDefinetly
             // 
-            this.deleteDefinetly.Location = new System.Drawing.Point(793, 296);
+            this.deleteDefinetly.Location = new System.Drawing.Point(774, 316);
             this.deleteDefinetly.Name = "deleteDefinetly";
             this.deleteDefinetly.Size = new System.Drawing.Size(128, 96);
             this.deleteDefinetly.TabIndex = 5;
@@ -70,11 +70,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 465);
+            this.ClientSize = new System.Drawing.Size(932, 465);
             this.Controls.Add(this.deleteDefinetly);
             this.Controls.Add(this.retrieveButton);
             this.Controls.Add(this.clientsGridView);
             this.Name = "RetrieveClients";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recuperar Clientes BANMEX";
             this.Load += new System.EventHandler(this.RetrieveClients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientsGridView)).EndInit();

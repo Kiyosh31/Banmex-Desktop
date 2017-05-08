@@ -1,3 +1,3 @@
 DELETE FROM client 
 WHERE
-    idClient = 7
+    idClient = 8

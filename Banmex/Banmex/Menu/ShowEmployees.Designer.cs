@@ -43,14 +43,14 @@
             this.employesGridview.Name = "employesGridview";
             this.employesGridview.ReadOnly = true;
             this.employesGridview.RowTemplate.Height = 24;
-            this.employesGridview.Size = new System.Drawing.Size(935, 439);
+            this.employesGridview.Size = new System.Drawing.Size(774, 439);
             this.employesGridview.TabIndex = 0;
             // 
             // modifyButton
             // 
-            this.modifyButton.Location = new System.Drawing.Point(983, 117);
+            this.modifyButton.Location = new System.Drawing.Point(828, 131);
             this.modifyButton.Name = "modifyButton";
-            this.modifyButton.Size = new System.Drawing.Size(147, 60);
+            this.modifyButton.Size = new System.Drawing.Size(147, 68);
             this.modifyButton.TabIndex = 1;
             this.modifyButton.Text = "Modificar";
             this.modifyButton.UseVisualStyleBackColor = true;
@@ -58,9 +58,9 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(983, 240);
+            this.deleteButton.Location = new System.Drawing.Point(828, 254);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(147, 60);
+            this.deleteButton.Size = new System.Drawing.Size(147, 69);
             this.deleteButton.TabIndex = 2;
             this.deleteButton.Text = "Eliminar";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1163, 463);
+            this.ClientSize = new System.Drawing.Size(1010, 463);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.employesGridview);

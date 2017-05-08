@@ -76,6 +76,12 @@
     <Compile Include="Menu\AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\CancelTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\CancelTransaction.Designer.cs">
+      <DependentUpon>CancelTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\MakeTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     <Compile Include="Menu\ShowEmployees.Designer.cs">
       <DependentUpon>ShowEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\ShowTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\ShowTransaction.Designer.cs">
+      <DependentUpon>ShowTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="login.resx">
@@ -149,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\CancelTransaction.resx">
+      <DependentUpon>CancelTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\MakeTransaction.resx">
       <DependentUpon>MakeTransaction.cs</DependentUpon>
@@ -179,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\ShowEmployees.resx">
       <DependentUpon>ShowEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\ShowTransaction.resx">
+      <DependentUpon>ShowTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

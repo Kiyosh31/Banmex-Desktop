@@ -46,9 +46,9 @@
             // 
             // modifyButton
             // 
-            this.modifyButton.Location = new System.Drawing.Point(119, 409);
+            this.modifyButton.Location = new System.Drawing.Point(236, 424);
             this.modifyButton.Name = "modifyButton";
-            this.modifyButton.Size = new System.Drawing.Size(132, 54);
+            this.modifyButton.Size = new System.Drawing.Size(144, 60);
             this.modifyButton.TabIndex = 2;
             this.modifyButton.Text = "Modificar";
             this.modifyButton.UseVisualStyleBackColor = true;
@@ -56,7 +56,7 @@
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(94, 44);
+            this.idTextBox.Location = new System.Drawing.Point(12, 46);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(101, 22);
             this.idTextBox.TabIndex = 11;
@@ -66,7 +66,7 @@
             this.idLabel.AutoSize = true;
             this.idLabel.BackColor = System.Drawing.Color.Transparent;
             this.idLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.idLabel.Location = new System.Drawing.Point(91, 24);
+            this.idLabel.Location = new System.Drawing.Point(9, 26);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(21, 17);
             this.idLabel.TabIndex = 10;
@@ -74,7 +74,7 @@
             // 
             // addressTextBox
             // 
-            this.addressTextBox.Location = new System.Drawing.Point(94, 358);
+            this.addressTextBox.Location = new System.Drawing.Point(12, 343);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(203, 22);
             this.addressTextBox.TabIndex = 21;
@@ -84,7 +84,7 @@
             this.addressLabel.AutoSize = true;
             this.addressLabel.BackColor = System.Drawing.Color.Transparent;
             this.addressLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.addressLabel.Location = new System.Drawing.Point(91, 338);
+            this.addressLabel.Location = new System.Drawing.Point(9, 323);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(64, 17);
             this.addressLabel.TabIndex = 20;
@@ -92,21 +92,21 @@
             // 
             // emailtextBox
             // 
-            this.emailtextBox.Location = new System.Drawing.Point(94, 298);
+            this.emailtextBox.Location = new System.Drawing.Point(12, 282);
             this.emailtextBox.Name = "emailtextBox";
             this.emailtextBox.Size = new System.Drawing.Size(203, 22);
             this.emailtextBox.TabIndex = 19;
             // 
             // phoneTextBox
             // 
-            this.phoneTextBox.Location = new System.Drawing.Point(94, 237);
+            this.phoneTextBox.Location = new System.Drawing.Point(12, 222);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(203, 22);
             this.phoneTextBox.TabIndex = 18;
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(94, 171);
+            this.lastNameTextBox.Location = new System.Drawing.Point(12, 163);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(203, 22);
             this.lastNameTextBox.TabIndex = 17;
@@ -116,7 +116,7 @@
             this.emailLabel.AutoSize = true;
             this.emailLabel.BackColor = System.Drawing.Color.Transparent;
             this.emailLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.emailLabel.Location = new System.Drawing.Point(91, 278);
+            this.emailLabel.Location = new System.Drawing.Point(9, 262);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(125, 17);
             this.emailLabel.TabIndex = 16;
@@ -127,7 +127,7 @@
             this.phoneLabel.AutoSize = true;
             this.phoneLabel.BackColor = System.Drawing.Color.Transparent;
             this.phoneLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.phoneLabel.Location = new System.Drawing.Point(91, 217);
+            this.phoneLabel.Location = new System.Drawing.Point(9, 202);
             this.phoneLabel.Name = "phoneLabel";
             this.phoneLabel.Size = new System.Drawing.Size(64, 17);
             this.phoneLabel.TabIndex = 15;
@@ -138,7 +138,7 @@
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.lastNameLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.lastNameLabel.Location = new System.Drawing.Point(91, 151);
+            this.lastNameLabel.Location = new System.Drawing.Point(9, 143);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(58, 17);
             this.lastNameLabel.TabIndex = 14;
@@ -146,7 +146,7 @@
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(94, 102);
+            this.firstNameTextBox.Location = new System.Drawing.Point(12, 104);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(203, 22);
             this.firstNameTextBox.TabIndex = 13;
@@ -156,7 +156,7 @@
             this.firstNameLabel.AutoSize = true;
             this.firstNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.firstNameLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.firstNameLabel.Location = new System.Drawing.Point(91, 82);
+            this.firstNameLabel.Location = new System.Drawing.Point(9, 84);
             this.firstNameLabel.Name = "firstNameLabel";
             this.firstNameLabel.Size = new System.Drawing.Size(58, 17);
             this.firstNameLabel.TabIndex = 12;

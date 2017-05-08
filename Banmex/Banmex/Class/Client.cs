@@ -77,13 +77,6 @@ namespace Banmex.Class
             return OK;
         }
 
-        public static int searchIdClient(MySqlConnection Connection, string name)
-        {
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT idClient FROM Client WHERE FirstName = '{0}'", name), Connection);
-            int OK = command.ExecuteNonQuery();
-            return OK;
-        }
-
         //este metodo elimina un cliente, recibe la conexion y un id del cliente
         //el metodo retorna el numero de filas afectadas en la db
         // 1 = eliminado correctamente
@@ -143,7 +136,7 @@ namespace Banmex.Class
         // 1 = eliminado correctamente 
         public static int deleteDefinetly(MySqlConnection Connection, string idClient)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("DELETE FROM Client WHERE idEmployee = '{0}'", idClient), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("DELETE FROM Client WHERE idClient = '{0}'", idClient), Connection);
             int OK = command.ExecuteNonQuery();
             return OK;
         }
