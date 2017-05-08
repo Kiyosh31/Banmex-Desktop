@@ -44,9 +44,9 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(106, 353);
+            this.addButton.Location = new System.Drawing.Point(93, 355);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(109, 52);
+            this.addButton.Size = new System.Drawing.Size(136, 67);
             this.addButton.TabIndex = 0;
             this.addButton.Text = "Agregar";
             this.addButton.UseVisualStyleBackColor = true;
@@ -55,6 +55,8 @@
             // nipLabel
             // 
             this.nipLabel.AutoSize = true;
+            this.nipLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nipLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.nipLabel.Location = new System.Drawing.Point(59, 49);
             this.nipLabel.Name = "nipLabel";
             this.nipLabel.Size = new System.Drawing.Size(29, 17);
@@ -65,6 +67,7 @@
             // 
             this.niptextBox.Location = new System.Drawing.Point(62, 69);
             this.niptextBox.Name = "niptextBox";
+            this.niptextBox.PasswordChar = '*';
             this.niptextBox.Size = new System.Drawing.Size(201, 22);
             this.niptextBox.TabIndex = 2;
             // 
@@ -78,6 +81,8 @@
             // balanceLabel
             // 
             this.balanceLabel.AutoSize = true;
+            this.balanceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.balanceLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.balanceLabel.Location = new System.Drawing.Point(59, 105);
             this.balanceLabel.Name = "balanceLabel";
             this.balanceLabel.Size = new System.Drawing.Size(44, 17);
@@ -94,6 +99,8 @@
             // maximumCreditLabel
             // 
             this.maximumCreditLabel.AutoSize = true;
+            this.maximumCreditLabel.BackColor = System.Drawing.Color.Transparent;
+            this.maximumCreditLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.maximumCreditLabel.Location = new System.Drawing.Point(59, 162);
             this.maximumCreditLabel.Name = "maximumCreditLabel";
             this.maximumCreditLabel.Size = new System.Drawing.Size(104, 17);
@@ -102,6 +109,7 @@
             // 
             // cutOffDayDateTimePicker
             // 
+            this.cutOffDayDateTimePicker.CustomFormat = "dd.MM.yyyy";
             this.cutOffDayDateTimePicker.Location = new System.Drawing.Point(62, 238);
             this.cutOffDayDateTimePicker.Name = "cutOffDayDateTimePicker";
             this.cutOffDayDateTimePicker.Size = new System.Drawing.Size(201, 22);
@@ -110,6 +118,8 @@
             // cutOffDayLabel
             // 
             this.cutOffDayLabel.AutoSize = true;
+            this.cutOffDayLabel.BackColor = System.Drawing.Color.Transparent;
+            this.cutOffDayLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cutOffDayLabel.Location = new System.Drawing.Point(59, 218);
             this.cutOffDayLabel.Name = "cutOffDayLabel";
             this.cutOffDayLabel.Size = new System.Drawing.Size(103, 17);
@@ -130,6 +140,8 @@
             // accountTypeLabel
             // 
             this.accountTypeLabel.AutoSize = true;
+            this.accountTypeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.accountTypeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.accountTypeLabel.Location = new System.Drawing.Point(59, 281);
             this.accountTypeLabel.Name = "accountTypeLabel";
             this.accountTypeLabel.Size = new System.Drawing.Size(103, 17);

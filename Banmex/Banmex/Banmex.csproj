@@ -76,6 +76,12 @@
     <Compile Include="Menu\AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\MakeTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MakeTransaction.Designer.cs">
+      <DependentUpon>MakeTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\ManagerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="Menu\CashierMenu.Designer.cs">
       <DependentUpon>CashierMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\ModifyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\ModifyAccount.Designer.cs">
+      <DependentUpon>ModifyAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\ModifyClient.cs">
       <SubType>Form</SubType>
@@ -138,11 +150,17 @@
     <EmbeddedResource Include="Menu\AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MakeTransaction.resx">
+      <DependentUpon>MakeTransaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\ManagerMenu.resx">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\CashierMenu.resx">
       <DependentUpon>CashierMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\ModifyAccount.resx">
+      <DependentUpon>ModifyAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\ModifyClient.resx">
       <DependentUpon>ModifyClient.cs</DependentUpon>

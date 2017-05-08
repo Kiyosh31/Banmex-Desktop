@@ -10,6 +10,7 @@ namespace Banmex.Class
 {
     public class Employee
     {
+        //se declaran las variables como tipos de datos de la tabla en la db
         private int idEmployee;
         private string firstName;
         private string lastName;
@@ -20,6 +21,7 @@ namespace Banmex.Class
         private int employeeType;
         private bool active;
 
+        //se reciben todos los datos y se establecen en las variables
         public Employee(int idEmployee, string firstName, string lastName, string phone, string email, string address, string password, int employeeType, bool active)
         {
             this.idEmployee = idEmployee;
@@ -33,6 +35,7 @@ namespace Banmex.Class
             this.active = active;
         }
 
+        //getters y setters
         public int ID
         {
             get { return idEmployee; }
@@ -87,6 +90,9 @@ namespace Banmex.Class
             set { active = value; }
         }
 
+        //metodo para ingresar un empleado, recibe la conexion y un objeto empleado que contiene todos los datos necesarios
+        //el metodo retorna el numero de filas afectadas en la db
+        // 1 = ingresado correctamente
         public static int addEmployee(MySqlConnection Connection, Employee employee)
         {
             MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO employee (FirstName, LastName, Phone, Email, Address, Password, EmployeeType, Active) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', {6}, true)", employee.firstName, employee.lastName, employee.phone, employee.email, employee.address, employee.password, employee.employeeType), Connection);
@@ -96,6 +102,8 @@ namespace Banmex.Class
             return OK;
         }
 
+        //metodos para buscar un empleado, recibe la conexion y el id del empleado
+        //cuando encuentra el empleado, lo guarda en un objeto y lo retorna
         public static Employee searchEmployee(MySqlConnection Connection, int idEmployee)
         {
             MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM employee WHERE idEmployee = {0} AND active = true", idEmployee), Connection);
@@ -110,6 +118,9 @@ namespace Banmex.Class
             return e;
         }
 
+        //este metodo modifica un empleado, recibe la conexion y un objeto empleado
+        //el metodo retorna el numero de filas afectadas en la db
+        // 1 = modificado correctamente
         public static int modifyEmployee(MySqlConnection Connection, Employee employee)
         {
             MySqlCommand command = new MySqlCommand(String.Format(
@@ -119,6 +130,9 @@ namespace Banmex.Class
             return OK;
         }
 
+        //este metodo elimina un empleado, recibe la conexion y un id de empleado
+        //el metodo retorna el numero de filas afectadas en la db
+        // 1 = eliminado correctamente
         public static int deleteEmployee(MySqlConnection Connection, string idEmployee)
         {
             MySqlCommand command = new MySqlCommand(String.Format("UPDATE employee SET Active = false WHERE idEmployee = '{0}'", idEmployee), Connection);
@@ -126,6 +140,8 @@ namespace Banmex.Class
             return OK;
         }
 
+        //este metodo recupera todos los elementos activos de la tabla empleado y los agrega a una lista con la forma de empleado
+        //retorna la lista con todos los empleados activos
         public static IList<Employee> showAllEmployees(MySqlConnection Connection)
         {
             List<Employee> employeeList = new List<Employee>();
@@ -141,6 +157,8 @@ namespace Banmex.Class
             return employeeList;
         }
 
+        //este metodo recupera todos los elementos inactivos de la tabla empleado y los agrega a una lista con la forma de empleado
+        //retorna la lista con todos los empleados inactivos
         public static IList<Employee> showDeletedEmployees(MySqlConnection Connection)
         {
             List<Employee> employeeList = new List<Employee>();
@@ -156,9 +174,22 @@ namespace Banmex.Class
             return employeeList;
         }
 
+        //este metodo recupera los empleados eliminados de la db recibe la conexion y un id del empleado
+        //el metodo retorna el numero de filas afectadas en la db
+        // 1 = recuperado correctamente 
         public static int retrieveEmployee(MySqlConnection Connection, string idEmployee)
         {
             MySqlCommand command = new MySqlCommand(String.Format("UPDATE employee SET Active = true WHERE idEmployee = '{0}'", idEmployee), Connection);
+            int OK = command.ExecuteNonQuery();
+            return OK;
+        }
+
+        //este metodo elimina por completo los empleados eliminados de la db recibe la conexion y un id del empleado
+        //el metodo retorna el numero de filas afectadas en la db
+        // 1 = eliminado correctamente 
+        public static int deleteDefinetly(MySqlConnection Connection, string idEmployee)
+        {
+            MySqlCommand command = new MySqlCommand(String.Format("DELETE FROM Employee WHERE idEmployee = '{0}'", idEmployee), Connection);
             int OK = command.ExecuteNonQuery();
             return OK;
         }

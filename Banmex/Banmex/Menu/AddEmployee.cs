@@ -30,25 +30,49 @@ namespace Banmex.Menu
             }
             else
             {
-                Connection.OpenConnection();
-                int position;
-                if(positionComboBox.SelectedIndex == 0)
+                if(IsValidEmail(emailTextBox.Text) == true)
                 {
-                    // 0 = gerente
-                    position = 0;
+                    Connection.OpenConnection();
+                    int position;
+                    if (positionComboBox.SelectedIndex == 0)
+                    {
+                        // 0 = gerente
+                        position = 0;
+                    }
+                    else
+                    {
+                        //1 = empleado
+                        position = 1;
+                    }
+
+                    Class.Employee newEmploye = new Class.Employee(1, firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, emailTextBox.Text, addressTextBox.Text, passwordTextBox.Text, position, true);
+                    Class.Employee.addEmployee(Connection.myConnection, newEmploye);
+                    Connection.CloseConnection();
+
+                    MessageBox.Show("Cliente registrado\nExitosamente");
+                    this.Close();
                 }
                 else
                 {
-                    //1 = empleado
-                    position = 1;
+                    MessageBox.Show("El formato del correo no es correcto");
                 }
+            }
+        }
 
-                Class.Employee newEmploye = new Class.Employee(1, firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, emailTextBox.Text, addressTextBox.Text, passwordTextBox.Text, position ,true);
-                Class.Employee.addEmployee(Connection.myConnection, newEmploye);
-                Connection.CloseConnection();
-
-                MessageBox.Show("Cliente registrado\nExitosamente");
-                this.Close();
+        //este metodo valida que el correo tenga un formato correcto, recibe el email a evaluar
+        //retorna un valor booleano 
+        //true = tiene el formato correcto
+        //false = no tiene el formato correcto
+        bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
             }
         }
     }

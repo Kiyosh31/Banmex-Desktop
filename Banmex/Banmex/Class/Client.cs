@@ -9,6 +9,7 @@ namespace Banmex.Class
 {
     public class Client
     {
+        //se declaran las variables como tipos de datos de la tabla en la db
         private int idClient;
         private string firstName;
         private string lastName;
@@ -17,6 +18,7 @@ namespace Banmex.Class
         private string address;
         private bool active;
 
+        //se reciben todos los datos y se establecen en las variables
         public Client(int idClient, string firstName, string lastName, string phone, string email, string address, bool active)
         {
             this.idClient = idClient;
@@ -37,6 +39,9 @@ namespace Banmex.Class
         public string Address { get { return address; } set { address = value; } }
         public bool Active { get { return active; } set { active = value; } }
 
+        //metodo para ingresar el cliente, recibe la conexion y un objeto cliente que contiene todos los datos necesarios
+        //el metodo retorna un numero
+        // 1 = ingresado correctamente
         public static int addClient(MySqlConnection Connection, Client client)
         {
             MySqlCommand command = new MySqlCommand(
@@ -47,6 +52,8 @@ namespace Banmex.Class
             return OK;
         }
 
+        //metodos para buscar un cliente, recibe la conexion y el id del cliente
+        //cuando encuentra el cliente, lo guarda en un objeto y lo retorna
         public static Client searchClient(MySqlConnection Connection, string idClient)
         {
             MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM client WHERE idClient = {0} AND Active = true", idClient), Connection);
@@ -60,6 +67,9 @@ namespace Banmex.Class
             return e;
         }
 
+        //este metodo modifica un cliente, recibe la conexion y un objeto cliente
+        //el metodo retorna un numero
+        // 1 = modificado correctamente
         public static int modifyClient(MySqlConnection Connection, Client client)
         {
             MySqlCommand command = new MySqlCommand(String.Format("UPDATE client SET FirstName = '{0}', LastName = '{1}', Phone = '{2}', Email = '{3}', Address = '{4}' , Active = true WHERE idClient = {5}", client.firstName, client.lastName, client.phone, client.email, client.address, client.idClient), Connection);
@@ -67,6 +77,16 @@ namespace Banmex.Class
             return OK;
         }
 
+        public static int searchIdClient(MySqlConnection Connection, string name)
+        {
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT idClient FROM Client WHERE FirstName = '{0}'", name), Connection);
+            int OK = command.ExecuteNonQuery();
+            return OK;
+        }
+
+        //este metodo elimina un cliente, recibe la conexion y un id del cliente
+        //el metodo retorna el numero de filas afectadas en la db
+        // 1 = eliminado correctamente
         public static int deleteClient(MySqlConnection Connection, string idClient)
         {
             MySqlCommand command = new MySqlCommand(String.Format("UPDATE client SET Active = false WHERE idClient = {0}", idClient), Connection);
@@ -74,6 +94,8 @@ namespace Banmex.Class
             return OK;
         }
 
+        //este metodo recupera todos los elementos activos de la tabla cliente y los agrega a una lista con la forma de cliente
+        //retorna la lista con todos los clientes activos
         public static IList<Client> showAllClients(MySqlConnection Connection)
         {
             List<Client> clientList = new List<Client>();
@@ -89,6 +111,8 @@ namespace Banmex.Class
             return clientList;
         }
 
+        //este metodo recupera todos los elementos inactivos de la tabla cliente y los agrega a una lista con la forma de cliente
+        //retorna la lista con todos los clientes inactivos
         public static IList<Client> showDeletedClients(MySqlConnection Connection)
         {
             List<Client> clientList = new List<Client>();
@@ -104,9 +128,22 @@ namespace Banmex.Class
             return clientList;
         }
 
+        //este metodo recupera los clientes eliminados de la db recibe la conexion y un id del cliente
+        //el metodo retorna el numero de filas afectadas en la db
+        // 1 = recuperado correctamente 
         public static int retrieveEmployee(MySqlConnection Connection, string idClient)
         {
             MySqlCommand command = new MySqlCommand(String.Format("UPDATE employee SET Active = true WHERE idEmployee = '{0}'", idClient), Connection);
+            int OK = command.ExecuteNonQuery();
+            return OK;
+        }
+
+        //este metodo elimina DEFINITIVAMENTE los clientes eliminados de la db recibe la conexion y un id del cliente
+        //el metodo retorna el numero de filas afectadas en la db
+        // 1 = eliminado correctamente 
+        public static int deleteDefinetly(MySqlConnection Connection, string idClient)
+        {
+            MySqlCommand command = new MySqlCommand(String.Format("DELETE FROM Client WHERE idEmployee = '{0}'", idClient), Connection);
             int OK = command.ExecuteNonQuery();
             return OK;
         }

@@ -170,6 +170,9 @@
             // positionComboBox
             // 
             this.positionComboBox.FormattingEnabled = true;
+            this.positionComboBox.Items.AddRange(new object[] {
+            "Gerente",
+            "Cajero"});
             this.positionComboBox.Location = new System.Drawing.Point(199, 294);
             this.positionComboBox.Name = "positionComboBox";
             this.positionComboBox.Size = new System.Drawing.Size(128, 24);

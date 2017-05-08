@@ -62,5 +62,21 @@ namespace Banmex.Menu
                 loadData();
             }
         }
+
+        private void deleteDefinitely_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Seguro que desea eliminar este elemento?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                string idEmployee = employesGridview.CurrentRow.Cells[0].Value.ToString();
+                Connection.OpenConnection();
+                Class.Employee.deleteDefinetly(Connection.myConnection, idEmployee);
+                Connection.CloseConnection();
+
+                MessageBox.Show("Eliminado Exitosamente");
+                loadData();
+            }
+        }
     }
 }

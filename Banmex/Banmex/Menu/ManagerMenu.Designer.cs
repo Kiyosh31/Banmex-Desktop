@@ -37,6 +37,9 @@
             this.clientLabel = new System.Windows.Forms.Label();
             this.retrieveEmployeesButton = new System.Windows.Forms.Button();
             this.retrieveClientsButton = new System.Windows.Forms.Button();
+            this.transactionsLabel = new System.Windows.Forms.Label();
+            this.addTransactionButton = new System.Windows.Forms.Button();
+            this.cancelTransactionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // showEmployeeButton
@@ -84,7 +87,7 @@
             this.employeeLabel.AutoSize = true;
             this.employeeLabel.BackColor = System.Drawing.Color.Transparent;
             this.employeeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.employeeLabel.Location = new System.Drawing.Point(38, 9);
+            this.employeeLabel.Location = new System.Drawing.Point(47, 9);
             this.employeeLabel.Name = "employeeLabel";
             this.employeeLabel.Size = new System.Drawing.Size(78, 17);
             this.employeeLabel.TabIndex = 8;
@@ -95,7 +98,7 @@
             this.clientLabel.AutoSize = true;
             this.clientLabel.BackColor = System.Drawing.Color.Transparent;
             this.clientLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.clientLabel.Location = new System.Drawing.Point(236, 9);
+            this.clientLabel.Location = new System.Drawing.Point(224, 9);
             this.clientLabel.Name = "clientLabel";
             this.clientLabel.Size = new System.Drawing.Size(58, 17);
             this.clientLabel.TabIndex = 9;
@@ -121,12 +124,45 @@
             this.retrieveClientsButton.UseVisualStyleBackColor = true;
             this.retrieveClientsButton.Click += new System.EventHandler(this.retrieveClientsButton_Click);
             // 
+            // transactionsLabel
+            // 
+            this.transactionsLabel.AutoSize = true;
+            this.transactionsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.transactionsLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.transactionsLabel.Location = new System.Drawing.Point(375, 9);
+            this.transactionsLabel.Name = "transactionsLabel";
+            this.transactionsLabel.Size = new System.Drawing.Size(101, 17);
+            this.transactionsLabel.TabIndex = 12;
+            this.transactionsLabel.Text = "Transacciones";
+            // 
+            // addTransactionButton
+            // 
+            this.addTransactionButton.Location = new System.Drawing.Point(353, 34);
+            this.addTransactionButton.Name = "addTransactionButton";
+            this.addTransactionButton.Size = new System.Drawing.Size(150, 76);
+            this.addTransactionButton.TabIndex = 13;
+            this.addTransactionButton.Text = "Realizar";
+            this.addTransactionButton.UseVisualStyleBackColor = true;
+            this.addTransactionButton.Click += new System.EventHandler(this.addTransactionButton_Click);
+            // 
+            // cancelTransactionButton
+            // 
+            this.cancelTransactionButton.Location = new System.Drawing.Point(353, 130);
+            this.cancelTransactionButton.Name = "cancelTransactionButton";
+            this.cancelTransactionButton.Size = new System.Drawing.Size(150, 76);
+            this.cancelTransactionButton.TabIndex = 14;
+            this.cancelTransactionButton.Text = "Cancelar";
+            this.cancelTransactionButton.UseVisualStyleBackColor = true;
+            // 
             // ManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(342, 306);
+            this.ClientSize = new System.Drawing.Size(514, 306);
+            this.Controls.Add(this.cancelTransactionButton);
+            this.Controls.Add(this.addTransactionButton);
+            this.Controls.Add(this.transactionsLabel);
             this.Controls.Add(this.retrieveClientsButton);
             this.Controls.Add(this.retrieveEmployeesButton);
             this.Controls.Add(this.clientLabel);
@@ -153,5 +189,8 @@
         private System.Windows.Forms.Label clientLabel;
         private System.Windows.Forms.Button retrieveEmployeesButton;
         private System.Windows.Forms.Button retrieveClientsButton;
+        private System.Windows.Forms.Label transactionsLabel;
+        private System.Windows.Forms.Button addTransactionButton;
+        private System.Windows.Forms.Button cancelTransactionButton;
     }
 }

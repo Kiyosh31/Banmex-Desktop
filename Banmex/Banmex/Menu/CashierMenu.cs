@@ -43,5 +43,13 @@ namespace Banmex.Menu
             retrieveWindow.ShowDialog();
             this.Show();
         }
+
+        private void makeTransaction_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MakeTransaction transactionWindow = new MakeTransaction(Connection);
+            transactionWindow.ShowDialog();
+            this.Show();
+        }
     }
 }

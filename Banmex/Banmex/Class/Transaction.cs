@@ -38,5 +38,7 @@ namespace Banmex.Class
         public float Quantity { get { return quantity; } set { quantity = value; } }
         public int AccountType { get { return accountType; } set { accountType = value; } }
         public bool Canceltransaction { get { return cancelTransaction; } set { cancelTransaction = value; } }
+
+
     }
 }
