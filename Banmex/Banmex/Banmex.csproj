@@ -58,94 +58,94 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\AddAccount.cs">
+    <Compile Include="AddForms\AddAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\AddAccount.Designer.cs">
+    <Compile Include="AddForms\AddAccount.Designer.cs">
       <DependentUpon>AddAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\AddClient.cs">
+    <Compile Include="AddForms\AddClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\AddClient.Designer.cs">
+    <Compile Include="AddForms\AddClient.Designer.cs">
       <DependentUpon>AddClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\AddEmployee.cs">
+    <Compile Include="AddForms\AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\AddEmployee.Designer.cs">
+    <Compile Include="AddForms\AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\CancelTransaction.cs">
+    <Compile Include="TransactionForms\CancelTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\CancelTransaction.Designer.cs">
+    <Compile Include="TransactionForms\CancelTransaction.Designer.cs">
       <DependentUpon>CancelTransaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\MakeTransaction.cs">
+    <Compile Include="TransactionForms\MakeTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\MakeTransaction.Designer.cs">
+    <Compile Include="TransactionForms\MakeTransaction.Designer.cs">
       <DependentUpon>MakeTransaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\ManagerMenu.cs">
+    <Compile Include="MenuForms\ManagerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\ManagerMenu.Designer.cs">
+    <Compile Include="MenuForms\ManagerMenu.Designer.cs">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\CashierMenu.cs">
+    <Compile Include="MenuForms\CashierMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\CashierMenu.Designer.cs">
+    <Compile Include="MenuForms\CashierMenu.Designer.cs">
       <DependentUpon>CashierMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\ModifyAccount.cs">
+    <Compile Include="ModifyForms\ModifyAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\ModifyAccount.Designer.cs">
+    <Compile Include="ModifyForms\ModifyAccount.Designer.cs">
       <DependentUpon>ModifyAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\ModifyClient.cs">
+    <Compile Include="ModifyForms\ModifyClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\ModifyClient.Designer.cs">
+    <Compile Include="ModifyForms\ModifyClient.Designer.cs">
       <DependentUpon>ModifyClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\ModifyEmployee.cs">
+    <Compile Include="ModifyForms\ModifyEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\ModifyEmployee.Designer.cs">
+    <Compile Include="ModifyForms\ModifyEmployee.Designer.cs">
       <DependentUpon>ModifyEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\RetrieveClients.cs">
+    <Compile Include="RetrieveForms\RetrieveClients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\RetrieveClients.Designer.cs">
+    <Compile Include="RetrieveForms\RetrieveClients.Designer.cs">
       <DependentUpon>RetrieveClients.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\RetrieveEmployees.cs">
+    <Compile Include="RetrieveForms\RetrieveEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\RetrieveEmployees.Designer.cs">
+    <Compile Include="RetrieveForms\RetrieveEmployees.Designer.cs">
       <DependentUpon>RetrieveEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\ShowClients.cs">
+    <Compile Include="ShowForms\ShowClients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\ShowClients.Designer.cs">
+    <Compile Include="ShowForms\ShowClients.Designer.cs">
       <DependentUpon>ShowClients.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\ShowEmployees.cs">
+    <Compile Include="ShowForms\ShowEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\ShowEmployees.Designer.cs">
+    <Compile Include="ShowForms\ShowEmployees.Designer.cs">
       <DependentUpon>ShowEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\ShowTransaction.cs">
+    <Compile Include="ShowForms\ShowTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\ShowTransaction.Designer.cs">
+    <Compile Include="ShowForms\ShowTransaction.Designer.cs">
       <DependentUpon>ShowTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -153,49 +153,49 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\AddAccount.resx">
+    <EmbeddedResource Include="AddForms\AddAccount.resx">
       <DependentUpon>AddAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\addClient.resx">
+    <EmbeddedResource Include="AddForms\addClient.resx">
       <DependentUpon>AddClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\AddEmployee.resx">
+    <EmbeddedResource Include="AddForms\AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\CancelTransaction.resx">
+    <EmbeddedResource Include="TransactionForms\CancelTransaction.resx">
       <DependentUpon>CancelTransaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\MakeTransaction.resx">
+    <EmbeddedResource Include="TransactionForms\MakeTransaction.resx">
       <DependentUpon>MakeTransaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\ManagerMenu.resx">
+    <EmbeddedResource Include="MenuForms\ManagerMenu.resx">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\CashierMenu.resx">
+    <EmbeddedResource Include="MenuForms\CashierMenu.resx">
       <DependentUpon>CashierMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\ModifyAccount.resx">
+    <EmbeddedResource Include="ModifyForms\ModifyAccount.resx">
       <DependentUpon>ModifyAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\ModifyClient.resx">
+    <EmbeddedResource Include="ModifyForms\ModifyClient.resx">
       <DependentUpon>ModifyClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\ModifyEmployee.resx">
+    <EmbeddedResource Include="ModifyForms\ModifyEmployee.resx">
       <DependentUpon>ModifyEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\RetrieveClients.resx">
+    <EmbeddedResource Include="RetrieveForms\RetrieveClients.resx">
       <DependentUpon>RetrieveClients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\RetrieveEmployees.resx">
+    <EmbeddedResource Include="RetrieveForms\RetrieveEmployees.resx">
       <DependentUpon>RetrieveEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\ShowClients.resx">
+    <EmbeddedResource Include="ShowForms\ShowClients.resx">
       <DependentUpon>ShowClients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\ShowEmployees.resx">
+    <EmbeddedResource Include="ShowForms\ShowEmployees.resx">
       <DependentUpon>ShowEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\ShowTransaction.resx">
+    <EmbeddedResource Include="ShowForms\ShowTransaction.resx">
       <DependentUpon>ShowTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -223,6 +223,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DepositForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

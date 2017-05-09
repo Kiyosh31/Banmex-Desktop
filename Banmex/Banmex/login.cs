@@ -38,27 +38,28 @@ namespace Banmex
 
                 if (reader.Read())
                 {
+                    //el reader lo ponemos de la forma de employee
+                    Class.Employee myEmployee = new Class.Employee(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7), reader.GetBoolean(8));
+
                     //si coinciden los campos con la informacion del gerente entra aqui
-                    if (reader.GetInt32(7) == 0)
+                    if (myEmployee.EmployeeType == 0)
                     {
                         Connection.CloseConnection();
                         MessageBox.Show("Sesion iniciada como admin");
 
-                        //obtengo el id del empleado
-                        
-
                         //se inicializa el menu del gerente
                         this.Hide();
-                        ManagerMenu ManagerWindow = new ManagerMenu(Connection);
+                        //obtengo el id del empleado y lo mando 
+                        ManagerMenu ManagerWindow = new ManagerMenu(Connection, myEmployee.IdEmployee);
                         ManagerWindow.ShowDialog();
                         this.Close();
                     }
-                    else
+                    else if(myEmployee.EmployeeType == 1)
                     {
                         //si coinciden los datos con la informacion del cajero entra aqui
                         MessageBox.Show("Sesion iniciada como cajero");
                         Connection.CloseConnection();
-                        CashierMenu CashierWIndow = new CashierMenu(Connection);
+                        CashierMenu CashierWIndow = new CashierMenu(Connection, myEmployee.IdEmployee);
                         this.Hide();
                         CashierWIndow.ShowDialog();
                         this.Close();

@@ -52,7 +52,7 @@ namespace Banmex.Class
             return OK;
         }
 
-        //metodos para buscar un cliente, recibe la conexion y el id del cliente
+        //metodo para buscar un cliente, recibe la conexion y el id del cliente
         //cuando encuentra el cliente, lo guarda en un objeto y lo retorna
         public static Client searchClient(MySqlConnection Connection, string idClient)
         {
@@ -65,6 +65,15 @@ namespace Banmex.Class
             }
             Client e = null;
             return e;
+        }
+
+        //metodo para buscar el id de un cliente, recibe la conexion y el nombre del cliente
+        //cuando encuentra el cliente, lo guarda en un objeto de tipo reader y lo retorna
+        public static MySqlDataReader searchIdClient(MySqlConnection Connection, string clientName)
+        {
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM Client WHERE FirstName = {0} AND Active = true", clientName), Connection);
+            MySqlDataReader Reader = command.ExecuteReader();
+            return Reader;
         }
 
         //este metodo modifica un cliente, recibe la conexion y un objeto cliente

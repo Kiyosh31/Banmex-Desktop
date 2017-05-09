@@ -87,6 +87,21 @@ namespace Banmex.Class
             return e;
         }
 
+        //metodos para buscar el id de una cuenta, recibe la conexion y el id de un cliente
+        //cuando encuentra la cuenta, lo guarda en un objeto y lo retorna
+        public static Account searchIdAccount(MySqlConnection Connection, string idClient)
+        {
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM account WHERE Client_idClient = {0} AND Active = true", idClient), Connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                Account account = new Account(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetFloat(3), reader.GetFloat(4), reader.GetString(5), reader.GetInt32(6), reader.GetBoolean(7));
+                return account;
+            }
+            Account e = null;
+            return e;
+        }
+
         //este metodo elimina una cuenta, recibe la conexion y un id de la cuenta
         //el metodo retorna el numero de filas afectadas en la db
         // 1 = eliminado correctamente

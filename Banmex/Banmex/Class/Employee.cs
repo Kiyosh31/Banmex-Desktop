@@ -36,7 +36,7 @@ namespace Banmex.Class
         }
 
         //getters y setters
-        public int ID
+        public int IdEmployee
         {
             get { return idEmployee; }
             set { idEmployee = value; }
@@ -125,7 +125,7 @@ namespace Banmex.Class
         {
             MySqlCommand command = new MySqlCommand(String.Format(
                 "UPDATE employee SET firstName = '{1}', lastName = '{2}', phone = '{3}', email = {4}, address = '{5}', password = '{6}', employeeType = {6}, Active = true WHERE idEmployee = {0}", 
-                employee.ID ,employee.firstName, employee.lastName, employee.phone, employee.email, employee.address, employee.password, employee.employeeType, true), Connection);
+                employee.IdEmployee ,employee.firstName, employee.lastName, employee.phone, employee.email, employee.address, employee.password, employee.employeeType, true), Connection);
             int OK = command.ExecuteNonQuery();
             return OK;
         }
