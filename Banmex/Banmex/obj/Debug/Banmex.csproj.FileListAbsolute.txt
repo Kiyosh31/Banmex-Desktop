@@ -32,3 +32,4 @@ C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.ShowTransaction.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.AddForms.addTransaction.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.CancelForms.CancelTransaction.resources
+C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.csprojResolveAssemblyReference.cache

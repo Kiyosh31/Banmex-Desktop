@@ -37,6 +37,7 @@
             this.accountTypeLabel = new System.Windows.Forms.Label();
             this.quantityTextBox = new System.Windows.Forms.TextBox();
             this.accountTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.accpetButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.destinationGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.origenDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +66,7 @@
             this.origenDataGridView.Location = new System.Drawing.Point(26, 35);
             this.origenDataGridView.Name = "origenDataGridView";
             this.origenDataGridView.RowTemplate.Height = 24;
-            this.origenDataGridView.Size = new System.Drawing.Size(285, 150);
+            this.origenDataGridView.Size = new System.Drawing.Size(300, 150);
             this.origenDataGridView.TabIndex = 8;
             // 
             // textBox1
@@ -87,7 +88,7 @@
             // quantityLabel
             // 
             this.quantityLabel.AutoSize = true;
-            this.quantityLabel.Location = new System.Drawing.Point(105, 211);
+            this.quantityLabel.Location = new System.Drawing.Point(36, 208);
             this.quantityLabel.Name = "quantityLabel";
             this.quantityLabel.Size = new System.Drawing.Size(64, 17);
             this.quantityLabel.TabIndex = 11;
@@ -96,7 +97,7 @@
             // accountTypeLabel
             // 
             this.accountTypeLabel.AutoSize = true;
-            this.accountTypeLabel.Location = new System.Drawing.Point(105, 273);
+            this.accountTypeLabel.Location = new System.Drawing.Point(36, 270);
             this.accountTypeLabel.Name = "accountTypeLabel";
             this.accountTypeLabel.Size = new System.Drawing.Size(103, 17);
             this.accountTypeLabel.TabIndex = 12;
@@ -104,9 +105,9 @@
             // 
             // quantityTextBox
             // 
-            this.quantityTextBox.Location = new System.Drawing.Point(108, 232);
+            this.quantityTextBox.Location = new System.Drawing.Point(39, 229);
             this.quantityTextBox.Name = "quantityTextBox";
-            this.quantityTextBox.Size = new System.Drawing.Size(100, 22);
+            this.quantityTextBox.Size = new System.Drawing.Size(121, 22);
             this.quantityTextBox.TabIndex = 13;
             // 
             // accountTypeComboBox
@@ -116,16 +117,27 @@
             this.accountTypeComboBox.Items.AddRange(new object[] {
             "Credito",
             "Debito"});
-            this.accountTypeComboBox.Location = new System.Drawing.Point(108, 294);
+            this.accountTypeComboBox.Location = new System.Drawing.Point(39, 291);
             this.accountTypeComboBox.Name = "accountTypeComboBox";
             this.accountTypeComboBox.Size = new System.Drawing.Size(121, 24);
             this.accountTypeComboBox.TabIndex = 14;
+            // 
+            // accpetButton
+            // 
+            this.accpetButton.Location = new System.Drawing.Point(573, 291);
+            this.accpetButton.Name = "accpetButton";
+            this.accpetButton.Size = new System.Drawing.Size(120, 56);
+            this.accpetButton.TabIndex = 15;
+            this.accpetButton.Text = "Aceptar";
+            this.accpetButton.UseVisualStyleBackColor = true;
+            this.accpetButton.Click += new System.EventHandler(this.accpetButton_Click);
             // 
             // AddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 359);
+            this.Controls.Add(this.accpetButton);
             this.Controls.Add(this.accountTypeComboBox);
             this.Controls.Add(this.quantityTextBox);
             this.Controls.Add(this.accountTypeLabel);
@@ -157,5 +169,6 @@
         private System.Windows.Forms.Label accountTypeLabel;
         private System.Windows.Forms.TextBox quantityTextBox;
         private System.Windows.Forms.ComboBox accountTypeComboBox;
+        private System.Windows.Forms.Button accpetButton;
     }
 }

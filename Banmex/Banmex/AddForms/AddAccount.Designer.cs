@@ -41,7 +41,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(93, 277);
+            this.addButton.Location = new System.Drawing.Point(93, 278);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(136, 67);
             this.addButton.TabIndex = 0;
@@ -111,7 +111,7 @@
             this.accountTypeComboBox.Items.AddRange(new object[] {
             "Credito",
             "Debito"});
-            this.accountTypeComboBox.Location = new System.Drawing.Point(64, 225);
+            this.accountTypeComboBox.Location = new System.Drawing.Point(64, 226);
             this.accountTypeComboBox.Name = "accountTypeComboBox";
             this.accountTypeComboBox.Size = new System.Drawing.Size(201, 24);
             this.accountTypeComboBox.TabIndex = 9;
@@ -121,7 +121,7 @@
             this.accountTypeLabel.AutoSize = true;
             this.accountTypeLabel.BackColor = System.Drawing.Color.Transparent;
             this.accountTypeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.accountTypeLabel.Location = new System.Drawing.Point(61, 205);
+            this.accountTypeLabel.Location = new System.Drawing.Point(61, 206);
             this.accountTypeLabel.Name = "accountTypeLabel";
             this.accountTypeLabel.Size = new System.Drawing.Size(103, 17);
             this.accountTypeLabel.TabIndex = 10;

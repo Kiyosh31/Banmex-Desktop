@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.canceledDataGriedView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.canceledDataGriedView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // canceledDataGriedView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(394, 424);
-            this.dataGridView1.TabIndex = 0;
+            this.canceledDataGriedView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.canceledDataGriedView.Location = new System.Drawing.Point(13, 13);
+            this.canceledDataGriedView.Name = "canceledDataGriedView";
+            this.canceledDataGriedView.RowTemplate.Height = 24;
+            this.canceledDataGriedView.Size = new System.Drawing.Size(872, 424);
+            this.canceledDataGriedView.TabIndex = 0;
             // 
             // CancelTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 449);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(897, 449);
+            this.Controls.Add(this.canceledDataGriedView);
             this.Name = "CancelTransaction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cancelar Transaccion";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.canceledDataGriedView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView canceledDataGriedView;
     }
 }

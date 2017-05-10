@@ -29,7 +29,6 @@ namespace Banmex.Menu
 
             //establemos un credito maximo para la cuenta
             maximumCreditTextBox.Text = "50000";
-            
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -41,36 +40,38 @@ namespace Banmex.Menu
             }
             else
             {
-                //abrimos conexion con la db
+                //abrir conexion de la db
                 Connection.OpenConnection();
 
                 //establecemos la fecha de corte
-                string date = DateTime.Now.AddDays(15).ToString();
+                DateTime today = DateTime.Today;
+                DateTime cutOffDay = today.AddDays(15);
+                string date = today.ToString("yyyyMMdd");
 
-                //establecemos el tipo de cuenta que el usuario quiere
+                //establemos el tipo de cliente que sera 
                 int accountType;
-                if (accountTypeComboBox.SelectedIndex == 0)
+                if(accountTypeComboBox.SelectedIndex == 0)
                 {
-                    // 0 = Credito
+                    //0 = Credito
                     accountType = 0;
                 }
                 else
                 {
-                    // 1 = Debito
+                    //1 = debito
                     accountType = 1;
                 }
 
-                //ingresamos la cuenta del cliente a la db
                 Class.Account account = new Class.Account(1, Int32.Parse(idClient), niptextBox.Text, float.Parse(balanceTextBox.Text), float.Parse(maximumCreditTextBox.Text), date, accountType, true);
-                
-                //ingresamos la nueva cuenta a la db
-                Class.Account.addAccount(Connection.myConnection, account);
-                
-                //cierra conexion a la db
-                Connection.CloseConnection();
 
-                MessageBox.Show("La cuenta \nSe ingreso correctamente");
-                this.Close();
+                if(Class.Account.addAccount(Connection.myConnection, account) == 1)
+                {
+                    //Cerrar conexion con db
+                    Connection.CloseConnection();
+
+                    //Mensaje de exito
+                    MessageBox.Show("Cuenta registrada con exito");
+                    this.Close();
+                }   
             }
         }
     }

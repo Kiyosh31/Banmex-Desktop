@@ -59,7 +59,7 @@ namespace Banmex.Menu
                 {
                     string idClient = clientsGridView.CurrentRow.Cells[0].Value.ToString();
                     Connection.OpenConnection();
-                    Class.Employee.retrieveEmployee(Connection.myConnection, idClient);
+                    Class.Client.retrieveClient(Connection.myConnection, idClient);
                     Connection.CloseConnection();
 
                     MessageBox.Show("Restaurado exitosamente");

@@ -68,5 +68,21 @@ namespace Banmex.AddForms
             loadOrigenData();
             loadDestinationData();
         }
+
+        private void accpetButton_Click(object sender, EventArgs e)
+        {
+            if(origenDataGridView.Rows.Count == 0 || destinationGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("Las tablas estan vacias.");
+            }
+            else if(quantityTextBox.Text == "" || accountTypeComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Favor de llenar todos los campos");
+            }
+            else
+            {
+
+            }
+        }
     }
 }

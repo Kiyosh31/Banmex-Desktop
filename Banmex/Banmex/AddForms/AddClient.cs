@@ -30,7 +30,7 @@ namespace Banmex.Menu
         private int maxId()
         {
             //se declara el entero que sera el id del cliente
-            int id = 0;
+            int id = 1;
 
             try
             {
@@ -46,7 +46,7 @@ namespace Banmex.Menu
                     //se valida si la db esta vacia
                     if(!reader.IsDBNull(0))
                     {
-                        //seestablece el id del cliente a la variable
+                        //se establece el id del cliente a la variable
                         id = reader.GetInt32(0);
                     }
                 }
@@ -56,7 +56,7 @@ namespace Banmex.Menu
             }
             catch (Exception)
             {
-                //excepcion
+                MessageBox.Show("No se pudo obtener el id");
             }
 
             //retornamos el id del cliente
@@ -85,11 +85,14 @@ namespace Banmex.Menu
                     //validacion si se ingreso el nuevo cliente a la base de datos
                     if(Class.Client.addClient(Connection.myConnection, client) == 1)
                     {
+                        //cerrar conexion
+                        Connection.CloseConnection();
+
                         //mensaje de exito
                         MessageBox.Show("Cliente \nIngresado Correctamente");
 
                         //obtenemos el id del cliente
-                        string id = maxId().ToString("yyyy-MM-dd");
+                        string id = maxId().ToString();
 
                         //se abre la ventana para ingresar la cuenta
                         this.Hide();
@@ -102,9 +105,6 @@ namespace Banmex.Menu
                         //mensaje error
                         MessageBox.Show("Problemas al insertar al cliente");
                     }
-
-                    //cerrar conexion
-                    Connection.CloseConnection();
                 }
                 else
                 {

@@ -154,9 +154,9 @@ namespace Banmex.Class
         //este metodo recupera los clientes eliminados de la db recibe la conexion y un id del cliente
         //el metodo retorna el numero de filas afectadas en la db
         // 1 = recuperado correctamente 
-        public static int retrieveEmployee(MySqlConnection Connection, string idClient)
+        public static int retrieveClient(MySqlConnection Connection, string idClient)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("UPDATE employee SET Active = true WHERE idEmployee = '{0}'", idClient), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("UPDATE Client SET Active = true WHERE idClient = '{0}'", idClient), Connection);
             int OK = command.ExecuteNonQuery();
             return OK;
         }
