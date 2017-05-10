@@ -59,11 +59,21 @@ namespace Banmex.Menu
                 {
                     string idClient = clientsGridView.CurrentRow.Cells[0].Value.ToString();
                     Connection.OpenConnection();
-                    Class.Client.retrieveClient(Connection.myConnection, idClient);
-                    Connection.CloseConnection();
+                    if(Class.Client.retrieveClient(Connection.myConnection, idClient) == 1)
+                    {
+                        Connection.CloseConnection();
 
-                    MessageBox.Show("Restaurado exitosamente");
-                    loadData();
+                        this.Hide();
+                        AddAccount accountWindow = new AddAccount(Connection, idClient);
+                        accountWindow.ShowDialog();
+                        this.Close();
+
+                        MessageBox.Show("Restaurado exitosamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Problemas al tratar de reactivar a un cliente");
+                    }
                 }
             }
         }

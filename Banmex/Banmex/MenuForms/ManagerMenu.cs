@@ -75,7 +75,7 @@ namespace Banmex.Menu
         private void addTransactionButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddForms.AddTransaction transactionWindow = new AddForms.AddTransaction(Connection);
+            AddForms.AddTransaction transactionWindow = new AddForms.AddTransaction(Connection, idEmployee);
             transactionWindow.ShowDialog();
             this.Show();
         }

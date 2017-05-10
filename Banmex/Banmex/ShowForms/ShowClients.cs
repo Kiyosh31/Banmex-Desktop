@@ -44,17 +44,16 @@ namespace Banmex.Menu
             Connection.CloseConnection();
         }
 
-        //metodo para cargar todos los datos a la tabla
         public void loadAccountsData()
         {
             Connection.OpenConnection();
-            //se genera una lista con todas las cuentas activas de los clientes
+            //se genera una lista con todos los clientes activos
             accountdGridView.DataSource = Class.Account.showAllAccounts(Connection.myConnection);
 
             //se establecen los nombres de cabecera para las columnas
             this.accountdGridView.Columns[0].HeaderCell.Value = "ID Cuenta";
             this.accountdGridView.Columns[1].HeaderCell.Value = "ID Cliente";
-            this.accountdGridView.Columns[2].HeaderCell.Value = "NIP";
+            this.accountdGridView.Columns[2].HeaderCell.Value = "Nip";
             this.accountdGridView.Columns[3].HeaderCell.Value = "Saldo";
             this.accountdGridView.Columns[4].HeaderCell.Value = "Credito Maximo";
             this.accountdGridView.Columns[5].HeaderCell.Value = "Dia de corte";
@@ -111,6 +110,7 @@ namespace Banmex.Menu
                     Connection.CloseConnection();
 
                     MessageBox.Show("Eliminado exitosamente");
+
                     loadClientsData();
                     loadAccountsData();
                 }
@@ -122,6 +122,7 @@ namespace Banmex.Menu
             string idClient = clientsGridView.CurrentRow.Cells[0].Value.ToString();
             AddAccount addAccount = new AddAccount(Connection, idClient);
             addAccount.ShowDialog();
+
             loadClientsData();
             loadAccountsData();
         }

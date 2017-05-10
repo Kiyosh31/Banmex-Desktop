@@ -32,11 +32,11 @@
             this.modifyButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.addAccountButton = new System.Windows.Forms.Button();
-            this.accountdGridView = new System.Windows.Forms.DataGridView();
-            this.clientsLabel = new System.Windows.Forms.Label();
-            this.accountsLabel = new System.Windows.Forms.Label();
             this.deleteAccountButton = new System.Windows.Forms.Button();
             this.modifyAccountButton = new System.Windows.Forms.Button();
+            this.accountdGridView = new System.Windows.Forms.DataGridView();
+            this.accountsLabel = new System.Windows.Forms.Label();
+            this.clientsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clientsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountdGridView)).BeginInit();
             this.SuspendLayout();
@@ -83,36 +83,6 @@
             this.addAccountButton.UseVisualStyleBackColor = true;
             this.addAccountButton.Click += new System.EventHandler(this.addAccount_Click);
             // 
-            // accountdGridView
-            // 
-            this.accountdGridView.AllowUserToAddRows = false;
-            this.accountdGridView.AllowUserToDeleteRows = false;
-            this.accountdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.accountdGridView.Location = new System.Drawing.Point(615, 46);
-            this.accountdGridView.Name = "accountdGridView";
-            this.accountdGridView.ReadOnly = true;
-            this.accountdGridView.RowTemplate.Height = 24;
-            this.accountdGridView.Size = new System.Drawing.Size(583, 436);
-            this.accountdGridView.TabIndex = 4;
-            // 
-            // clientsLabel
-            // 
-            this.clientsLabel.AutoSize = true;
-            this.clientsLabel.Location = new System.Drawing.Point(239, 13);
-            this.clientsLabel.Name = "clientsLabel";
-            this.clientsLabel.Size = new System.Drawing.Size(58, 17);
-            this.clientsLabel.TabIndex = 5;
-            this.clientsLabel.Text = "Clientes";
-            // 
-            // accountsLabel
-            // 
-            this.accountsLabel.AutoSize = true;
-            this.accountsLabel.Location = new System.Drawing.Point(905, 13);
-            this.accountsLabel.Name = "accountsLabel";
-            this.accountsLabel.Size = new System.Drawing.Size(60, 17);
-            this.accountsLabel.TabIndex = 6;
-            this.accountsLabel.Text = "Cuentas";
-            // 
             // deleteAccountButton
             // 
             this.deleteAccountButton.Location = new System.Drawing.Point(951, 501);
@@ -132,6 +102,36 @@
             this.modifyAccountButton.Text = "Modificar Cuenta";
             this.modifyAccountButton.UseVisualStyleBackColor = true;
             this.modifyAccountButton.Click += new System.EventHandler(this.modifyAccountButton_Click);
+            // 
+            // accountdGridView
+            // 
+            this.accountdGridView.AllowUserToAddRows = false;
+            this.accountdGridView.AllowUserToDeleteRows = false;
+            this.accountdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.accountdGridView.Location = new System.Drawing.Point(615, 46);
+            this.accountdGridView.Name = "accountdGridView";
+            this.accountdGridView.ReadOnly = true;
+            this.accountdGridView.RowTemplate.Height = 24;
+            this.accountdGridView.Size = new System.Drawing.Size(583, 436);
+            this.accountdGridView.TabIndex = 4;
+            // 
+            // accountsLabel
+            // 
+            this.accountsLabel.AutoSize = true;
+            this.accountsLabel.Location = new System.Drawing.Point(905, 13);
+            this.accountsLabel.Name = "accountsLabel";
+            this.accountsLabel.Size = new System.Drawing.Size(60, 17);
+            this.accountsLabel.TabIndex = 6;
+            this.accountsLabel.Text = "Cuentas";
+            // 
+            // clientsLabel
+            // 
+            this.clientsLabel.AutoSize = true;
+            this.clientsLabel.Location = new System.Drawing.Point(239, 13);
+            this.clientsLabel.Name = "clientsLabel";
+            this.clientsLabel.Size = new System.Drawing.Size(58, 17);
+            this.clientsLabel.TabIndex = 5;
+            this.clientsLabel.Text = "Clientes";
             // 
             // ShowClients
             // 
@@ -164,10 +164,10 @@
         private System.Windows.Forms.Button modifyButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button addAccountButton;
-        private System.Windows.Forms.DataGridView accountdGridView;
-        private System.Windows.Forms.Label clientsLabel;
-        private System.Windows.Forms.Label accountsLabel;
         private System.Windows.Forms.Button deleteAccountButton;
         private System.Windows.Forms.Button modifyAccountButton;
+        private System.Windows.Forms.DataGridView accountdGridView;
+        private System.Windows.Forms.Label accountsLabel;
+        private System.Windows.Forms.Label clientsLabel;
     }
 }

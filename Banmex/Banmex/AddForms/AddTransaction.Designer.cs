@@ -37,7 +37,7 @@
             this.accountTypeLabel = new System.Windows.Forms.Label();
             this.quantityTextBox = new System.Windows.Forms.TextBox();
             this.accountTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.accpetButton = new System.Windows.Forms.Button();
+            this.acceptButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.destinationGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.origenDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -45,16 +45,16 @@
             // destinationGridView
             // 
             this.destinationGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.destinationGridView.Location = new System.Drawing.Point(396, 35);
+            this.destinationGridView.Location = new System.Drawing.Point(387, 35);
             this.destinationGridView.Name = "destinationGridView";
             this.destinationGridView.RowTemplate.Height = 24;
-            this.destinationGridView.Size = new System.Drawing.Size(283, 150);
+            this.destinationGridView.Size = new System.Drawing.Size(292, 150);
             this.destinationGridView.TabIndex = 10;
             // 
             // detinationLabel
             // 
             this.detinationLabel.AutoSize = true;
-            this.detinationLabel.Location = new System.Drawing.Point(449, 15);
+            this.detinationLabel.Location = new System.Drawing.Point(576, 15);
             this.detinationLabel.Name = "detinationLabel";
             this.detinationLabel.Size = new System.Drawing.Size(103, 17);
             this.detinationLabel.TabIndex = 9;
@@ -122,22 +122,22 @@
             this.accountTypeComboBox.Size = new System.Drawing.Size(121, 24);
             this.accountTypeComboBox.TabIndex = 14;
             // 
-            // accpetButton
+            // acceptButton
             // 
-            this.accpetButton.Location = new System.Drawing.Point(573, 291);
-            this.accpetButton.Name = "accpetButton";
-            this.accpetButton.Size = new System.Drawing.Size(120, 56);
-            this.accpetButton.TabIndex = 15;
-            this.accpetButton.Text = "Aceptar";
-            this.accpetButton.UseVisualStyleBackColor = true;
-            this.accpetButton.Click += new System.EventHandler(this.accpetButton_Click);
+            this.acceptButton.Location = new System.Drawing.Point(564, 270);
+            this.acceptButton.Name = "acceptButton";
+            this.acceptButton.Size = new System.Drawing.Size(115, 55);
+            this.acceptButton.TabIndex = 15;
+            this.acceptButton.Text = "Aceptar";
+            this.acceptButton.UseVisualStyleBackColor = true;
+            this.acceptButton.Click += new System.EventHandler(this.acceptButton_Click);
             // 
             // AddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 359);
-            this.Controls.Add(this.accpetButton);
+            this.ClientSize = new System.Drawing.Size(705, 346);
+            this.Controls.Add(this.acceptButton);
             this.Controls.Add(this.accountTypeComboBox);
             this.Controls.Add(this.quantityTextBox);
             this.Controls.Add(this.accountTypeLabel);
@@ -169,6 +169,6 @@
         private System.Windows.Forms.Label accountTypeLabel;
         private System.Windows.Forms.TextBox quantityTextBox;
         private System.Windows.Forms.ComboBox accountTypeComboBox;
-        private System.Windows.Forms.Button accpetButton;
+        private System.Windows.Forms.Button acceptButton;
     }
 }

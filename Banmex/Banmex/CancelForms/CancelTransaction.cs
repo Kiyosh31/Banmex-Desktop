@@ -42,5 +42,22 @@ namespace Banmex.CancelForms
 
             Connection.CloseConnection();
         }
+
+        private void CancelTransaction_Load(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            if(canceledDataGriedView.Rows.Count == 0)
+            {
+                MessageBox.Show("La tabla esta vacia");
+            }
+            else
+            {
+
+            }
+        }
     }
 }
