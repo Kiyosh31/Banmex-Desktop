@@ -94,12 +94,21 @@ namespace Banmex.AddForms
                 //tomamos el id del cliente origen
                 string idOrigenClient = origenDataGridView.CurrentRow.Cells[0].Value.ToString();
                 //obtenemos el id de la cuenta
-                
+                int idOrigen = Class.Account.searchIdAccount(Connection.myConnection, idOrigenClient);
+
+                //cerramos la conexion a la db
+                Connection.CloseConnection();
+
+                //abrimos conexion a db
+                Connection.OpenConnection();
 
                 //tomamos el id del cliente destino
                 string idDestinationClient = destinationGridView.CurrentRow.Cells[0].Value.ToString();
                 //obtenemos el id de la cuenta
-                
+                int idDestination = Class.Account.searchIdAccount(Connection.myConnection, idDestinationClient);
+
+                //ceramos conexion a db
+                Connection.CloseConnection();
 
                 //establecemos el tipo de cuenta
                 int type;
@@ -113,9 +122,10 @@ namespace Banmex.AddForms
                     //1 = Debito
                     type = 1;
                 }
+                
 
-                int idOrigen = 0;
-                int idDestination = 0;
+                //abrimos conexion a db
+                Connection.OpenConnection();
 
                 //establecemos la fecha de la transaccion
                 DateTime today = DateTime.Today;

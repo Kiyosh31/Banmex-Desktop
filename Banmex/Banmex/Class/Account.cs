@@ -89,17 +89,23 @@ namespace Banmex.Class
 
         //metodos para buscar el id de una cuenta, recibe la conexion y el id de un cliente
         //cuando encuentra la cuenta, lo guarda en un objeto y lo retorna
-        public static Account searchIdAccount(MySqlConnection Connection, string idClient)
+        public static int searchIdAccount(MySqlConnection Connection, string idClient)
         {
+            int idAccount = 0;
+
             MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM account WHERE Client_idClient = {0} AND Active = true", idClient), Connection);
             MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
                 Account account = new Account(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetFloat(3), reader.GetFloat(4), reader.GetString(5), reader.GetInt32(6), reader.GetBoolean(7));
-                return account;
+                
+                if(account.Client_idClient == Convert.ToInt32(idClient))
+                {
+                    idAccount = account.idAccount;
+                }
             }
-            Account e = null;
-            return e;
+
+            return idAccount;
         }
 
         //este metodo elimina una cuenta, recibe la conexion y un id de la cuenta
@@ -108,6 +114,16 @@ namespace Banmex.Class
         public static int deleteAccount(MySqlConnection Connection, string idAccount)
         {
             MySqlCommand command = new MySqlCommand(String.Format("UPDATE Account SET Active = false WHERE idAccount = {0}", idAccount), Connection);
+            int OK = command.ExecuteNonQuery();
+            return OK;
+        }
+
+        //este metodo modifica una cuenta, recibe la conexion y un objeto cuenta
+        //el metodo retorna un numero
+        // 1 = modificado correctamente
+        public static int modifyAccount(MySqlConnection Connection, Account account)
+        {
+            MySqlCommand command = new MySqlCommand(String.Format("UPDATE Account SET NIP = '{0}', Balance = {1}, MaximumCredit = {2}, CutOffDay = '{3}', AccountType = {4} , Active = true WHERE idAccount = {5}", account.nip, account.balance, account.maximumCredit, account.cutOffDay, account.AccountType, account.idAccount), Connection);
             int OK = command.ExecuteNonQuery();
             return OK;
         }

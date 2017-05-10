@@ -140,6 +140,7 @@ namespace Banmex.Menu
                 string idClient = accountdGridView.CurrentRow.Cells[0].Value.ToString();
                 ModifyAccount modWindow = new ModifyAccount(Connection, idClient);
                 modWindow.ShowDialog();
+
                 loadClientsData();
                 loadAccountsData();
             }
