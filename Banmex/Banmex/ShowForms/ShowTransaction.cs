@@ -61,13 +61,31 @@ namespace Banmex.Menu
 
                 if (result == DialogResult.Yes)
                 {
+                    //tomamos el id de la transaccion
                     string idTransaction = transactionGridView.CurrentRow.Cells[0].Value.ToString();
                     Connection.OpenConnection();
-                    Class.Transaction.deleteTransaction(Connection.myConnection, idTransaction);
-                    Connection.CloseConnection();
 
-                    MessageBox.Show("Eliminado exitosamente");
-                    loadData();
+                    //establecemos la fecha de hoy para comparacion
+                    DateTime today = DateTime.Today;
+                    string actualDate = today.ToString("yyyyMMdd");
+
+                    //tomamos la fecha en que se hizo la transaccion para comparacion
+                    string transactionDate = transactionGridView.CurrentRow.Cells[4].Value.ToString();
+
+                    //comparamos las fechas para la cancelacion
+                    if(actualDate == transactionDate)
+                    {
+                        //si la cancelacion es el mismo dia se cancela la transaccion
+                        Class.Transaction.deleteTransaction(Connection.myConnection, idTransaction);
+                        Connection.CloseConnection();
+
+                        MessageBox.Show("Eliminado exitosamente");
+                        loadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No es posible cancelar la transaccion \nEl tiempo de cancelacion expiro");
+                    }
                 }
             }
         }
