@@ -13,12 +13,14 @@ namespace Banmex.AddForms
     public partial class AddDeposit : Form
     {
         Class.Connection Connection = new Class.Connection();
+        int idEmployee;
 
-        public AddDeposit(Class.Connection Connection)
+        public AddDeposit(Class.Connection Connection, int idEmployee)
         {
             InitializeComponent();
 
             this.Connection = Connection;
+            this.idEmployee = idEmployee;
 
             //Ajustar el contenido de la tabla al tamaño del dataGridView
             destinationDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -71,7 +73,23 @@ namespace Banmex.AddForms
             }
             else
             {
+                Connection.OpenConnection();
+                //id de la cuenta
+                string idClient = destinationDataGridView.CurrentRow.Cells[0].Value.ToString();
+                int idDestination = Class.Account.searchIdAccount(Connection.myConnection, idClient);
+                Connection.CloseConnection();
 
+                //fecha de hoy
+                DateTime today = DateTime.Today;
+                string date = today.ToString("yyyyMMdd");
+
+                Connection.OpenConnection();
+                Class.DepositWithoutAccount deposit = new Class.DepositWithoutAccount(1, idEmployee, idDestination, date, float.Parse(quantityTextBox.Text), nameTextBox.Text, false);
+                Class.DepositWithoutAccount.addDeposit(Connection.myConnection, deposit);
+                Connection.CloseConnection();
+
+                MessageBox.Show("Deposito realizado con exito");
+                this.Close();
             }
         }
     }

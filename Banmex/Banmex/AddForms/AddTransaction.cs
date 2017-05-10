@@ -90,23 +90,20 @@ namespace Banmex.AddForms
             {
                 //Abrimos conexion con la db
                 Connection.OpenConnection();
-
                 //tomamos el id del cliente origen
                 string idOrigenClient = origenDataGridView.CurrentRow.Cells[0].Value.ToString();
                 //obtenemos el id de la cuenta
                 int idOrigen = Class.Account.searchIdAccount(Connection.myConnection, idOrigenClient);
-
                 //cerramos la conexion a la db
                 Connection.CloseConnection();
 
+
                 //abrimos conexion a db
                 Connection.OpenConnection();
-
                 //tomamos el id del cliente destino
                 string idDestinationClient = destinationGridView.CurrentRow.Cells[0].Value.ToString();
                 //obtenemos el id de la cuenta
                 int idDestination = Class.Account.searchIdAccount(Connection.myConnection, idDestinationClient);
-
                 //ceramos conexion a db
                 Connection.CloseConnection();
 
@@ -126,7 +123,6 @@ namespace Banmex.AddForms
 
                 //abrimos conexion a db
                 Connection.OpenConnection();
-
                 //establecemos la fecha de la transaccion
                 DateTime today = DateTime.Today;
                 string date = today.ToString("yyyyMMdd");

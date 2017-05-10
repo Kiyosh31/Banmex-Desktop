@@ -55,7 +55,32 @@ namespace Banmex.ShowForms
             }
             else
             {
+                DialogResult result = MessageBox.Show("¿Seguro que desea eliminar este elemento?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
+                if (result == DialogResult.Yes)
+                {
+                    string idDeposit = cancelDepositDataGridView.CurrentRow.Cells[0].Value.ToString();
+
+                    //comparamos la fecha de hoy con la fecha del deposito
+                    //establecemos la fecha de hoy para comparacion
+                    DateTime date = DateTime.Today;
+                    string today = date.ToString("yyyyMMdd");
+
+                    if(today == cancelDepositDataGridView.CurrentRow.Cells[3].Value.ToString())
+                    {
+                        Connection.OpenConnection();
+                        Class.DepositWithoutAccount.deleteDeposit(Connection.myConnection, idDeposit);
+                        Connection.CloseConnection();
+
+                        MessageBox.Show("Eliminado exitosamente");
+                        loadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El tiempo de cancelacion expiro");
+                        this.Close();
+                    }
+                }
             }
         }
     }

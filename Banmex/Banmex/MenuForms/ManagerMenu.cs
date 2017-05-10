@@ -99,7 +99,7 @@ namespace Banmex.Menu
         private void addDepositButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddForms.AddDeposit depositWindow = new AddForms.AddDeposit(Connection);
+            AddForms.AddDeposit depositWindow = new AddForms.AddDeposit(Connection, idEmployee);
             depositWindow.ShowDialog();
             this.Show();
         }

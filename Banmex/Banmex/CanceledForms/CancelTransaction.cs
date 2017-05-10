@@ -47,17 +47,5 @@ namespace Banmex.CancelForms
         {
             loadData();
         }
-
-        private void cancelButton_Click(object sender, EventArgs e)
-        {
-            if(canceledDataGriedView.Rows.Count == 0)
-            {
-                MessageBox.Show("La tabla esta vacia");
-            }
-            else
-            {
-
-            }
-        }
     }
 }
