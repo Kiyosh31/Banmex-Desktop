@@ -67,6 +67,7 @@
             this.niptextBox.PasswordChar = '*';
             this.niptextBox.Size = new System.Drawing.Size(201, 22);
             this.niptextBox.TabIndex = 2;
+            this.niptextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.niptextBox_KeyPress);
             // 
             // balanceTextBox
             // 
@@ -74,6 +75,7 @@
             this.balanceTextBox.Name = "balanceTextBox";
             this.balanceTextBox.Size = new System.Drawing.Size(201, 22);
             this.balanceTextBox.TabIndex = 4;
+            this.balanceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.balanceTextBox_KeyPress);
             // 
             // balanceLabel
             // 
@@ -92,6 +94,7 @@
             this.maximumCreditTextBox.Name = "maximumCreditTextBox";
             this.maximumCreditTextBox.Size = new System.Drawing.Size(201, 22);
             this.maximumCreditTextBox.TabIndex = 6;
+            this.maximumCreditTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maximumCreditTextBox_KeyPress);
             // 
             // maximumCreditLabel
             // 

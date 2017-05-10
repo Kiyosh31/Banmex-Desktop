@@ -46,16 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddForms\AddDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddDeposit.Designer.cs">
+      <DependentUpon>AddDeposit.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddForms\AddTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddForms\AddTransaction.Designer.cs">
       <DependentUpon>AddTransaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="CancelForms\CancelTransaction.cs">
+    <Compile Include="CanceledForms\CancelDeposit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CancelForms\CancelTransaction.Designer.cs">
+    <Compile Include="CanceledForms\CancelDeposit.Designer.cs">
+      <DependentUpon>CancelDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CanceledForms\CancelTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CanceledForms\CancelTransaction.Designer.cs">
       <DependentUpon>CancelTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Account.cs" />
@@ -136,6 +148,12 @@
     <Compile Include="ShowForms\ShowClients.Designer.cs">
       <DependentUpon>ShowClients.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowForms\ShowDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowForms\ShowDeposit.Designer.cs">
+      <DependentUpon>ShowDeposit.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShowForms\ShowEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,10 +168,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddForms\AddDeposit.resx">
+      <DependentUpon>AddDeposit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddForms\AddTransaction.resx">
       <DependentUpon>AddTransaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CancelForms\CancelTransaction.resx">
+    <EmbeddedResource Include="CanceledForms\CancelDeposit.resx">
+      <DependentUpon>CancelDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CanceledForms\CancelTransaction.resx">
       <DependentUpon>CancelTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
@@ -191,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShowForms\ShowClients.resx">
       <DependentUpon>ShowClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowForms\ShowDeposit.resx">
+      <DependentUpon>ShowDeposit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowForms\ShowEmployees.resx">
       <DependentUpon>ShowEmployees.cs</DependentUpon>

@@ -95,5 +95,29 @@ namespace Banmex.Menu
             showTransactionWindow.ShowDialog();
             this.Show();
         }
+
+        private void addDepositButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddForms.AddDeposit depositWindow = new AddForms.AddDeposit(Connection);
+            depositWindow.ShowDialog();
+            this.Show();
+        }
+
+        private void showDepositButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ShowForms.ShowDeposit showDepositWindow = new ShowForms.ShowDeposit(Connection);
+            showDepositWindow.ShowDialog();
+            this.Show();
+        }
+
+        private void cancelDepositButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CancelForms.CancelDeposit cancelDepositWindow = new CancelForms.CancelDeposit(Connection);
+            cancelDepositWindow.ShowDialog();
+            this.Show();
+        }
     }
 }

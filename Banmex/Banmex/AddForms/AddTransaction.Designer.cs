@@ -109,6 +109,7 @@
             this.quantityTextBox.Name = "quantityTextBox";
             this.quantityTextBox.Size = new System.Drawing.Size(121, 22);
             this.quantityTextBox.TabIndex = 13;
+            this.quantityTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.quantityTextBox_KeyPress);
             // 
             // accountTypeComboBox
             // 

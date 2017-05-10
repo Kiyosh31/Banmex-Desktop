@@ -40,6 +40,10 @@
             this.addTransactionButton = new System.Windows.Forms.Button();
             this.cancelTransactionButton = new System.Windows.Forms.Button();
             this.showTransactionButton = new System.Windows.Forms.Button();
+            this.depositLabel = new System.Windows.Forms.Label();
+            this.addDepositButton = new System.Windows.Forms.Button();
+            this.showDepositButton = new System.Windows.Forms.Button();
+            this.cancelDepositButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // showEmployeeButton
@@ -165,11 +169,56 @@
             this.showTransactionButton.UseVisualStyleBackColor = true;
             this.showTransactionButton.Click += new System.EventHandler(this.showTransactionButton_Click);
             // 
+            // depositLabel
+            // 
+            this.depositLabel.AutoSize = true;
+            this.depositLabel.BackColor = System.Drawing.Color.Transparent;
+            this.depositLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.depositLabel.Location = new System.Drawing.Point(560, 9);
+            this.depositLabel.Name = "depositLabel";
+            this.depositLabel.Size = new System.Drawing.Size(78, 17);
+            this.depositLabel.TabIndex = 16;
+            this.depositLabel.Text = "Despositos";
+            // 
+            // addDepositButton
+            // 
+            this.addDepositButton.Location = new System.Drawing.Point(526, 34);
+            this.addDepositButton.Name = "addDepositButton";
+            this.addDepositButton.Size = new System.Drawing.Size(150, 76);
+            this.addDepositButton.TabIndex = 17;
+            this.addDepositButton.Text = "Realizar";
+            this.addDepositButton.UseVisualStyleBackColor = true;
+            this.addDepositButton.Click += new System.EventHandler(this.addDepositButton_Click);
+            // 
+            // showDepositButton
+            // 
+            this.showDepositButton.Location = new System.Drawing.Point(526, 128);
+            this.showDepositButton.Name = "showDepositButton";
+            this.showDepositButton.Size = new System.Drawing.Size(150, 76);
+            this.showDepositButton.TabIndex = 19;
+            this.showDepositButton.Text = "Ver";
+            this.showDepositButton.UseVisualStyleBackColor = true;
+            this.showDepositButton.Click += new System.EventHandler(this.showDepositButton_Click);
+            // 
+            // cancelDepositButton
+            // 
+            this.cancelDepositButton.Location = new System.Drawing.Point(526, 220);
+            this.cancelDepositButton.Name = "cancelDepositButton";
+            this.cancelDepositButton.Size = new System.Drawing.Size(150, 76);
+            this.cancelDepositButton.TabIndex = 18;
+            this.cancelDepositButton.Text = "Canceladas";
+            this.cancelDepositButton.UseVisualStyleBackColor = true;
+            this.cancelDepositButton.Click += new System.EventHandler(this.cancelDepositButton_Click);
+            // 
             // ManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 306);
+            this.ClientSize = new System.Drawing.Size(699, 306);
+            this.Controls.Add(this.showDepositButton);
+            this.Controls.Add(this.cancelDepositButton);
+            this.Controls.Add(this.addDepositButton);
+            this.Controls.Add(this.depositLabel);
             this.Controls.Add(this.showTransactionButton);
             this.Controls.Add(this.cancelTransactionButton);
             this.Controls.Add(this.addTransactionButton);
@@ -204,5 +253,9 @@
         private System.Windows.Forms.Button addTransactionButton;
         private System.Windows.Forms.Button cancelTransactionButton;
         private System.Windows.Forms.Button showTransactionButton;
+        private System.Windows.Forms.Label depositLabel;
+        private System.Windows.Forms.Button addDepositButton;
+        private System.Windows.Forms.Button showDepositButton;
+        private System.Windows.Forms.Button cancelDepositButton;
     }
 }

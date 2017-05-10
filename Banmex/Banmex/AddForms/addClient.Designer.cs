@@ -93,6 +93,7 @@
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(214, 22);
             this.phoneTextBox.TabIndex = 8;
+            this.phoneTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneTextBox_KeyPress);
             // 
             // phoneLabel
             // 

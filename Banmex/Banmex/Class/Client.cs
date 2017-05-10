@@ -113,27 +113,6 @@ namespace Banmex.Class
             return clientList;
         }
 
-        //este metodo recupera todos los elementos activos de la tabla cliente y los agrega a una lista con la forma de cliente
-        //retorna la lista con todos los clientes activos
-        public static int getClientNumber(MySqlConnection Connection)
-        {
-            List<Client> clientList = new List<Client>();
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM client"), Connection);
-            MySqlDataReader reader = command.ExecuteReader();
-
-            int count = 0;
-
-            while (reader.Read())
-            {
-                Client client = new Client(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetBoolean(6));
-                clientList.Add(client);
-
-                count++;
-            }
-
-            return count;
-        }
-
         //este metodo recupera todos los elementos inactivos de la tabla cliente y los agrega a una lista con la forma de cliente
         //retorna la lista con todos los clientes inactivos
         public static IList<Client> showDeletedClients(MySqlConnection Connection)

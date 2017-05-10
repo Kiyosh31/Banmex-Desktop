@@ -29,7 +29,10 @@ namespace Banmex.Menu
 
             //establemos un credito maximo para la cuenta
             maximumCreditTextBox.Text = "50000";
+            
         }
+
+        
 
         private void addButton_Click(object sender, EventArgs e)
         {
@@ -72,6 +75,43 @@ namespace Banmex.Menu
                     MessageBox.Show("Cuenta registrada con exito");
                     this.Close();
                 }   
+            }
+        }
+
+        //evento keypress el textbox solo acepta numeros
+        private void niptextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if(!char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+
+                MessageBox.Show("Favor de ingresar un dato valido");
+            }
+        }
+
+        private void balanceTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+
+                MessageBox.Show("Favor de ingresar un dato valido");
+            }
+        }
+
+        private void maximumCreditTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+
+                MessageBox.Show("Favor de ingresar un dato valido");
             }
         }
     }

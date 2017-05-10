@@ -138,5 +138,17 @@ namespace Banmex.Menu
                 return false;
             }
         }
+
+        private void phoneTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+
+                MessageBox.Show("Favor de ingresar un dato valido");
+            }
+        }
     }
 }

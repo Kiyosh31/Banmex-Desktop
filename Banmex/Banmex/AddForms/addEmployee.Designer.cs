@@ -87,6 +87,7 @@
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(205, 22);
             this.phoneTextBox.TabIndex = 5;
+            this.phoneTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneTextBox_KeyPress);
             // 
             // phoneLabel
             // 
@@ -170,7 +171,7 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(35, 364);
+            this.passwordTextBox.Location = new System.Drawing.Point(29, 364);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(205, 22);
@@ -181,7 +182,7 @@
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
             this.passwordLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.passwordLabel.Location = new System.Drawing.Point(32, 344);
+            this.passwordLabel.Location = new System.Drawing.Point(26, 344);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(81, 17);
             this.passwordLabel.TabIndex = 14;

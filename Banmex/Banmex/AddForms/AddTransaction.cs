@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Banmex.AddForms
 {
@@ -75,9 +76,9 @@ namespace Banmex.AddForms
         {
             if(origenDataGridView.Rows.Count == 0 || destinationGridView.Rows.Count == 0)
             {
-                MessageBox.Show("La tabla esta vacia");
+                MessageBox.Show("Las tablas estan vacias");
             }
-            else if(origenDataGridView.CurrentRow.Cells[0].Value == destinationGridView.CurrentRow.Cells[0].Value)
+            else if(origenDataGridView.CurrentRow.Cells[0].Value.ToString() == destinationGridView.CurrentRow.Cells[0].Value.ToString())
             {
                 MessageBox.Show("No se puede transferir a la misma cuenta");
             }
@@ -91,10 +92,14 @@ namespace Banmex.AddForms
                 Connection.OpenConnection();
 
                 //tomamos el id del cliente origen
-                string idOrigen = origenDataGridView.CurrentRow.Cells[0].Value.ToString();
+                string idOrigenClient = origenDataGridView.CurrentRow.Cells[0].Value.ToString();
+                //obtenemos el id de la cuenta
+                
 
                 //tomamos el id del cliente destino
-                string idDestination = destinationGridView.CurrentRow.Cells[0].Value.ToString();
+                string idDestinationClient = destinationGridView.CurrentRow.Cells[0].Value.ToString();
+                //obtenemos el id de la cuenta
+                
 
                 //establecemos el tipo de cuenta
                 int type;
@@ -109,12 +114,15 @@ namespace Banmex.AddForms
                     type = 1;
                 }
 
+                int idOrigen = 0;
+                int idDestination = 0;
+
                 //establecemos la fecha de la transaccion
                 DateTime today = DateTime.Today;
                 string date = today.ToString("yyyyMMdd");
 
                 //creamos el objeto de tipo transaccion
-                Class.Transaction transaction = new Class.Transaction(1, Convert.ToInt32(idOrigen), Convert.ToInt32(idDestination), idEployee, date, float.Parse(quantityTextBox.Text), type, false);
+                Class.Transaction transaction = new Class.Transaction(1, idOrigen, idDestination, idEployee, date, float.Parse(quantityTextBox.Text), type, false);
 
                 //intentamos ingresar a la db
                 if(Class.Transaction.addTransaction(Connection.myConnection, transaction) == 1)
@@ -122,8 +130,22 @@ namespace Banmex.AddForms
                     //cerramos conexion
                     Connection.CloseConnection();
 
-
+                    MessageBox.Show("Se ha transferido el dinero");
+                    this.Close();
                 }
+            }
+        }
+
+        //metodo validacion ingreso solo numeros
+        private void quantityTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+
+                MessageBox.Show("Favor de ingresar un dato valido");
             }
         }
     }
