@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAccount));
             this.addButton = new System.Windows.Forms.Button();
             this.nipLabel = new System.Windows.Forms.Label();
             this.niptextBox = new System.Windows.Forms.TextBox();
@@ -36,15 +35,13 @@
             this.balanceLabel = new System.Windows.Forms.Label();
             this.maximumCreditTextBox = new System.Windows.Forms.TextBox();
             this.maximumCreditLabel = new System.Windows.Forms.Label();
-            this.cutOffDayDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.cutOffDayLabel = new System.Windows.Forms.Label();
             this.accountTypeComboBox = new System.Windows.Forms.ComboBox();
             this.accountTypeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(93, 355);
+            this.addButton.Location = new System.Drawing.Point(93, 277);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(136, 67);
             this.addButton.TabIndex = 0;
@@ -56,8 +53,8 @@
             // 
             this.nipLabel.AutoSize = true;
             this.nipLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nipLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.nipLabel.Location = new System.Drawing.Point(59, 49);
+            this.nipLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.nipLabel.Location = new System.Drawing.Point(61, 28);
             this.nipLabel.Name = "nipLabel";
             this.nipLabel.Size = new System.Drawing.Size(29, 17);
             this.nipLabel.TabIndex = 1;
@@ -65,7 +62,7 @@
             // 
             // niptextBox
             // 
-            this.niptextBox.Location = new System.Drawing.Point(62, 69);
+            this.niptextBox.Location = new System.Drawing.Point(64, 48);
             this.niptextBox.Name = "niptextBox";
             this.niptextBox.PasswordChar = '*';
             this.niptextBox.Size = new System.Drawing.Size(201, 22);
@@ -73,7 +70,7 @@
             // 
             // balanceTextBox
             // 
-            this.balanceTextBox.Location = new System.Drawing.Point(62, 125);
+            this.balanceTextBox.Location = new System.Drawing.Point(64, 104);
             this.balanceTextBox.Name = "balanceTextBox";
             this.balanceTextBox.Size = new System.Drawing.Size(201, 22);
             this.balanceTextBox.TabIndex = 4;
@@ -82,8 +79,8 @@
             // 
             this.balanceLabel.AutoSize = true;
             this.balanceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.balanceLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.balanceLabel.Location = new System.Drawing.Point(59, 105);
+            this.balanceLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.balanceLabel.Location = new System.Drawing.Point(61, 84);
             this.balanceLabel.Name = "balanceLabel";
             this.balanceLabel.Size = new System.Drawing.Size(44, 17);
             this.balanceLabel.TabIndex = 3;
@@ -91,7 +88,7 @@
             // 
             // maximumCreditTextBox
             // 
-            this.maximumCreditTextBox.Location = new System.Drawing.Point(62, 182);
+            this.maximumCreditTextBox.Location = new System.Drawing.Point(64, 161);
             this.maximumCreditTextBox.Name = "maximumCreditTextBox";
             this.maximumCreditTextBox.Size = new System.Drawing.Size(201, 22);
             this.maximumCreditTextBox.TabIndex = 6;
@@ -100,31 +97,12 @@
             // 
             this.maximumCreditLabel.AutoSize = true;
             this.maximumCreditLabel.BackColor = System.Drawing.Color.Transparent;
-            this.maximumCreditLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.maximumCreditLabel.Location = new System.Drawing.Point(59, 162);
+            this.maximumCreditLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.maximumCreditLabel.Location = new System.Drawing.Point(61, 141);
             this.maximumCreditLabel.Name = "maximumCreditLabel";
             this.maximumCreditLabel.Size = new System.Drawing.Size(104, 17);
             this.maximumCreditLabel.TabIndex = 5;
             this.maximumCreditLabel.Text = "Credito maximo";
-            // 
-            // cutOffDayDateTimePicker
-            // 
-            this.cutOffDayDateTimePicker.CustomFormat = "dd.MM.yyyy";
-            this.cutOffDayDateTimePicker.Location = new System.Drawing.Point(62, 238);
-            this.cutOffDayDateTimePicker.Name = "cutOffDayDateTimePicker";
-            this.cutOffDayDateTimePicker.Size = new System.Drawing.Size(201, 22);
-            this.cutOffDayDateTimePicker.TabIndex = 7;
-            // 
-            // cutOffDayLabel
-            // 
-            this.cutOffDayLabel.AutoSize = true;
-            this.cutOffDayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.cutOffDayLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cutOffDayLabel.Location = new System.Drawing.Point(59, 218);
-            this.cutOffDayLabel.Name = "cutOffDayLabel";
-            this.cutOffDayLabel.Size = new System.Drawing.Size(103, 17);
-            this.cutOffDayLabel.TabIndex = 8;
-            this.cutOffDayLabel.Text = "Fecha de corte";
             // 
             // accountTypeComboBox
             // 
@@ -133,7 +111,7 @@
             this.accountTypeComboBox.Items.AddRange(new object[] {
             "Credito",
             "Debito"});
-            this.accountTypeComboBox.Location = new System.Drawing.Point(62, 301);
+            this.accountTypeComboBox.Location = new System.Drawing.Point(64, 225);
             this.accountTypeComboBox.Name = "accountTypeComboBox";
             this.accountTypeComboBox.Size = new System.Drawing.Size(201, 24);
             this.accountTypeComboBox.TabIndex = 9;
@@ -142,8 +120,8 @@
             // 
             this.accountTypeLabel.AutoSize = true;
             this.accountTypeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.accountTypeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.accountTypeLabel.Location = new System.Drawing.Point(59, 281);
+            this.accountTypeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.accountTypeLabel.Location = new System.Drawing.Point(61, 205);
             this.accountTypeLabel.Name = "accountTypeLabel";
             this.accountTypeLabel.Size = new System.Drawing.Size(103, 17);
             this.accountTypeLabel.TabIndex = 10;
@@ -153,12 +131,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(333, 448);
             this.Controls.Add(this.accountTypeLabel);
             this.Controls.Add(this.accountTypeComboBox);
-            this.Controls.Add(this.cutOffDayLabel);
-            this.Controls.Add(this.cutOffDayDateTimePicker);
             this.Controls.Add(this.maximumCreditTextBox);
             this.Controls.Add(this.maximumCreditLabel);
             this.Controls.Add(this.balanceTextBox);
@@ -183,8 +158,6 @@
         private System.Windows.Forms.Label balanceLabel;
         private System.Windows.Forms.TextBox maximumCreditTextBox;
         private System.Windows.Forms.Label maximumCreditLabel;
-        private System.Windows.Forms.DateTimePicker cutOffDayDateTimePicker;
-        private System.Windows.Forms.Label cutOffDayLabel;
         private System.Windows.Forms.ComboBox accountTypeComboBox;
         private System.Windows.Forms.Label accountTypeLabel;
     }

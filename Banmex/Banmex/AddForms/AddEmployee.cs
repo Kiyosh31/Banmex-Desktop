@@ -50,7 +50,7 @@ namespace Banmex.Menu
                     Class.Employee.addEmployee(Connection.myConnection, newEmploye);
                     Connection.CloseConnection();
 
-                    MessageBox.Show("Cliente registrado\nExitosamente");
+                    MessageBox.Show("Empleado registrado\nExitosamente");
                     this.Close();
                 }
                 else

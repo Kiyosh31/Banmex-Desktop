@@ -23,21 +23,51 @@ namespace Banmex.Menu
 
             //recibo por referencia la conexion a la base de datos
             this.Connection = Connection;
+            
+        }
 
-            //establecemos una minima cantidad inicial de la cuenta
-            balanceTextBox.Text = "1000";
+        //este metodo obtiene el ultimo id ingresado de un cliente
+        private int maxId()
+        {
+            //se declara el entero que sera el id del cliente
+            int id = 0;
 
-            //establecemos un limite estandar para la cuenta
-            maximumCreditTextBox.Text = "50000";
+            try
+            {
+                //se abre conexion
+                Connection.OpenConnection();
+
+                //se declara un reader que tendra el id del cliente
+                MySqlDataReader reader = Class.Client.clientMaxId(Connection.myConnection);
+
+                //mientras se haga la consulta
+                if (reader.Read())
+                {
+                    //se valida si la db esta vacia
+                    if(!reader.IsDBNull(0))
+                    {
+                        //seestablece el id del cliente a la variable
+                        id = reader.GetInt32(0);
+                    }
+                }
+
+                //se cierra conexion
+                Connection.CloseConnection();
+            }
+            catch (Exception)
+            {
+                //excepcion
+            }
+
+            //retornamos el id del cliente
+            return id;
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
             //validacion, todos los campos deben estan llenos para poder ingresar
             if(firstNameTextBox.Text == "" || lastNameTextBox.Text == "" || phoneTextBox.Text == "" 
-                || emailTextBox.Text == "" || addresTextBox.Text == "" || niptextBox.Text == "" 
-                || balanceTextBox.Text == "" || maximumCreditTextBox.Text == "" || cutOffDayDateTimePicker.Value.ToString() == "" 
-                || accountTypeComboBox.SelectedItem == null)
+                || emailTextBox.Text == "" || addresTextBox.Text == "" )
             {
                 MessageBox.Show("Favor de llenar todos los campos");
             }
@@ -48,40 +78,37 @@ namespace Banmex.Menu
                 {
                     //se abre conexion a la db
                     Connection.OpenConnection();
+
                     //instanciamos un objeto cliente y le mandamos los datos de los campos
                     Class.Client client = new Class.Client(1, firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, emailTextBox.Text, addresTextBox.Text, true);
-                    //ingresamos el nuevo cliente a la base de datos
-                    Class.Client.addClient(Connection.myConnection, client);
-
-                    //damos formato a la fecha de corte
-                    string date = cutOffDayDateTimePicker.Value.ToString("yyyyMMdd");
-                    //establecemos el tipo de cuenta que el usuario quiere
-                    int accountType;
-                    if(accountTypeComboBox.SelectedIndex == 0)
+                    
+                    //validacion si se ingreso el nuevo cliente a la base de datos
+                    if(Class.Client.addClient(Connection.myConnection, client) == 1)
                     {
-                        // 0 = Credito
-                        accountType = 0;
+                        //mensaje de exito
+                        MessageBox.Show("Cliente \nIngresado Correctamente");
+
+                        //obtenemos el id del cliente
+                        string id = maxId().ToString("yyyy-MM-dd");
+
+                        //se abre la ventana para ingresar la cuenta
+                        this.Hide();
+                        AddAccount addAccountWindow = new AddAccount(Connection, id);
+                        addAccountWindow.ShowDialog();
+                        this.Close();
                     }
                     else
                     {
-                        // 1 = Debito
-                        accountType = 1;
+                        //mensaje error
+                        MessageBox.Show("Problemas al insertar al cliente");
                     }
-                    Connection.OpenConnection();
-                    //conseguimos el id del cliente para asociarlo con la cuenta
-                    
-                    //instanciamos un objeto account y le mandamos los datos de los campos
-                    //Class.Account account = new Class.Account(1,1, 1, niptextBox.Text, float.Parse(balanceTextBox.Text), float.Parse(maximumCreditTextBox.Text), date, accountType, true);
-                    //ingresamos la nueva cuenta a la db
-                    //Class.Account.addAccount(Connection.myConnection, account);
-                    //cierra conexion a la db
-                    Connection.CloseConnection();
 
-                    MessageBox.Show("El cliente \nSe ingreso correctamente");
-                    this.Close();
+                    //cerrar conexion
+                    Connection.CloseConnection();
                 }
                 else
                 {
+                    //mensaje error
                     MessageBox.Show("El formato del correo no es correcto");
                 }
             }

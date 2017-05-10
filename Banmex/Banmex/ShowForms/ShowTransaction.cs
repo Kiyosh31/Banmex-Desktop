@@ -47,6 +47,7 @@ namespace Banmex.Menu
             loadData();
         }
 
+        //boton para la cencalacion de las transacciones
         private void cancelButton_Click(object sender, EventArgs e)
         {
             //validacion si la tabla esta vacia

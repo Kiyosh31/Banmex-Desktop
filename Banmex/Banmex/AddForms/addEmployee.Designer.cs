@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEmployee));
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
@@ -50,7 +49,7 @@
             // 
             this.firstNameLabel.AutoSize = true;
             this.firstNameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.firstNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.firstNameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.firstNameLabel.Location = new System.Drawing.Point(26, 25);
             this.firstNameLabel.Name = "firstNameLabel";
             this.firstNameLabel.Size = new System.Drawing.Size(58, 17);
@@ -75,7 +74,7 @@
             // 
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.lastNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lastNameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lastNameLabel.Location = new System.Drawing.Point(32, 87);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(58, 17);
@@ -93,7 +92,7 @@
             // 
             this.phoneLabel.AutoSize = true;
             this.phoneLabel.BackColor = System.Drawing.Color.Transparent;
-            this.phoneLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.phoneLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.phoneLabel.Location = new System.Drawing.Point(26, 154);
             this.phoneLabel.Name = "phoneLabel";
             this.phoneLabel.Size = new System.Drawing.Size(64, 17);
@@ -111,7 +110,7 @@
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.BackColor = System.Drawing.Color.Transparent;
-            this.emailLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.emailLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.emailLabel.Location = new System.Drawing.Point(26, 215);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(125, 17);
@@ -129,7 +128,7 @@
             // 
             this.addressLabel.AutoSize = true;
             this.addressLabel.BackColor = System.Drawing.Color.Transparent;
-            this.addressLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.addressLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.addressLabel.Location = new System.Drawing.Point(26, 279);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(64, 17);
@@ -140,7 +139,7 @@
             // 
             this.positionLabel.AutoSize = true;
             this.positionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.positionLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.positionLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.positionLabel.Location = new System.Drawing.Point(32, 404);
             this.positionLabel.Name = "positionLabel";
             this.positionLabel.Size = new System.Drawing.Size(61, 17);
@@ -181,7 +180,7 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
-            this.passwordLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.passwordLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.passwordLabel.Location = new System.Drawing.Point(32, 344);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(81, 17);
@@ -192,7 +191,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(391, 548);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);

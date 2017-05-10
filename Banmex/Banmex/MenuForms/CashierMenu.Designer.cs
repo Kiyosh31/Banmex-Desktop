@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierMenu));
             this.addClientButton = new System.Windows.Forms.Button();
             this.clientLabel = new System.Windows.Forms.Label();
             this.showClientButton = new System.Windows.Forms.Button();
@@ -52,7 +51,7 @@
             // 
             this.clientLabel.AutoSize = true;
             this.clientLabel.BackColor = System.Drawing.Color.Transparent;
-            this.clientLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.clientLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.clientLabel.Location = new System.Drawing.Point(140, 30);
             this.clientLabel.Name = "clientLabel";
             this.clientLabel.Size = new System.Drawing.Size(51, 17);
@@ -83,7 +82,7 @@
             // 
             this.transactionsLabel.AutoSize = true;
             this.transactionsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.transactionsLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.transactionsLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.transactionsLabel.Location = new System.Drawing.Point(319, 30);
             this.transactionsLabel.Name = "transactionsLabel";
             this.transactionsLabel.Size = new System.Drawing.Size(101, 17);
@@ -114,7 +113,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(480, 312);
             this.Controls.Add(this.cancelTransaction);
             this.Controls.Add(this.makeTransaction);

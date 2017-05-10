@@ -75,7 +75,7 @@ namespace Banmex.Menu
         private void addTransactionButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MakeTransaction transactionWindow = new MakeTransaction(Connection, idEmployee);
+            AddForms.AddTransaction transactionWindow = new AddForms.AddTransaction(Connection);
             transactionWindow.ShowDialog();
             this.Show();
         }
@@ -83,7 +83,7 @@ namespace Banmex.Menu
         private void cancelTransactionButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CancelTransaction cancelWindow = new CancelTransaction(Connection, idEmployee);
+            CancelForms.CancelTransaction cancelWindow = new CancelForms.CancelTransaction(Connection);
             cancelWindow.ShowDialog();
             this.Show();
         }

@@ -50,16 +50,12 @@ namespace Banmex.Menu
         private void makeTransaction_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MakeTransaction transactionWindow = new MakeTransaction(Connection, idEmployee);
-            transactionWindow.ShowDialog();
             this.Show();
         }
 
         private void cancelTransaction_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CancelTransaction cancelWindow = new CancelTransaction(Connection, idEmployee);
-            cancelWindow.ShowDialog();
             this.Show();
         }
     }

@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddForms\AddTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddTransaction.Designer.cs">
+      <DependentUpon>AddTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CancelForms\CancelTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelForms\CancelTransaction.Designer.cs">
+      <DependentUpon>CancelTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\Account.cs" />
     <Compile Include="Class\Client.cs" />
     <Compile Include="Class\Connection.cs" />
@@ -75,18 +87,6 @@
     </Compile>
     <Compile Include="AddForms\AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TransactionForms\CancelTransaction.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransactionForms\CancelTransaction.Designer.cs">
-      <DependentUpon>CancelTransaction.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TransactionForms\MakeTransaction.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransactionForms\MakeTransaction.Designer.cs">
-      <DependentUpon>MakeTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuForms\ManagerMenu.cs">
       <SubType>Form</SubType>
@@ -150,6 +150,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddForms\AddTransaction.resx">
+      <DependentUpon>AddTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CancelForms\CancelTransaction.resx">
+      <DependentUpon>CancelTransaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,12 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddForms\AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TransactionForms\CancelTransaction.resx">
-      <DependentUpon>CancelTransaction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TransactionForms\MakeTransaction.resx">
-      <DependentUpon>MakeTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForms\ManagerMenu.resx">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
@@ -224,8 +224,6 @@
   <ItemGroup>
     <None Include="src\user-icon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DepositForms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

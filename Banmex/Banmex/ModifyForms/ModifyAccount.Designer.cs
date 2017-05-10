@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyAccount));
             this.idAccountLabel = new System.Windows.Forms.Label();
             this.idAccountTextBox = new System.Windows.Forms.TextBox();
             this.modifyButton = new System.Windows.Forms.Button();
@@ -50,7 +49,7 @@
             // 
             this.idAccountLabel.AutoSize = true;
             this.idAccountLabel.BackColor = System.Drawing.Color.Transparent;
-            this.idAccountLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.idAccountLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.idAccountLabel.Location = new System.Drawing.Point(12, 34);
             this.idAccountLabel.Name = "idAccountLabel";
             this.idAccountLabel.Size = new System.Drawing.Size(70, 17);
@@ -84,7 +83,7 @@
             // 
             this.idClientLabel.AutoSize = true;
             this.idClientLabel.BackColor = System.Drawing.Color.Transparent;
-            this.idClientLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.idClientLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.idClientLabel.Location = new System.Drawing.Point(12, 79);
             this.idClientLabel.Name = "idClientLabel";
             this.idClientLabel.Size = new System.Drawing.Size(68, 17);
@@ -102,7 +101,7 @@
             // 
             this.nipLabel.AutoSize = true;
             this.nipLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nipLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.nipLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.nipLabel.Location = new System.Drawing.Point(14, 124);
             this.nipLabel.Name = "nipLabel";
             this.nipLabel.Size = new System.Drawing.Size(30, 17);
@@ -120,7 +119,7 @@
             // 
             this.balanceLabel.AutoSize = true;
             this.balanceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.balanceLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.balanceLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.balanceLabel.Location = new System.Drawing.Point(12, 169);
             this.balanceLabel.Name = "balanceLabel";
             this.balanceLabel.Size = new System.Drawing.Size(44, 17);
@@ -138,7 +137,7 @@
             // 
             this.maximumCreditLabel.AutoSize = true;
             this.maximumCreditLabel.BackColor = System.Drawing.Color.Transparent;
-            this.maximumCreditLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.maximumCreditLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.maximumCreditLabel.Location = new System.Drawing.Point(14, 214);
             this.maximumCreditLabel.Name = "maximumCreditLabel";
             this.maximumCreditLabel.Size = new System.Drawing.Size(104, 17);
@@ -149,7 +148,7 @@
             // 
             this.cutOffDayLabel.AutoSize = true;
             this.cutOffDayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.cutOffDayLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cutOffDayLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cutOffDayLabel.Location = new System.Drawing.Point(14, 259);
             this.cutOffDayLabel.Name = "cutOffDayLabel";
             this.cutOffDayLabel.Size = new System.Drawing.Size(85, 17);
@@ -167,7 +166,7 @@
             // 
             this.accountTypeLabel.AutoSize = true;
             this.accountTypeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.accountTypeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.accountTypeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.accountTypeLabel.Location = new System.Drawing.Point(14, 305);
             this.accountTypeLabel.Name = "accountTypeLabel";
             this.accountTypeLabel.Size = new System.Drawing.Size(103, 17);
@@ -190,7 +189,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(338, 481);
             this.Controls.Add(this.accountTypeComboBox);
             this.Controls.Add(this.accountTypeLabel);

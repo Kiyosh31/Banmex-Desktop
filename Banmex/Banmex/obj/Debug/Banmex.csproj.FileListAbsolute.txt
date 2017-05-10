@@ -12,7 +12,6 @@ C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\bin\Debug\Banmex.pdb
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\bin\Debug\MySql.Data.dll
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\bin\Debug\MySql.Data.xml
-C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.csprojResolveAssemblyReference.cache
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.login.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Properties.Resources.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.csproj.GenerateResource.Cache
@@ -30,6 +29,6 @@ C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.RetrieveClients.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.AddAccount.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.ModifyAccount.resources
-C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.MakeTransaction.resources
-C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.CancelTransaction.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.Menu.ShowTransaction.resources
+C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.AddForms.addTransaction.resources
+C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.CancelForms.CancelTransaction.resources

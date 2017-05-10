@@ -16,6 +16,7 @@ namespace Banmex.Menu
         Class.Connection Connection = new Class.Connection();
         string idClient;
 
+
         public AddAccount(Class.Connection Connection, string idClient)
         {
             InitializeComponent();
@@ -25,22 +26,27 @@ namespace Banmex.Menu
 
             //establecemos un saldo minimo para la apertura de la cuenta
             balanceTextBox.Text = "1000";
+
             //establemos un credito maximo para la cuenta
             maximumCreditTextBox.Text = "50000";
+            
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
             if(niptextBox.Text == "" || balanceTextBox.Text == "" || maximumCreditTextBox.Text == "" 
-                || cutOffDayDateTimePicker.Value.ToString() == "" || accountTypeComboBox.SelectedItem == null)
+                 || accountTypeComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Favor de llenar todos los campos");
             }
             else
             {
+                //abrimos conexion con la db
                 Connection.OpenConnection();
-                //damos formato a la fecha de corte
-                string date = cutOffDayDateTimePicker.Value.ToString("yyyyMMdd");
+
+                //establecemos la fecha de corte
+                string date = DateTime.Now.AddDays(15).ToString();
+
                 //establecemos el tipo de cuenta que el usuario quiere
                 int accountType;
                 if (accountTypeComboBox.SelectedIndex == 0)
@@ -53,10 +59,13 @@ namespace Banmex.Menu
                     // 1 = Debito
                     accountType = 1;
                 }
+
                 //ingresamos la cuenta del cliente a la db
                 Class.Account account = new Class.Account(1, Int32.Parse(idClient), niptextBox.Text, float.Parse(balanceTextBox.Text), float.Parse(maximumCreditTextBox.Text), date, accountType, true);
+                
                 //ingresamos la nueva cuenta a la db
                 Class.Account.addAccount(Connection.myConnection, account);
+                
                 //cierra conexion a la db
                 Connection.CloseConnection();
 
