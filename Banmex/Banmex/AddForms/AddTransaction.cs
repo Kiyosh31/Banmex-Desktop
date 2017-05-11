@@ -82,7 +82,7 @@ namespace Banmex.AddForms
             {
                 MessageBox.Show("No se puede transferir a la misma cuenta");
             }
-            else if(quantityTextBox.Text == "" || accountTypeComboBox.SelectedItem == null)
+            else if(quantityTextBox.Text == "")
             {
                 MessageBox.Show("Favor de llenar todos los campos");
             }

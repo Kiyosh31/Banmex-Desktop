@@ -50,13 +50,49 @@ namespace Banmex.Menu
         private void makeTransaction_Click(object sender, EventArgs e)
         {
             this.Hide();
+            AddForms.AddTransaction addTransaction = new AddForms.AddTransaction(Connection, idEmployee);
+            addTransaction.ShowDialog();
             this.Show();
         }
 
         private void cancelTransaction_Click(object sender, EventArgs e)
         {
             this.Hide();
+            ShowTransaction showTransaction = new ShowTransaction(Connection);
+            showTransaction.ShowDialog();
             this.Show();
+        }
+
+        private void canceledTransactionButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CancelForms.CancelTransaction canceledTransaction = new CancelForms.CancelTransaction(Connection);
+            canceledTransaction.ShowDialog();
+            this.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddForms.AddDeposit addDeposit = new AddForms.AddDeposit(Connection, idEmployee);
+            addDeposit.ShowDialog();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ShowForms.ShowDeposit showDeposit = new ShowForms.ShowDeposit(Connection);
+            showDeposit.ShowDialog();
+            this.Close();
+        }
+
+        private void cancelDepositButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CancelForms.CancelDeposit cancelDeposit = new CancelForms.CancelDeposit(Connection);
+            cancelDeposit.ShowDialog();
+            this.Hide();
         }
     }
 }

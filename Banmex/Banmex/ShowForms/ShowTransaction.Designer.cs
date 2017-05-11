@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowTransaction));
             this.transactionGridView = new System.Windows.Forms.DataGridView();
             this.cancelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.transactionGridView)).BeginInit();
@@ -36,15 +37,15 @@
             // transactionGridView
             // 
             this.transactionGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.transactionGridView.Location = new System.Drawing.Point(13, 13);
+            this.transactionGridView.Location = new System.Drawing.Point(12, 101);
             this.transactionGridView.Name = "transactionGridView";
             this.transactionGridView.RowTemplate.Height = 24;
-            this.transactionGridView.Size = new System.Drawing.Size(626, 439);
+            this.transactionGridView.Size = new System.Drawing.Size(754, 439);
             this.transactionGridView.TabIndex = 0;
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(666, 191);
+            this.cancelButton.Location = new System.Drawing.Point(796, 112);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(136, 74);
             this.cancelButton.TabIndex = 1;
@@ -56,7 +57,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 464);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(944, 552);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.transactionGridView);
             this.Name = "ShowTransaction";

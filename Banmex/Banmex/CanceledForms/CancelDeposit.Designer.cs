@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CancelDeposit));
             this.cancelDepositDataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.cancelDepositDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -35,7 +36,7 @@
             // cancelDepositDataGridView
             // 
             this.cancelDepositDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cancelDepositDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.cancelDepositDataGridView.Location = new System.Drawing.Point(12, 75);
             this.cancelDepositDataGridView.Name = "cancelDepositDataGridView";
             this.cancelDepositDataGridView.RowTemplate.Height = 24;
             this.cancelDepositDataGridView.Size = new System.Drawing.Size(825, 424);
@@ -45,7 +46,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(847, 511);
             this.Controls.Add(this.cancelDepositDataGridView);
             this.Name = "CancelDeposit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

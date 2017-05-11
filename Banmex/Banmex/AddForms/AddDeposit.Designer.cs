@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddDeposit));
             this.destinationDataGridView = new System.Windows.Forms.DataGridView();
             this.accountLabel = new System.Windows.Forms.Label();
             this.quantityLabel = new System.Windows.Forms.Label();
@@ -41,7 +42,7 @@
             // destinationDataGridView
             // 
             this.destinationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.destinationDataGridView.Location = new System.Drawing.Point(12, 41);
+            this.destinationDataGridView.Location = new System.Drawing.Point(100, 84);
             this.destinationDataGridView.Name = "destinationDataGridView";
             this.destinationDataGridView.RowTemplate.Height = 24;
             this.destinationDataGridView.Size = new System.Drawing.Size(240, 150);
@@ -50,7 +51,9 @@
             // accountLabel
             // 
             this.accountLabel.AutoSize = true;
-            this.accountLabel.Location = new System.Drawing.Point(12, 21);
+            this.accountLabel.BackColor = System.Drawing.Color.Transparent;
+            this.accountLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.accountLabel.Location = new System.Drawing.Point(100, 64);
             this.accountLabel.Name = "accountLabel";
             this.accountLabel.Size = new System.Drawing.Size(105, 17);
             this.accountLabel.TabIndex = 1;
@@ -59,7 +62,9 @@
             // quantityLabel
             // 
             this.quantityLabel.AutoSize = true;
-            this.quantityLabel.Location = new System.Drawing.Point(12, 219);
+            this.quantityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.quantityLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.quantityLabel.Location = new System.Drawing.Point(100, 262);
             this.quantityLabel.Name = "quantityLabel";
             this.quantityLabel.Size = new System.Drawing.Size(64, 17);
             this.quantityLabel.TabIndex = 2;
@@ -67,7 +72,7 @@
             // 
             // quantityTextBox
             // 
-            this.quantityTextBox.Location = new System.Drawing.Point(15, 240);
+            this.quantityTextBox.Location = new System.Drawing.Point(103, 283);
             this.quantityTextBox.Name = "quantityTextBox";
             this.quantityTextBox.Size = new System.Drawing.Size(237, 22);
             this.quantityTextBox.TabIndex = 3;
@@ -75,7 +80,7 @@
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(15, 301);
+            this.nameTextBox.Location = new System.Drawing.Point(103, 344);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(237, 22);
             this.nameTextBox.TabIndex = 5;
@@ -83,7 +88,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 280);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(100, 323);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 4;
@@ -91,7 +98,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(311, 368);
+            this.addButton.Location = new System.Drawing.Point(397, 368);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(119, 53);
             this.addButton.TabIndex = 6;
@@ -103,7 +110,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 433);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(528, 433);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label1);

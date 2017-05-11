@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowDeposit));
             this.cancelDepositDataGridView = new System.Windows.Forms.DataGridView();
             this.cancelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cancelDepositDataGridView)).BeginInit();
@@ -36,15 +37,15 @@
             // cancelDepositDataGridView
             // 
             this.cancelDepositDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cancelDepositDataGridView.Location = new System.Drawing.Point(13, 13);
+            this.cancelDepositDataGridView.Location = new System.Drawing.Point(12, 93);
             this.cancelDepositDataGridView.Name = "cancelDepositDataGridView";
             this.cancelDepositDataGridView.RowTemplate.Height = 24;
-            this.cancelDepositDataGridView.Size = new System.Drawing.Size(612, 424);
+            this.cancelDepositDataGridView.Size = new System.Drawing.Size(758, 424);
             this.cancelDepositDataGridView.TabIndex = 0;
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(666, 119);
+            this.cancelButton.Location = new System.Drawing.Point(776, 132);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(154, 91);
             this.cancelButton.TabIndex = 1;
@@ -56,7 +57,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 449);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(945, 529);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.cancelDepositDataGridView);
             this.Name = "ShowDeposit";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyAccount));
             this.idAccountLabel = new System.Windows.Forms.Label();
             this.idAccountTextBox = new System.Windows.Forms.TextBox();
             this.modifyButton = new System.Windows.Forms.Button();
@@ -49,8 +50,8 @@
             // 
             this.idAccountLabel.AutoSize = true;
             this.idAccountLabel.BackColor = System.Drawing.Color.Transparent;
-            this.idAccountLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.idAccountLabel.Location = new System.Drawing.Point(10, 25);
+            this.idAccountLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.idAccountLabel.Location = new System.Drawing.Point(67, 78);
             this.idAccountLabel.Name = "idAccountLabel";
             this.idAccountLabel.Size = new System.Drawing.Size(70, 17);
             this.idAccountLabel.TabIndex = 0;
@@ -58,14 +59,14 @@
             // 
             // idAccountTextBox
             // 
-            this.idAccountTextBox.Location = new System.Drawing.Point(13, 45);
+            this.idAccountTextBox.Location = new System.Drawing.Point(70, 98);
             this.idAccountTextBox.Name = "idAccountTextBox";
             this.idAccountTextBox.Size = new System.Drawing.Size(224, 22);
             this.idAccountTextBox.TabIndex = 1;
             // 
             // modifyButton
             // 
-            this.modifyButton.Location = new System.Drawing.Point(185, 437);
+            this.modifyButton.Location = new System.Drawing.Point(380, 260);
             this.modifyButton.Name = "modifyButton";
             this.modifyButton.Size = new System.Drawing.Size(141, 63);
             this.modifyButton.TabIndex = 2;
@@ -75,7 +76,7 @@
             // 
             // idClientTextBox
             // 
-            this.idClientTextBox.Location = new System.Drawing.Point(15, 104);
+            this.idClientTextBox.Location = new System.Drawing.Point(72, 157);
             this.idClientTextBox.Name = "idClientTextBox";
             this.idClientTextBox.Size = new System.Drawing.Size(224, 22);
             this.idClientTextBox.TabIndex = 4;
@@ -84,8 +85,8 @@
             // 
             this.idClientLabel.AutoSize = true;
             this.idClientLabel.BackColor = System.Drawing.Color.Transparent;
-            this.idClientLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.idClientLabel.Location = new System.Drawing.Point(12, 84);
+            this.idClientLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.idClientLabel.Location = new System.Drawing.Point(69, 137);
             this.idClientLabel.Name = "idClientLabel";
             this.idClientLabel.Size = new System.Drawing.Size(68, 17);
             this.idClientLabel.TabIndex = 3;
@@ -93,7 +94,7 @@
             // 
             // nipTextBox
             // 
-            this.nipTextBox.Location = new System.Drawing.Point(15, 153);
+            this.nipTextBox.Location = new System.Drawing.Point(72, 206);
             this.nipTextBox.Name = "nipTextBox";
             this.nipTextBox.Size = new System.Drawing.Size(222, 22);
             this.nipTextBox.TabIndex = 6;
@@ -102,8 +103,8 @@
             // 
             this.nipLabel.AutoSize = true;
             this.nipLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nipLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.nipLabel.Location = new System.Drawing.Point(12, 133);
+            this.nipLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.nipLabel.Location = new System.Drawing.Point(69, 186);
             this.nipLabel.Name = "nipLabel";
             this.nipLabel.Size = new System.Drawing.Size(30, 17);
             this.nipLabel.TabIndex = 5;
@@ -111,7 +112,7 @@
             // 
             // balancetextBox
             // 
-            this.balancetextBox.Location = new System.Drawing.Point(12, 207);
+            this.balancetextBox.Location = new System.Drawing.Point(69, 260);
             this.balancetextBox.Name = "balancetextBox";
             this.balancetextBox.Size = new System.Drawing.Size(224, 22);
             this.balancetextBox.TabIndex = 8;
@@ -120,8 +121,8 @@
             // 
             this.balanceLabel.AutoSize = true;
             this.balanceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.balanceLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.balanceLabel.Location = new System.Drawing.Point(9, 187);
+            this.balanceLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.balanceLabel.Location = new System.Drawing.Point(66, 240);
             this.balanceLabel.Name = "balanceLabel";
             this.balanceLabel.Size = new System.Drawing.Size(44, 17);
             this.balanceLabel.TabIndex = 7;
@@ -129,7 +130,7 @@
             // 
             // maximumCreditTextBox
             // 
-            this.maximumCreditTextBox.Location = new System.Drawing.Point(15, 262);
+            this.maximumCreditTextBox.Location = new System.Drawing.Point(314, 98);
             this.maximumCreditTextBox.Name = "maximumCreditTextBox";
             this.maximumCreditTextBox.Size = new System.Drawing.Size(222, 22);
             this.maximumCreditTextBox.TabIndex = 10;
@@ -138,8 +139,8 @@
             // 
             this.maximumCreditLabel.AutoSize = true;
             this.maximumCreditLabel.BackColor = System.Drawing.Color.Transparent;
-            this.maximumCreditLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.maximumCreditLabel.Location = new System.Drawing.Point(12, 242);
+            this.maximumCreditLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.maximumCreditLabel.Location = new System.Drawing.Point(311, 78);
             this.maximumCreditLabel.Name = "maximumCreditLabel";
             this.maximumCreditLabel.Size = new System.Drawing.Size(104, 17);
             this.maximumCreditLabel.TabIndex = 9;
@@ -149,8 +150,8 @@
             // 
             this.accountTypeLabel.AutoSize = true;
             this.accountTypeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.accountTypeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.accountTypeLabel.Location = new System.Drawing.Point(13, 360);
+            this.accountTypeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.accountTypeLabel.Location = new System.Drawing.Point(312, 186);
             this.accountTypeLabel.Name = "accountTypeLabel";
             this.accountTypeLabel.Size = new System.Drawing.Size(103, 17);
             this.accountTypeLabel.TabIndex = 13;
@@ -163,7 +164,7 @@
             this.accountTypeComboBox.Items.AddRange(new object[] {
             "Credito",
             "Debito"});
-            this.accountTypeComboBox.Location = new System.Drawing.Point(11, 380);
+            this.accountTypeComboBox.Location = new System.Drawing.Point(310, 206);
             this.accountTypeComboBox.Name = "accountTypeComboBox";
             this.accountTypeComboBox.Size = new System.Drawing.Size(222, 24);
             this.accountTypeComboBox.TabIndex = 15;
@@ -172,8 +173,8 @@
             // 
             this.cutOffDayLabel.AutoSize = true;
             this.cutOffDayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.cutOffDayLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cutOffDayLabel.Location = new System.Drawing.Point(12, 302);
+            this.cutOffDayLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cutOffDayLabel.Location = new System.Drawing.Point(311, 138);
             this.cutOffDayLabel.Name = "cutOffDayLabel";
             this.cutOffDayLabel.Size = new System.Drawing.Size(103, 17);
             this.cutOffDayLabel.TabIndex = 16;
@@ -183,7 +184,7 @@
             // 
             this.cutOffDayDateTimePicker.CustomFormat = "yyyy.MM.dd";
             this.cutOffDayDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.cutOffDayDateTimePicker.Location = new System.Drawing.Point(13, 323);
+            this.cutOffDayDateTimePicker.Location = new System.Drawing.Point(312, 159);
             this.cutOffDayDateTimePicker.Name = "cutOffDayDateTimePicker";
             this.cutOffDayDateTimePicker.Size = new System.Drawing.Size(220, 22);
             this.cutOffDayDateTimePicker.TabIndex = 17;
@@ -192,7 +193,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 512);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(589, 350);
             this.Controls.Add(this.cutOffDayDateTimePicker);
             this.Controls.Add(this.cutOffDayLabel);
             this.Controls.Add(this.accountTypeComboBox);

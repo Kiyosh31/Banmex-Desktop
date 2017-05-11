@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowClients));
             this.clientsGridView = new System.Windows.Forms.DataGridView();
             this.modifyButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
@@ -118,6 +119,8 @@
             // accountsLabel
             // 
             this.accountsLabel.AutoSize = true;
+            this.accountsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.accountsLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.accountsLabel.Location = new System.Drawing.Point(905, 13);
             this.accountsLabel.Name = "accountsLabel";
             this.accountsLabel.Size = new System.Drawing.Size(60, 17);
@@ -127,6 +130,8 @@
             // clientsLabel
             // 
             this.clientsLabel.AutoSize = true;
+            this.clientsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.clientsLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.clientsLabel.Location = new System.Drawing.Point(239, 13);
             this.clientsLabel.Name = "clientsLabel";
             this.clientsLabel.Size = new System.Drawing.Size(58, 17);
@@ -137,6 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1210, 581);
             this.Controls.Add(this.deleteAccountButton);
             this.Controls.Add(this.modifyAccountButton);

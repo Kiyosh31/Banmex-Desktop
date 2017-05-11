@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CancelTransaction));
             this.canceledDataGriedView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.canceledDataGriedView)).BeginInit();
             this.SuspendLayout();
@@ -35,7 +36,7 @@
             // canceledDataGriedView
             // 
             this.canceledDataGriedView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.canceledDataGriedView.Location = new System.Drawing.Point(13, 13);
+            this.canceledDataGriedView.Location = new System.Drawing.Point(13, 88);
             this.canceledDataGriedView.Name = "canceledDataGriedView";
             this.canceledDataGriedView.RowTemplate.Height = 24;
             this.canceledDataGriedView.Size = new System.Drawing.Size(1047, 424);
@@ -45,7 +46,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 449);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1072, 521);
             this.Controls.Add(this.canceledDataGriedView);
             this.Name = "CancelTransaction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

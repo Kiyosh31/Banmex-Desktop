@@ -66,10 +66,11 @@ namespace Banmex.Menu
 
                     //establecemos la fecha de hoy para comparacion
                     DateTime date = DateTime.Today;
-                    string today = date.ToString("yyyyMMdd");
+                    string today = date.ToString("dd/MM/yyyy");
 
                     //tomamos la fecha en que se hizo la transaccion para comparacion
                     string transactionDate = transactionGridView.CurrentRow.Cells[4].Value.ToString();
+                    //damos formato a esa fecha                    
 
                     //comparamos las fechas para la cancelacion
                     if(today == transactionDate)

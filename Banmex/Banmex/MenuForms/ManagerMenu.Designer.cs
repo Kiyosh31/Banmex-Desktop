@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerMenu));
             this.showEmployeeButton = new System.Windows.Forms.Button();
             this.addEmployeeButton = new System.Windows.Forms.Button();
             this.addClientButton = new System.Windows.Forms.Button();
@@ -48,7 +49,7 @@
             // 
             // showEmployeeButton
             // 
-            this.showEmployeeButton.Location = new System.Drawing.Point(12, 130);
+            this.showEmployeeButton.Location = new System.Drawing.Point(51, 196);
             this.showEmployeeButton.Name = "showEmployeeButton";
             this.showEmployeeButton.Size = new System.Drawing.Size(149, 72);
             this.showEmployeeButton.TabIndex = 0;
@@ -58,7 +59,7 @@
             // 
             // addEmployeeButton
             // 
-            this.addEmployeeButton.Location = new System.Drawing.Point(12, 34);
+            this.addEmployeeButton.Location = new System.Drawing.Point(51, 100);
             this.addEmployeeButton.Name = "addEmployeeButton";
             this.addEmployeeButton.Size = new System.Drawing.Size(149, 76);
             this.addEmployeeButton.TabIndex = 1;
@@ -68,7 +69,7 @@
             // 
             // addClientButton
             // 
-            this.addClientButton.Location = new System.Drawing.Point(180, 34);
+            this.addClientButton.Location = new System.Drawing.Point(219, 100);
             this.addClientButton.Name = "addClientButton";
             this.addClientButton.Size = new System.Drawing.Size(150, 76);
             this.addClientButton.TabIndex = 5;
@@ -78,7 +79,7 @@
             // 
             // showClientButton
             // 
-            this.showClientButton.Location = new System.Drawing.Point(180, 130);
+            this.showClientButton.Location = new System.Drawing.Point(219, 196);
             this.showClientButton.Name = "showClientButton";
             this.showClientButton.Size = new System.Drawing.Size(150, 72);
             this.showClientButton.TabIndex = 4;
@@ -90,8 +91,8 @@
             // 
             this.employeeLabel.AutoSize = true;
             this.employeeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.employeeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.employeeLabel.Location = new System.Drawing.Point(47, 9);
+            this.employeeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.employeeLabel.Location = new System.Drawing.Point(86, 75);
             this.employeeLabel.Name = "employeeLabel";
             this.employeeLabel.Size = new System.Drawing.Size(78, 17);
             this.employeeLabel.TabIndex = 8;
@@ -101,8 +102,8 @@
             // 
             this.clientLabel.AutoSize = true;
             this.clientLabel.BackColor = System.Drawing.Color.Transparent;
-            this.clientLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.clientLabel.Location = new System.Drawing.Point(224, 9);
+            this.clientLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.clientLabel.Location = new System.Drawing.Point(263, 75);
             this.clientLabel.Name = "clientLabel";
             this.clientLabel.Size = new System.Drawing.Size(58, 17);
             this.clientLabel.TabIndex = 9;
@@ -110,7 +111,7 @@
             // 
             // retrieveEmployeesButton
             // 
-            this.retrieveEmployeesButton.Location = new System.Drawing.Point(12, 222);
+            this.retrieveEmployeesButton.Location = new System.Drawing.Point(51, 288);
             this.retrieveEmployeesButton.Name = "retrieveEmployeesButton";
             this.retrieveEmployeesButton.Size = new System.Drawing.Size(149, 72);
             this.retrieveEmployeesButton.TabIndex = 10;
@@ -120,7 +121,7 @@
             // 
             // retrieveClientsButton
             // 
-            this.retrieveClientsButton.Location = new System.Drawing.Point(181, 222);
+            this.retrieveClientsButton.Location = new System.Drawing.Point(220, 288);
             this.retrieveClientsButton.Name = "retrieveClientsButton";
             this.retrieveClientsButton.Size = new System.Drawing.Size(149, 72);
             this.retrieveClientsButton.TabIndex = 11;
@@ -132,8 +133,8 @@
             // 
             this.transactionsLabel.AutoSize = true;
             this.transactionsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.transactionsLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.transactionsLabel.Location = new System.Drawing.Point(375, 9);
+            this.transactionsLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.transactionsLabel.Location = new System.Drawing.Point(414, 75);
             this.transactionsLabel.Name = "transactionsLabel";
             this.transactionsLabel.Size = new System.Drawing.Size(101, 17);
             this.transactionsLabel.TabIndex = 12;
@@ -141,7 +142,7 @@
             // 
             // addTransactionButton
             // 
-            this.addTransactionButton.Location = new System.Drawing.Point(353, 34);
+            this.addTransactionButton.Location = new System.Drawing.Point(392, 100);
             this.addTransactionButton.Name = "addTransactionButton";
             this.addTransactionButton.Size = new System.Drawing.Size(150, 76);
             this.addTransactionButton.TabIndex = 13;
@@ -151,7 +152,7 @@
             // 
             // cancelTransactionButton
             // 
-            this.cancelTransactionButton.Location = new System.Drawing.Point(353, 218);
+            this.cancelTransactionButton.Location = new System.Drawing.Point(392, 284);
             this.cancelTransactionButton.Name = "cancelTransactionButton";
             this.cancelTransactionButton.Size = new System.Drawing.Size(150, 76);
             this.cancelTransactionButton.TabIndex = 14;
@@ -161,7 +162,7 @@
             // 
             // showTransactionButton
             // 
-            this.showTransactionButton.Location = new System.Drawing.Point(353, 126);
+            this.showTransactionButton.Location = new System.Drawing.Point(392, 192);
             this.showTransactionButton.Name = "showTransactionButton";
             this.showTransactionButton.Size = new System.Drawing.Size(150, 76);
             this.showTransactionButton.TabIndex = 15;
@@ -173,8 +174,8 @@
             // 
             this.depositLabel.AutoSize = true;
             this.depositLabel.BackColor = System.Drawing.Color.Transparent;
-            this.depositLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.depositLabel.Location = new System.Drawing.Point(560, 9);
+            this.depositLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.depositLabel.Location = new System.Drawing.Point(599, 75);
             this.depositLabel.Name = "depositLabel";
             this.depositLabel.Size = new System.Drawing.Size(78, 17);
             this.depositLabel.TabIndex = 16;
@@ -182,7 +183,7 @@
             // 
             // addDepositButton
             // 
-            this.addDepositButton.Location = new System.Drawing.Point(526, 34);
+            this.addDepositButton.Location = new System.Drawing.Point(565, 100);
             this.addDepositButton.Name = "addDepositButton";
             this.addDepositButton.Size = new System.Drawing.Size(150, 76);
             this.addDepositButton.TabIndex = 17;
@@ -192,7 +193,7 @@
             // 
             // showDepositButton
             // 
-            this.showDepositButton.Location = new System.Drawing.Point(526, 128);
+            this.showDepositButton.Location = new System.Drawing.Point(565, 194);
             this.showDepositButton.Name = "showDepositButton";
             this.showDepositButton.Size = new System.Drawing.Size(150, 76);
             this.showDepositButton.TabIndex = 19;
@@ -202,7 +203,7 @@
             // 
             // cancelDepositButton
             // 
-            this.cancelDepositButton.Location = new System.Drawing.Point(526, 220);
+            this.cancelDepositButton.Location = new System.Drawing.Point(565, 286);
             this.cancelDepositButton.Name = "cancelDepositButton";
             this.cancelDepositButton.Size = new System.Drawing.Size(150, 76);
             this.cancelDepositButton.TabIndex = 18;
@@ -214,7 +215,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 306);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(771, 387);
             this.Controls.Add(this.showDepositButton);
             this.Controls.Add(this.cancelDepositButton);
             this.Controls.Add(this.addDepositButton);

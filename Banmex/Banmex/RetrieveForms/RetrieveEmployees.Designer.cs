@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RetrieveEmployees));
             this.employesGridview = new System.Windows.Forms.DataGridView();
             this.retrieveButton = new System.Windows.Forms.Button();
             this.deleteDefinitely = new System.Windows.Forms.Button();
@@ -39,16 +40,16 @@
             this.employesGridview.AllowUserToAddRows = false;
             this.employesGridview.AllowUserToDeleteRows = false;
             this.employesGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employesGridview.Location = new System.Drawing.Point(12, 12);
+            this.employesGridview.Location = new System.Drawing.Point(12, 95);
             this.employesGridview.Name = "employesGridview";
             this.employesGridview.ReadOnly = true;
             this.employesGridview.RowTemplate.Height = 24;
-            this.employesGridview.Size = new System.Drawing.Size(728, 439);
+            this.employesGridview.Size = new System.Drawing.Size(746, 439);
             this.employesGridview.TabIndex = 1;
             // 
             // retrieveButton
             // 
-            this.retrieveButton.Location = new System.Drawing.Point(764, 57);
+            this.retrieveButton.Location = new System.Drawing.Point(783, 131);
             this.retrieveButton.Name = "retrieveButton";
             this.retrieveButton.Size = new System.Drawing.Size(128, 96);
             this.retrieveButton.TabIndex = 2;
@@ -58,7 +59,7 @@
             // 
             // deleteDefinitely
             // 
-            this.deleteDefinitely.Location = new System.Drawing.Point(764, 270);
+            this.deleteDefinitely.Location = new System.Drawing.Point(783, 407);
             this.deleteDefinitely.Name = "deleteDefinitely";
             this.deleteDefinitely.Size = new System.Drawing.Size(128, 96);
             this.deleteDefinitely.TabIndex = 3;
@@ -70,7 +71,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 466);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(935, 546);
             this.Controls.Add(this.deleteDefinitely);
             this.Controls.Add(this.retrieveButton);
             this.Controls.Add(this.employesGridview);

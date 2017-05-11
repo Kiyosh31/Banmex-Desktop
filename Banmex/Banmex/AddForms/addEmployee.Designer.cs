@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEmployee));
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
@@ -49,8 +50,8 @@
             // 
             this.firstNameLabel.AutoSize = true;
             this.firstNameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.firstNameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.firstNameLabel.Location = new System.Drawing.Point(26, 25);
+            this.firstNameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.firstNameLabel.Location = new System.Drawing.Point(82, 78);
             this.firstNameLabel.Name = "firstNameLabel";
             this.firstNameLabel.Size = new System.Drawing.Size(58, 17);
             this.firstNameLabel.TabIndex = 0;
@@ -58,14 +59,14 @@
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(29, 45);
+            this.firstNameTextBox.Location = new System.Drawing.Point(85, 98);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(207, 22);
             this.firstNameTextBox.TabIndex = 1;
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(29, 107);
+            this.lastNameTextBox.Location = new System.Drawing.Point(85, 160);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(207, 22);
             this.lastNameTextBox.TabIndex = 3;
@@ -74,8 +75,8 @@
             // 
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.lastNameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lastNameLabel.Location = new System.Drawing.Point(32, 87);
+            this.lastNameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lastNameLabel.Location = new System.Drawing.Point(88, 140);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(58, 17);
             this.lastNameLabel.TabIndex = 2;
@@ -83,7 +84,7 @@
             // 
             // phoneTextBox
             // 
-            this.phoneTextBox.Location = new System.Drawing.Point(29, 174);
+            this.phoneTextBox.Location = new System.Drawing.Point(85, 227);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(205, 22);
             this.phoneTextBox.TabIndex = 5;
@@ -93,8 +94,8 @@
             // 
             this.phoneLabel.AutoSize = true;
             this.phoneLabel.BackColor = System.Drawing.Color.Transparent;
-            this.phoneLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.phoneLabel.Location = new System.Drawing.Point(26, 154);
+            this.phoneLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.phoneLabel.Location = new System.Drawing.Point(82, 207);
             this.phoneLabel.Name = "phoneLabel";
             this.phoneLabel.Size = new System.Drawing.Size(64, 17);
             this.phoneLabel.TabIndex = 4;
@@ -102,7 +103,7 @@
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(29, 235);
+            this.emailTextBox.Location = new System.Drawing.Point(85, 287);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(205, 22);
             this.emailTextBox.TabIndex = 7;
@@ -111,8 +112,8 @@
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.BackColor = System.Drawing.Color.Transparent;
-            this.emailLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.emailLabel.Location = new System.Drawing.Point(26, 215);
+            this.emailLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.emailLabel.Location = new System.Drawing.Point(82, 267);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(125, 17);
             this.emailLabel.TabIndex = 6;
@@ -120,7 +121,7 @@
             // 
             // addressTextBox
             // 
-            this.addressTextBox.Location = new System.Drawing.Point(29, 299);
+            this.addressTextBox.Location = new System.Drawing.Point(331, 98);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(205, 22);
             this.addressTextBox.TabIndex = 9;
@@ -129,8 +130,8 @@
             // 
             this.addressLabel.AutoSize = true;
             this.addressLabel.BackColor = System.Drawing.Color.Transparent;
-            this.addressLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.addressLabel.Location = new System.Drawing.Point(26, 279);
+            this.addressLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.addressLabel.Location = new System.Drawing.Point(328, 78);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(64, 17);
             this.addressLabel.TabIndex = 8;
@@ -140,8 +141,8 @@
             // 
             this.positionLabel.AutoSize = true;
             this.positionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.positionLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.positionLabel.Location = new System.Drawing.Point(32, 404);
+            this.positionLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.positionLabel.Location = new System.Drawing.Point(334, 203);
             this.positionLabel.Name = "positionLabel";
             this.positionLabel.Size = new System.Drawing.Size(61, 17);
             this.positionLabel.TabIndex = 10;
@@ -149,7 +150,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(250, 480);
+            this.addButton.Location = new System.Drawing.Point(407, 270);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(129, 56);
             this.addButton.TabIndex = 12;
@@ -164,14 +165,14 @@
             this.positionComboBox.Items.AddRange(new object[] {
             "Gerente",
             "Cajero"});
-            this.positionComboBox.Location = new System.Drawing.Point(29, 424);
+            this.positionComboBox.Location = new System.Drawing.Point(331, 223);
             this.positionComboBox.Name = "positionComboBox";
             this.positionComboBox.Size = new System.Drawing.Size(205, 24);
             this.positionComboBox.TabIndex = 13;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(29, 364);
+            this.passwordTextBox.Location = new System.Drawing.Point(331, 163);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(205, 22);
@@ -181,8 +182,8 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
-            this.passwordLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.passwordLabel.Location = new System.Drawing.Point(26, 344);
+            this.passwordLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.passwordLabel.Location = new System.Drawing.Point(328, 143);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(81, 17);
             this.passwordLabel.TabIndex = 14;
@@ -192,7 +193,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 548);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(595, 348);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.positionComboBox);
