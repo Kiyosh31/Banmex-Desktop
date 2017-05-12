@@ -62,7 +62,7 @@ namespace Banmex.Menu
                 Connection.OpenConnection();
                 int position;
                 int cellphone;
-                cellphone = Int32.Parse(emailTextBox.Text);
+                cellphone = Int32.Parse(phoneTextBox.Text);
 
                 if (positionComboBox.Text == "Gerente")
                 {

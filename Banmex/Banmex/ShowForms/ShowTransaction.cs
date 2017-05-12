@@ -83,27 +83,69 @@ namespace Banmex.Menu
                         //cerramos conexion
                         Connection.CloseConnection();
 
-                        
+                        string transactionDate = transaction.Date;
 
                         //comparamos las fechas para la cancelacion
-                        if (today == transactionDate)
-                        {
-                            Connection.OpenConnection();
-                            //si la cancelacion es el mismo dia se cancela la transaccion
-                            Class.Transaction.deleteTransaction(Connection.myConnection, idTransaction);
-                            Connection.CloseConnection();
+                        //if (today == transactionDate)
+                        //{
+                            //validacion de la cuenta a cancelar
+                            //obtenga los fondos necesarios para regresar el dinero
+                            if(haveBalance(transaction.OrigenAccount, transaction.Quantity))
+                            {
+                                MessageBox.Show("La cuenta no contiene el saldo necesario para esta transaccion");
+                            }
+                            else
+                            {
+                                Connection.OpenConnection();
+                                //si la cancelacion es el mismo dia se cancela la transaccion
+                                Class.Transaction.deleteTransaction(Connection.myConnection, idTransaction);
+                                Connection.CloseConnection();
 
-                            MessageBox.Show("Eliminado exitosamente");
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("El tiempo de cancelacion expiro");
-                            this.Close();
-                        }
+                                MessageBox.Show("Eliminado exitosamente");
+                                this.Close();
+                            }
+                        //}
+                       // else
+                        //{
+                            //MessageBox.Show("El tiempo de cancelacion expiro");
+                            //this.Close();
+                        //}
                     }
                 }
             }
+        }
+
+        private bool haveBalance(int idAccount, float money)
+        {
+           bool answer = false;
+
+            try
+            {
+                Connection.OpenConnection();
+                MySqlCommand command = new MySqlCommand(String.Format("SELECT * from Account WHERE idAccount = '{0}' AND Active = true", idAccount), Connection.myConnection);
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Class.Account account = new Class.Account(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetFloat(3), reader.GetFloat(4), reader.GetString(5), reader.GetInt32(6), reader.GetBoolean(7));
+                    Connection.CloseConnection();
+
+                    if (account.Balance < money)
+                    {
+                        answer = true;
+                    }
+                    else
+                    {
+                        answer = false;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                //exception
+            }
+
+            return answer;
         }
     }
 }

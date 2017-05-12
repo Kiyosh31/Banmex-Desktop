@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Banmex.ShowForms
 {
@@ -66,15 +67,77 @@ namespace Banmex.ShowForms
                     DateTime date = DateTime.Today;
                     string today = date.ToString("yyyyMMdd");
 
-                    
-                        Connection.OpenConnection();
-                        Class.DepositWithoutAccount.deleteDeposit(Connection.myConnection, idDeposit);
+
+                    Connection.OpenConnection();
+                    MySqlCommand command = new MySqlCommand(String.Format("SELECT * from DepositWithoutAccount WHERE idDepositWithoutAccount = '{0}' AND CancelTransaction = false", idDeposit), Connection.myConnection);
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    if(reader.Read())
+                    {
+                        Class.DepositWithoutAccount deposit = new Class.DepositWithoutAccount(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3), reader.GetFloat(4), reader.GetString(5), reader.GetBoolean(6));
                         Connection.CloseConnection();
 
-                        MessageBox.Show("Eliminado exitosamente");
-                    this.Close();                    
+                        string depositDay = deposit.Date;
+
+                        //validacion la fecha sea la misma para eliminar
+                        //if(today == depositDay)
+                        //{
+                            //validacion del deposito a cancelar
+                            //obtenga los fondos necesarios para regresar el dinero
+                            if (haveBalance(deposit.DestinyAccount, deposit.Quantity))
+                            {
+                                MessageBox.Show("La cuenta no contiene el saldo necesario para esta transaccion");
+                            }
+                            else
+                            {
+                                Connection.OpenConnection();
+                                Class.DepositWithoutAccount.deleteDeposit(Connection.myConnection, idDeposit);
+                                Connection.CloseConnection();
+
+                                MessageBox.Show("Eliminado exitosamente");
+                                this.Close();
+                            }
+                        //}
+                        //else
+                        //{
+                           // MessageBox.Show("La fecha de cancelacion expiro");
+                        //}
+                    }
                 }
             }
+        }
+
+        private bool haveBalance(int idAccount, float money)
+        {
+            bool answer = false;
+
+            try
+            {
+                Connection.OpenConnection();
+                MySqlCommand command = new MySqlCommand(String.Format("SELECT * from Account WHERE idAccount = '{0}' AND Active = true", idAccount), Connection.myConnection);
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Class.Account account = new Class.Account(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetFloat(3), reader.GetFloat(4), reader.GetString(5), reader.GetInt32(6), reader.GetBoolean(7));
+                    Connection.CloseConnection();
+
+                    if (account.Balance < money)
+                    {
+                        answer = true;
+                    }
+                    else
+                    {
+                        answer = false;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                //exception
+            }
+
+            return answer;
         }
     }
 }
