@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Banmex.Menu
 {
@@ -68,25 +69,38 @@ namespace Banmex.Menu
                     DateTime date = DateTime.Today;
                     string today = date.ToString("dd/MM/yyyy");
 
-                    //tomamos la fecha en que se hizo la transaccion para comparacion
-                    string transactionDate = transactionGridView.CurrentRow.Cells[4].Value.ToString();
-                    //damos formato a esa fecha                    
+                    //abrimos conexion
+                    Connection.OpenConnection();
+                    //generamos el query
+                    MySqlCommand command = new MySqlCommand(String.Format("SELECT * from Transaction WHERE idTransaction = '{0}' AND CancelTransaction = false", idTransaction), Connection.myConnection);
+                    MySqlDataReader reader = command.ExecuteReader();
 
-                    //comparamos las fechas para la cancelacion
-                    if(today == transactionDate)
+                    //si existe el registro
+                    if(reader.Read())
                     {
-                        Connection.OpenConnection();
-                        //si la cancelacion es el mismo dia se cancela la transaccion
-                        Class.Transaction.deleteTransaction(Connection.myConnection, idTransaction);
+                        //creamos un objeto de tipo transaccion
+                        Class.Transaction transaction = new Class.Transaction(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetString(4), reader.GetFloat(5), reader.GetInt32(6), reader.GetBoolean(7));
+                        //cerramos conexion
                         Connection.CloseConnection();
 
-                        MessageBox.Show("Eliminado exitosamente");
-                        loadData();
-                    }
-                    else
-                    {
-                        MessageBox.Show("El tiempo de cancelacion expiro");
-                        this.Close();
+                        
+
+                        //comparamos las fechas para la cancelacion
+                        if (today == transactionDate)
+                        {
+                            Connection.OpenConnection();
+                            //si la cancelacion es el mismo dia se cancela la transaccion
+                            Class.Transaction.deleteTransaction(Connection.myConnection, idTransaction);
+                            Connection.CloseConnection();
+
+                            MessageBox.Show("Eliminado exitosamente");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El tiempo de cancelacion expiro");
+                            this.Close();
+                        }
                     }
                 }
             }

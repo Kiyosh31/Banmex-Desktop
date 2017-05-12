@@ -76,7 +76,7 @@ namespace Banmex.Menu
             this.Hide();
             AddForms.AddDeposit addDeposit = new AddForms.AddDeposit(Connection, idEmployee);
             addDeposit.ShowDialog();
-            this.Hide();
+            this.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,7 +84,7 @@ namespace Banmex.Menu
             this.Hide();
             ShowForms.ShowDeposit showDeposit = new ShowForms.ShowDeposit(Connection);
             showDeposit.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
         private void cancelDepositButton_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace Banmex.Menu
             this.Hide();
             CancelForms.CancelDeposit cancelDeposit = new CancelForms.CancelDeposit(Connection);
             cancelDeposit.ShowDialog();
-            this.Hide();
+            this.Show();
         }
     }
 }

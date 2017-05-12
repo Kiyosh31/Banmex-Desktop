@@ -119,25 +119,47 @@ namespace Banmex.AddForms
                     //1 = Debito
                     type = 1;
                 }
-                
 
-                //abrimos conexion a db
+                //abrimos conexion
                 Connection.OpenConnection();
-                //establecemos la fecha de la transaccion
-                DateTime today = DateTime.Today;
-                string date = today.ToString("yyyyMMdd");
+                //realizamos el query para la cuenta
+                MySqlCommand command = new MySqlCommand(String.Format("SELECT * from Account WHERE idAccount = '{0}' AND Active  = true", idOrigen), Connection.myConnection);
+                MySqlDataReader reader = command.ExecuteReader();
 
-                //creamos el objeto de tipo transaccion
-                Class.Transaction transaction = new Class.Transaction(1, idOrigen, idDestination, idEployee, date, float.Parse(quantityTextBox.Text), type, false);
-
-                //intentamos ingresar a la db
-                if(Class.Transaction.addTransaction(Connection.myConnection, transaction) == 1)
+                //si la cuenta existe entramos
+                if(reader.Read())
                 {
-                    //cerramos conexion
+                    //se genera un objeto de tipo cuenta con todos los datos de la cuenta origen
+                    Class.Account valAccount = new Class.Account(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetFloat(3), reader.GetFloat(4), reader.GetString(5), reader.GetInt32(6), reader.GetBoolean(7));
+                    //se cierra la conexion
                     Connection.CloseConnection();
 
-                    MessageBox.Show("Se ha transferido el dinero");
-                    this.Close();
+                    //validacion si el saldo de la cuenta es menor a la cantidad se genera un mensaje de error
+                    if(valAccount.Balance < Convert.ToInt32(quantityTextBox.Text))
+                    {
+                        MessageBox.Show("La cuenta origen no tiene el saldo suficiente");
+                    }
+                    else
+                    {
+                        //abrimos conexion a db
+                        Connection.OpenConnection();
+                        //establecemos la fecha de la transaccion
+                        DateTime today = DateTime.Today;
+                        string date = today.ToString("yyyyMMdd");
+
+                        //creamos el objeto de tipo transaccion
+                        Class.Transaction transaction = new Class.Transaction(1, idOrigen, idDestination, idEployee, date, float.Parse(quantityTextBox.Text), type, false);
+
+                        //intentamos ingresar a la db
+                        if (Class.Transaction.addTransaction(Connection.myConnection, transaction) == 1)
+                        {
+                            //cerramos conexion
+                            Connection.CloseConnection();
+
+                            MessageBox.Show("Se ha transferido el dinero");
+                            this.Close();
+                        }
+                    }
                 }
             }
         }

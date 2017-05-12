@@ -66,20 +66,13 @@ namespace Banmex.ShowForms
                     DateTime date = DateTime.Today;
                     string today = date.ToString("yyyyMMdd");
 
-                    if(today == cancelDepositDataGridView.CurrentRow.Cells[3].Value.ToString())
-                    {
+                    
                         Connection.OpenConnection();
                         Class.DepositWithoutAccount.deleteDeposit(Connection.myConnection, idDeposit);
                         Connection.CloseConnection();
 
                         MessageBox.Show("Eliminado exitosamente");
-                        loadData();
-                    }
-                    else
-                    {
-                        MessageBox.Show("El tiempo de cancelacion expiro");
-                        this.Close();
-                    }
+                    this.Close();                    
                 }
             }
         }

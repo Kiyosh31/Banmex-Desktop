@@ -49,6 +49,7 @@
             // 
             this.userLabel.AutoSize = true;
             this.userLabel.BackColor = System.Drawing.Color.Transparent;
+            this.userLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.userLabel.Location = new System.Drawing.Point(101, 193);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(57, 17);
@@ -59,6 +60,7 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.passwordLabel.Location = new System.Drawing.Point(101, 257);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(81, 17);
