@@ -22,6 +22,9 @@ namespace Banmex.Menu
 
             //Ajustar la tabla a la ventana
             employesGridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            //desactivamos la opcion de eliminar completamente
+            deleteDefinitely.Visible = false;
         }
 
         public void loadData()
