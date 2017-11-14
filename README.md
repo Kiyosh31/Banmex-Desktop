@@ -1,4 +1,4 @@
-﻿ Decoder-Banmex
+﻿ Banmex-Desktop
 Simple Bank system made in C# and MySQL 
 
 ## Necessary Tools
