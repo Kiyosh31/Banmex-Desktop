@@ -28,7 +28,7 @@ namespace Banmex.CancelForms
         {
             Connection.OpenConnection();
             //se genera una lista con todos los clientes activos
-            cancelDepositDataGridView.DataSource = Class.DepositWithoutAccount.showAllDeposits(Connection.myConnection);
+            cancelDepositDataGridView.DataSource = Class.DepositWithoutAccount.showCanceled(Connection.myConnection);
 
             //se establecen los nombres de cabecera para las columnas
             this.cancelDepositDataGridView.Columns[0].HeaderCell.Value = "ID Deposito";

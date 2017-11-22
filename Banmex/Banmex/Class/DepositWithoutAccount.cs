@@ -68,6 +68,21 @@ namespace Banmex.Class
             return depositList;
         }
 
+        public static IList<DepositWithoutAccount> showCanceled(MySqlConnection Connection)
+        {
+            List<DepositWithoutAccount> depositList = new List<DepositWithoutAccount>();
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM DepositWithoutAccount WHERE CancelTransaction = true"), Connection);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                DepositWithoutAccount deposit = new DepositWithoutAccount(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3), reader.GetFloat(4), reader.GetString(5), reader.GetBoolean(6));
+                depositList.Add(deposit);
+            }
+
+            return depositList;
+        }
+
         //este metodo elimina un deposito, recibe la conexion y un id de un deposito
         //el metodo retorna el numero de filas afectadas en la db
         // 1 = eliminado correctamente

@@ -36,3 +36,32 @@ C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.AddForms.AddDeposit.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.CancelForms.CancelDeposit.resources
 C:\Users\david\Google Drive\CUCEI\Semestre 5\Ingenieria software\Proyecto Final\Banmex\Banmex\obj\Debug\Banmex.ShowForms.ShowDeposit.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\bin\Debug\Banmex.exe.config
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\bin\Debug\Banmex.exe
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\bin\Debug\Banmex.pdb
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\bin\Debug\MySql.Data.xml
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.AddForms.AddDeposit.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.AddForms.AddTransaction.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.CancelForms.CancelDeposit.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.CancelForms.CancelTransaction.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.login.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.AddAccount.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.AddClient.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.AddEmployee.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.ManagerMenu.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.CashierMenu.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.ModifyAccount.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.ModifyClient.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.ModifyEmployee.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.RetrieveClients.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.RetrieveEmployees.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.ShowClients.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.ShowForms.ShowDeposit.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.ShowEmployees.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Menu.ShowTransaction.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.Properties.Resources.resources
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.csproj.GenerateResource.Cache
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.csproj.CoreCompileInputs.cache
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.exe
+C:\Users\David\Desktop\Banmex-Desktop\Banmex\Banmex\obj\Debug\Banmex.pdb
